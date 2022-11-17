@@ -1,0 +1,123 @@
+﻿.TemplateToolbar label {
+    float: left;
+    width: 220px;
+}
+
+.TemplateToolbar input { float: left; }
+
+INPUT.miniColors { margin-right: 4px; }
+
+.miniColors-selector {
+    -moz-border-radius: 5px;
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+    background: white;
+    border: solid 1px #bababa;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+    height: 150px;
+    padding: 5px;
+    position: absolute;
+    width: 175px;
+    z-index: 999999;
+}
+
+.miniColors.opacity.miniColors-selector { width: 200px; }
+
+.miniColors-selector.black {
+    background: black;
+    border-color: black;
+}
+
+.miniColors-colors {
+    background: url(images/colors.png) -40px 0 no-repeat;
+    cursor: crosshair;
+    height: 150px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 150px;
+}
+
+.miniColors.opacity .miniColors-colors { left: 30px; }
+
+.miniColors-hues {
+    background: url(images/colors.png) 0 0 no-repeat;
+    cursor: crosshair;
+    height: 150px;
+    left: 160px;
+    position: absolute;
+    top: 5px;
+    width: 20px;
+}
+
+.miniColors.opacity .miniColors-hues { left: 185px; }
+
+.miniColors-opacity {
+    background: url(images/colors.png) -20px 0 no-repeat;
+    cursor: crosshair;
+    height: 150px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 20px;
+}
+
+.miniColors-colorPicker {
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border: 1px solid black;
+    border-radius: 11px;
+    height: 11px;
+    position: absolute;
+    width: 11px;
+}
+
+.miniColors-colorPicker-inner {
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border: 2px solid white;
+    border-radius: 9px;
+    height: 7px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 7px;
+}
+
+.miniColors-huePicker,
+.miniColors-opacityPicker {
+    background: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 2px;
+    left: -2px;
+    margin-top: -1px;
+    position: absolute;
+    width: 22px;
+}
+
+.miniColors-trigger,
+.miniColors-triggerWrap {
+    display: inline-block;
+    float: left;
+    height: 22px;
+    margin-right: 15px;
+    width: 22px;
+}
+
+.miniColors-triggerWrap { background: url(images/trigger.png) -22px 0 no-repeat; }
+
+.miniColors-triggerWrap.disabled {
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.miniColors-trigger {
+    background: url(images/trigger.png) 0 0 no-repeat;
+    outline: none;
+    vertical-align: middle;
+}
+
+.miniColors-triggerWrap.disabled .miniColors-trigger { cursor: default; }

@@ -1,0 +1,166 @@
+﻿{
+  "MODULE989": {
+    "PostJoinClass2": "0",
+    "GetJoinClass2": "0",
+    "PostJoinClass3": "0",
+    "GetJoinClass3": "0",
+    "PostJoinClass1": "0",
+    "GetJoinClass1": "0",
+    "PostJoinClass4": "0",
+    "GetJoinClass4": "0"
+  },
+  "MODULE39": {
+    "PostReferUser": "0",
+    "GetReferUser": "0"
+  },
+  "MODULE35": {
+    "PostPostArticle": "0",
+    "GetPostArticle": "0",
+    "PostViewArticle": "0",
+    "GetViewArticle": "0"
+  },
+  "MODULE31": {
+    "PostAddAction": "0",
+    "GetAddAction": "0",
+    "PostViewAuction": "0",
+    "GetViewAuction": "0",
+    "PostBidItem": "0",
+    "GetBidItem": "0"
+  },
+  "MODULE61": {
+    "PostAddBlog": "0",
+    "GetAddBlog": "0",
+    "PostViewBlog": "0",
+    "GetViewBlog": "0"
+  },
+  "MODULE20": {
+    "PostPostBusiness": "0",
+    "GetPostBusiness": "0",
+    "PostViewBusiness": "0",
+    "GetViewBusiness": "0"
+  },
+  "MODULE44": {
+    "PostPostAd": "0",
+    "GetPostAd": "0",
+    "PostViewAd": "0",
+    "GetViewAd": "0",
+    "PostPurchaseItem": "0",
+    "GetPurchaseItem": "0"
+  },
+  "MODULE8": {
+    "PostRateList": "0",
+    "GetRateList": "0",
+    "PostLeaveComment": "0",
+    "GetLeaveComment": "0"
+  },
+  "MODULE64": {
+    "PostAddCalling": "0",
+    "GetAddCalling": "0"
+  },
+  "MODULE62": {
+    "PostAddCAuction": "0",
+    "GetAddCAuction": "0",
+    "PostBidCAuction": "0",
+    "GetBidCAuction": "0"
+  },
+  "MODULE5": {
+    "PostAddCoupon": "0",
+    "GetAddCoupon": "0"
+  },
+  "MODULE46": {
+    "PostPostEvent": "0",
+    "GetPostEvent": "0",
+    "PostViewEvent": "0",
+    "GetViewEvent": "0"
+  },
+  "MODULE10": {
+    "PostUploadFile": "0",
+    "GetUploadFile": "0",
+    "PostDownloadFile": "0",
+    "GetDownloadFile": "0"
+  },
+  "MODULE13": {
+    "PostSubmitForm": "0",
+    "GetSubmitForm": "0"
+  },
+  "MODULE12": {
+    "PostPostTopic": "0",
+    "GetPostTopic": "0",
+    "PostReplyTopic": "0",
+    "GetReplyTopic": "0"
+  },
+  "MODULE14": {
+    "PostSignGuestbook": "0",
+    "GetSignGuestbook": "0"
+  },
+  "MODULE40": {
+    "PostRatePicture": "0",
+    "GetRatePicture": "0"
+  },
+  "MODULE66": {
+    "PostAddResumes": "0",
+    "GetAddResumes": "0",
+    "PostPostJobs": "0",
+    "GetPostJobs": "0",
+    "PostViewCandidate": "0",
+    "GetViewCandidate": "0"
+  },
+  "MODULE48": {
+    "PostAddResume": "0",
+    "GetAddResume": "0",
+    "PostPostJob": "0",
+    "GetPostJob": "0",
+    "PostAddCompany": "0",
+    "GetAddCompany": "0"
+  },
+  "MODULE19": {
+    "PostPostLink": "0",
+    "GetPostLink": "0",
+    "PostViewLink": "0",
+    "GetViewLink": "0"
+  },
+  "MODULE18": {
+    "PostCreateProfile": "0",
+    "GetCreateProfile": "0"
+  },
+  "MODULE17": {
+    "PostSendMessage": "0",
+    "GetSendMessage": "0"
+  },
+  "MODULE28": {
+    "PostCreateAlbum": "0",
+    "GetCreateAlbum": "0",
+    "PostUploadPicture": "0",
+    "GetUploadPicture": "0"
+  },
+  "MODULE25": {
+    "PostVotePoll": "0",
+    "GetVotePoll": "0"
+  },
+  "MODULE32": {
+    "PostPostProperty": "0",
+    "GetPostProperty": "0",
+    "PostViewProperty": "0",
+    "GetViewProperty": "0"
+  },
+  "MODULE43": {
+    "PostReferUser": "0",
+    "GetReferUser": "0"
+  },
+  "MODULE997": {
+    "PostCreateAccount": "0",
+    "GetCreateAccount": "0"
+  },
+  "MODULE7": {
+    "PostCreateSite": "0",
+    "GetCreateSite": "0"
+  },
+  "MODULE63": {
+    "PostAddProfile": "0",
+    "GetAddProfile": "0"
+  },
+  "MODULE36": {
+    "PostPostReview": "0",
+    "GetPostReview": "0"
+  }
+}

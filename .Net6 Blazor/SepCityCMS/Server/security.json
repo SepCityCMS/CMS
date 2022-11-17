@@ -1,0 +1,192 @@
+﻿{
+  "MODULE994": {
+    "AdminUserMan": "|2|",
+    "GroupLists": "|2|"
+  },
+  "MODULE996": {
+    "AdminAccess": "|2|",
+    "AdminSetup": "|2|",
+    "AdminEditPage": "|2|",
+    "AdminSecurity": "|2|",
+    "AdminStats": "|2|",
+    "AdminAdvance": "|2|",
+    "AdminModuleMan": "|2|",
+    "AdminSiteLooks": "|2|",
+    "AdminErrorLogs": "|2|",
+    "AdminActivities": "|2|",
+    "AdminPointSys": "|2|"
+  },
+  "MODULE2": {
+    "AdsAccess": "|2|,|3|,|1|,|4|",
+    "AdsStats": "|2|,|3|,|4|",
+    "AdsAllStats": "|2|",
+    "AdsAdmin": "|2|"
+  },
+  "MODULE39": {
+    "AffiliateJoin": "|2|,|3|,|1|,|4|",
+    "AffiliateAdmin": "|2|"
+  },
+  "MODULE35": {
+    "ArticlesAccess": "|2|,|3|,|1|,|4|",
+    "ArticlesPost": "|2|,|4|",
+    "ArticlesAdmin": "|2|"
+  },
+  "MODULE31": {
+    "AuctionAccess": "|2|,|3|,|1|,|4|",
+    "AuctionPost": "|2|,|4|",
+    "AuctionAdmin": "|2|"
+  },
+  "MODULE61": {
+    "BlogsAccess": "|2|,|3|,|1|,|4|",
+    "BlogsCreate": "|2|,|4|",
+    "BlogsAdmin": "|2|"
+  },
+  "MODULE20": {
+    "BusinessAccess": "|2|,|3|,|1|,|4|",
+    "BusinessPost": "|2|,|4|",
+    "BusinessSiteURL": "|2|,|4|",
+    "BusinessMyListings": "|2|,|3|,|4|",
+    "BusinessRandom": "|2|,|4|",
+    "BusinessAdmin": "|2|"
+  },
+  "MODULE42": {
+    "TeleAccess": "|2|,|3|,|4|",
+    "TeleAdmin": "|2|"
+  },
+  "MODULE44": {
+    "ClassifiedAccess": "|2|,|3|,|1|,|4|",
+    "ClassifiedPost": "|2|,|4|",
+    "ClassifiedAdmin": "|2|"
+  },
+  "MODULE5": {
+    "DiscountsAccess": "|2|,|3|,|1|,|4|",
+    "DiscountsPost": "|2|,|4|",
+    "DiscountsAdmin": "|2|"
+  },
+  "MODULE37": {
+    "ELearningAccess": "|2|,|3|,|1|,|4|",
+    "ELearningAdmin": "|2|"
+  },
+  "MODULE46": {
+    "EventsAccess": "|2|,|3|,|1|,|4|",
+    "EventsPost": "|2|,|3|,|4|",
+    "EventsShared": "|2|,|4|",
+    "EventsAdmin": "|2|"
+  },
+  "MODULE9": {
+    "FAQAccess": "|2|,|3|,|1|,|4|",
+    "FAQAdmin": "|2|"
+  },
+  "MODULE10": {
+    "LibraryAccess": "|2|,|3|,|1|,|4|",
+    "LibraryUpload": "|2|,|4|",
+    "LibraryAdmin": "|2|"
+  },
+  "MODULE13": {
+    "FormsAccess": "|2|,|3|,|1|,|4|",
+    "FormsAdmin": "|2|"
+  },
+  "MODULE12": {
+    "ForumsAccess": "|2|,|3|,|1|,|4|",
+    "ForumsPost": "|2|,|3|,|4|",
+    "ForumsAdmin": "|2|"
+  },
+  "MODULE14": {
+    "GuestbookAccess": "|2|,|3|,|1|,|4|",
+    "GuestbookSign": "|2|,|3|,|1|,|4|",
+    "GuestbookAdmin": "|2|"
+  },
+  "MODULE40": {
+    "HotNotAccess": "|2|,|3|,|1|,|4|",
+    "HotNotUpload": "|2|,|4|",
+    "HotNotAdmin": "|2|"
+  },
+  "MODULE19": {
+    "LinksAccess": "|2|,|3|,|1|,|4|",
+    "LinksPost": "|2|,|4|",
+    "LinksAdmin": "|2|"
+  },
+  "MODULE18": {
+    "MatchAccess": "|2|,|3|,|1|,|4|",
+    "MatchView": "|2|,|3|,|1|,|4|",
+    "MatchModify": "|2|,|3|,|4|",
+    "MatchAdmin": "|2|"
+  },
+  "MODULE17": {
+    "MessengerAccess": "|2|,|3|,|4|",
+    "MessengerRead": "|2|,|3|,|4|",
+    "MessengerFind": "|2|,|3|,|1|,|4|",
+    "MessengerCompose": "|2|,|3|,|4|",
+    "MessengerReply": "|2|,|3|,|4|",
+    "MessengerMass": "|2|"
+  },
+  "MODULE23": {
+    "NewsAccess": "|2|,|3|,|1|,|4|",
+    "NewsAdmin": "|2|"
+  },
+  "MODULE24": {
+    "NewsletJoin": "|2|,|3|,|1|,|4|",
+    "NewsletAdmin": "|2|"
+  },
+  "MODULE47": {
+    "GamesAccess": "|2|,|3|,|1|,|4|",
+    "GamesAdmin": "|2|"
+  },
+  "MODULE28": {
+    "PhotosAccess": "|2|,|3|,|1|,|4|",
+    "PhotosShared": "|2|,|3|,|4|",
+    "PhotosCreate": "|2|,|3|,|4|",
+    "PhotosPassword": "|2|,|4|",
+    "PhotosAdmin": "|2|"
+  },
+  "MODULE25": {
+    "PollsAccess": "|2|,|3|,|1|,|4|",
+    "PollsVote": "|2|,|3|,|1|,|4|",
+    "PollsAdmin": "|2|"
+  },
+  "MODULE60": {
+    "PortalsAccess": "|2|,|3|,|1|,|4|",
+    "PortalsCreate": "|2|",
+    "PortalsAdmin": "|2|"
+  },
+  "MODULE32": {
+    "RStateAccess": "|2|,|3|,|1|,|4|",
+    "RStatePost": "|2|,|4|",
+    "RStateAdmin": "|2|"
+  },
+  "MODULE43": {
+    "ReferAccess": "|2|,|3|,|1|,|4|",
+    "ReferAdmin": "|2|"
+  },
+  "MODULE995": {
+    "ShopCartAdmin": "|2|"
+  },
+  "MODULE41": {
+    "ShopMallAccess": "|2|,|3|,|1|,|4|",
+    "ShopMallAdmin": "|2|"
+  },
+  "MODULE50": {
+    "SpeakerAccess": "|2|,|3|,|1|,|4|",
+    "SpeakerAdmin": "|2|"
+  },
+  "MODULE7": {
+    "UPagesAccess": "|2|,|3|,|1|,|4|",
+    "UPagesCreate": "|2|,|4|",
+    "UPagesPassword": "|2|,|4|",
+    "UPagesManage": "|2|"
+  },
+  "MODULE63": {
+    "ProfilesAccess": "|2|,|3|,|1|,|4|",
+    "ProfilesView": "|2|,|3|,|1|,|4|",
+    "ProfilesModify": "|2|,|3|,|4|",
+    "ProfilesAdmin": "|2|"
+  },
+  "MODULE36": {
+    "ReviewsAccess": "|2|,|3|,|1|,|4|",
+    "ReviewsWrite": "|2|,|3|,|4|",
+    "ReviewsAdmin": "|2|"
+  },
+  "MODULE34": {
+    "WhosOnline": "|2|,|3|,|1|,|4|"
+  }
+}

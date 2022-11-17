@@ -1,0 +1,54 @@
+@page "/articles"
+@inject HttpClient Http
+
+<PageTitle>Articles</PageTitle>
+
+<SepCityCMS.Client.Shared.TopMenus.UTM_Articles />
+
+@if (cContent != null)
+{
+    @((MarkupString)cContent.PageText);
+}
+
+<Categories ModuleID=35 CategoryID=0 />
+
+<br />
+
+<div ID="NewestListings"><h5>Latest Article Postings</h5></div>
+
+@if (cListings != null)
+{
+    @foreach (var item in cListings.Results)
+    {
+        <div class="article-bx">
+            <div class="row">
+                <div class="col-md-4 no-padding">
+                    <div class="article-img"><img src="@item.DefaultPicture" alt="" class="img-fluid"></div>
+                </div>
+                <div class="col-md-8">
+                    <div class="article-content-area">
+                        <div class="article-top-content">
+                            <h3><a href="/article/@item.ArticleID/@item.Headline/">@item.Headline</a></h3>
+                            <p>@item.Summary</p>
+                        </div>
+                        <div class="article-btn-group">
+                            <p><i class="fa fa-user-o"></i> Posted By: <strong><a href="/userinfo.aspx?UserID=@item.UserID">@item.Author</a></strong></p>
+                            <p><span>Date :</span> @item.Headline_Date</p>
+                            <a href="/article/@item.ArticleID/@item.Headline/" class="btn btn-primary">Read More</a>                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+@code {
+	private SepCityCMS.Models.API.SearchResponse<SepCityCMS.Models.Articles>? cListings;
+	private SepCityCMS.Models.WebPages? cContent;
+	protected override async Task OnInitializedAsync()
+	{
+        cContent = await Http.GetFromJsonAsync<SepCityCMS.Models.WebPages>("/api/pages/35");
+        cListings = await Http.GetFromJsonAsync<SepCityCMS.Models.API.SearchResponse<SepCityCMS.Models.Articles>>("/api/articles?numRecords=10&showAvailable=true&sortBy=Headline_Date&sortByDirection=DESC&CategoryId=-1");
+	}
+}

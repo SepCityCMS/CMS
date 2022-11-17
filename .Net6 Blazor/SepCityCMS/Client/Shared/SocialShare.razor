@@ -1,0 +1,32 @@
+﻿@inject NavigationManager MyNavigationManager
+
+@if (SocialEnabled)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <a href="http://twitter.com/home?status=@(MyNavigationManager.Uri)" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+            <a href="https://www.facebook.com/sharer/sharer.php@(MyNavigationManager.Uri)" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+            <a href="http://www.stumbleupon.com/submit?url=@(MyNavigationManager.Uri)" title="Share on StumbleUpon" target="_blank" data-placement="top" class="btn btn-stumbleupon"><i class="fa fa-stumbleupon"></i> Stumbleupon</a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=@(MyNavigationManager.Uri)" title="Share on LinkedIn" target="_blank" class="btn btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public bool SocialEnabled { get; set; }
+    Task CheckEnabled()
+    {
+        //if (SepCityCMS.Server.SepFunctions.Setup(993, "SocialSharing") == "Yes")
+        //{
+        //    SocialEnabled = true;
+        //}
+        return Task.CompletedTask;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CheckEnabled();
+    }
+
+}

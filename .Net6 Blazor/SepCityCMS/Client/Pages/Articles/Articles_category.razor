@@ -1,0 +1,59 @@
+﻿@page "/cat35/{Id:long}/{Text?}"
+@page "/cat35/{Id:long}/{Text}/{Page:int}"
+@inject HttpClient Http
+
+<PageTitle>Articles</PageTitle>
+
+<SepCityCMS.Client.Shared.TopMenus.UTM_Articles />
+
+<Categories ModuleID=35 CategoryID=@Id />
+
+@if (cListings != null)
+{
+    @foreach (var item in cListings.Results)
+    {
+        <div class="article-bx">
+            <div class="row">
+                <div class="col-md-4 no-padding">
+                    <div class="article-img">
+                        <img src="@item.DefaultPicture" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="article-content-area">
+                        <div class="article-top-content">
+                            <h3><a href="/article/@item.ArticleID/@item.Headline/">@item.Headline</a></h3>
+                            <p>@item.Summary</p>
+                        </div>
+                        <div class="article-btn-group">
+                            <p><i class="fa fa-user-o"></i> Posted By: <strong><a href="/userinfo.aspx?UserID=@item.UserID">@item.Author</a></strong></p>
+                            <p><span>Date :</span> @item.Headline_Date</p>
+                            <a href="/article/@item.ArticleID/@item.Headline/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <Pagination Url="@($"/cat35/{Id}/{Text}")" TotalPages="@(cListings.TotalPages)" CurrentPage="@Page" />
+
+}
+    
+@code {
+    [Parameter]
+    public long Id { get; set; }
+    [Parameter]
+    public string? Text { get; set; }
+    [Parameter]
+    public int Page { get; set; }
+    private SepCityCMS.Models.API.SearchResponse<SepCityCMS.Models.Articles>? cListings;
+    protected override async Task OnInitializedAsync()
+    {
+        cListings = await Http.GetFromJsonAsync<SepCityCMS.Models.API.SearchResponse<SepCityCMS.Models.Articles>>("/api/articles?showAvailable=true&CategoryId="+@Id+"&page="+@Page);
+    }
+    protected override async Task OnParametersSetAsync()
+    {
+        cListings = await Http.GetFromJsonAsync<SepCityCMS.Models.API.SearchResponse<SepCityCMS.Models.Articles>>("/api/articles?showAvailable=true&CategoryId="+@Id+"&page="+@Page);
+    }
+}

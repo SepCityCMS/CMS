@@ -1,0 +1,427 @@
+﻿{
+  "MODULE33": {
+    "LoginPage": [],
+    "PPShowMemberships": "Yes",
+    "PPShowOrders": "Yes",
+    "PPShowAdStats": "Yes",
+    "PPShowFriends": "Yes",
+    "PPShowFavorites": "Yes",
+    "PPShowAffiliate": "Yes",
+    "PPShowMessenger": "Yes",
+    "PPShowProfile": "Yes",
+    "PPShowBlogs": "Yes",
+    "PPShowForums": "Yes",
+    "PPShowMain": "Yes",
+    "PPDefaultPage": "Account",
+    "FriendsEnable": "Yes",
+    "ShowPoints": "Yes",
+    "ShowCreditsSignup": "Yes"
+  },
+  "MODULE994": {
+    "AskGender": "Yes",
+    "AskPhoneNumber": "Yes",
+    "ReqPhoneNumber": "No",
+    "AskStreetAddress": "Yes",
+    "AskCity": "Yes",
+    "AskState": "Yes",
+    "AskZipCode": "Yes",
+    "AskCountry": "Yes",
+    "ReqAddress": "No",
+    "AskBirthDate": "Yes",
+    "AskPayPal": "No",
+    "ReqPayPal": "No",
+    "PostHide": "No",
+    "AskFriends": "Yes"
+  },
+  "MODULE991": {
+    "AdminFullName": "Steven Pink",
+    "AdminEmailAddress": "spink@sepcity.com",
+    "CompanyName": "My Company",
+    "CompanySlogan": "My Company Slogan",
+    "CompanyPhone": "440-520-2101",
+    "CompanyAddressLine1": "4301 Thor Ct",
+    "CompanyCity": "Painesville",
+    "CompanyState": "Ohio",
+    "CompanyZipCode": "44077",
+    "CompanyCountry": "us",
+    "TwitterUsername": []
+  },
+  "MODULE64": {
+    "ConferenceEnable": "Enable",
+    "ModeratorClass": [],
+    "TwilioSMSReminderMsg": [],
+    "TwilioSMSReminderOffset": []
+  },
+  "MODULE2": {
+    "AdsEnable": "Enable",
+    "AdsStatsEnable": "Yes",
+    "SponsorsTarget": "_blank"
+  },
+  "MODULE39": {
+    "AffiliateEnable": "Enable",
+    "AffiliateLVL1": "10",
+    "AffiliateLVL2": "5",
+    "AffiliateSignup": "No",
+    "AffiliateIDReq": "No",
+    "AffiliateImageText": [],
+    "AffiliateReturnPage": []
+  },
+  "MODULE35": {
+    "ArticlesEnable": "Enable",
+    "Articles10Newest": "Yes",
+    "ArticleShowPic": "Yes",
+    "ArticleShowSource": "Yes",
+    "ArticleShowMeta": "Yes"
+  },
+  "MODULE31": {
+    "AuctionEnable": "Enable",
+    "AuctionDisplayNewest": "Yes",
+    "AuctionDeleteDays": "10",
+    "AuctionEmailSubject": "Thank you for posting a new ad on our web site!",
+    "AuctionEmailBody": "Your ad has been successfully posted on our website. Your auction will remain on our website for 10 days. If you have any questions please feel free to contact us at anytime."
+  },
+  "MODULE61": {
+    "BlogsEnable": "Enable"
+  },
+  "MODULE20": {
+    "BusinessEnable": "Enable",
+    "BusinessDisplayNewest": "Yes",
+    "BusinessClaim": "Yes",
+    "BusinessUserAddress": "No"
+  },
+  "MODULE42": {
+    "ChatEnable": "Enable"
+  },
+  "MODULE6": {
+    "IMessengerEnable": "Enable"
+  },
+  "MODULE44": {
+    "ClassifiedEnable": "Enable",
+    "ClassifiedDisplayNewest": "Yes",
+    "ClassifiedDeleteDays": "10",
+    "ClassifiedEmailSubject": "Thank you for posting a new ad on our web site!",
+    "ClassifiedEmailBody": "Your ad has been successfully posted on our website. Your item will remain on our website for 10 days. If you have any questions please feel free to contact us at anytime.",
+    "ClassifiedBuy": "No"
+  },
+  "MODULE8": {
+    "CNRCEnable": "Yes",
+    "CNRREnable": "Yes",
+    "RGraphEnable": "Yes"
+  },
+  "MODULE4": {
+    "ContactEnable": "Enable",
+    "ContactEmail": [],
+    "ContactEmailSubject": "Thank you for contacting us!",
+    "ContactEmailBody": "This is an auto-response that we have received your email. We will respond to you as soon as possible.",
+    "ContactStreetAddress": "No",
+    "ContactAddress": "No",
+    "ContactPhoneNumber": "Yes",
+    "ContactFaxNumber": "No",
+    "ContactFileTypes": [],
+    "ContactMaxFiles": []
+  },
+  "MODULE1": {
+    "CREnable": "Yes"
+  },
+  "MODULE5": {
+    "DiscountsEnable": "Enable",
+    "DiscountsDisplayNewest": "Yes"
+  },
+  "MODULE37": {
+    "ELearningEnable": "Enable",
+    "ELearningNewest": "Yes"
+  },
+  "MODULE46": {
+    "EventsEnable": "Enable",
+    "EventsSMSReminders": "No"
+  },
+  "MODULE9": {
+    "FAQEnable": "Enable",
+    "FAQNewest": "Yes"
+  },
+  "MODULE10": {
+    "LibraryEnable": "Enable",
+    "LibraryDisplayNewest": "Yes",
+    "LibraryDisplayPopular": "Yes",
+    "LibraryMaxUpload": "10",
+    "LibraryDownload": "No"
+  },
+  "MODULE13": {
+    "FormsEnable": "Enable",
+    "FormsSignup": []
+  },
+  "MODULE12": {
+    "ForumsEnable": "Enable",
+    "ForumsDeleteDays": "730",
+    "ForumsDisplayNewest": "Yes",
+    "ForumsUsersEdit": "No",
+    "ForumsAttachment": "No"
+  },
+  "MODULE14": {
+    "GuestbookEnable": "Enable",
+    "GuestbookDeleteDays": "730"
+  },
+  "MODULE57": {
+    "HoroscopesEnable": "Enable"
+  },
+  "MODULE40": {
+    "HotNotEnable": "Enable",
+    "HotNotProfiles": "Yes"
+  },
+  "MODULE56": {
+    "INewsEnable": "Enable"
+  },
+  "MODULE19": {
+    "LinksEnable": "Enable",
+    "LinksDisplayNewest": "Yes"
+  },
+  "MODULE18": {
+    "MatchEnable": "Enable",
+    "MatchPicNo": "6"
+  },
+  "MODULE17": {
+    "MessengerEnable": "Enable",
+    "MessengerDeleteDays": "730",
+    "MessengerSMS": "No"
+  },
+  "MODULE23": {
+    "NewsEnable": "Enable",
+    "NewsDeleteDays": "1460"
+  },
+  "MODULE24": {
+    "NewsLetEnable": "Enable",
+    "NewsletRemoveText": "Click here to unsubscribe from this newsletter",
+    "NewsletFromEmail": [],
+    "NewsletNightlyEnable": "Yes",
+    "NewsletNightlyNews": [],
+    "NewsletNightlySubject": [],
+    "NewsletNightlyBody": []
+  },
+  "MODULE47": {
+    "GamesEnable": "Enable"
+  },
+  "MODULE28": {
+    "PhotosEnable": "Enable",
+    "PhotoNumber": []
+  },
+  "MODULE25": {
+    "PollsEnable": "Enable"
+  },
+  "MODULE68": {
+    "LDAPPath": [],
+    "LDAPDomain": []
+  },
+  "MODULE69": {
+    "VideoConferenceEnable": "Enable",
+    "VideoConferenceSendSMS": "Yes",
+    "VideoConferenceSMSOffset": []
+  },
+  "MODULE70": {
+    "SepCityAPIKey": [],
+    "SepCityUser": [],
+    "SepCityPassword": "QgpO43sKzZNNDVODL5F9YQ=="
+  },
+  "MODULE60": {
+    "PortalsEnable": "Enable",
+    "PortalMasterDomain": [],
+    "PortalProfiles": "Yes",
+    "PortalSiteLooks": "Yes"
+  },
+  "MODULE32": {
+    "RStateEnable": "Enable",
+    "RStateDisplayNewest": "Yes",
+    "RStateNewestRent": "Yes",
+    "RStateNewestSale": "Yes",
+    "RStateStateDrop": "Yes",
+    "RStateCountryDrop": "Yes",
+    "RStateMaxPhotos": []
+  },
+  "MODULE43": {
+    "ReferEnable": "Enable",
+    "ReferDisplayStats": "Yes",
+    "ReferTop": "Yes",
+    "ReferEmailSubject": "Take a look at this web site you may like it!",
+    "ReferEmailBody": "I thought you might be interested in the information on this web site."
+  },
+  "MODULE3": {
+    "SearchModules": "Yes",
+    "SearchRadius": "Yes",
+    "SearchCountry": "Yes"
+  },
+  "MODULE995": {
+    "TaxCalcEnable": "Yes",
+    "OrderFinalText": [],
+    "EmailTempAdmin": [],
+    "EmailTempCust": []
+  },
+  "MODULE41": {
+    "ShopMallEnable": "Enable",
+    "ShopMallWishList": "Yes",
+    "ShopMallSalesPage": "Yes",
+    "ShopMallElectronic": [],
+    "ShopMallDisplayNewest": "Yes"
+  },
+  "MODULE997": {
+    "StartupClass": "4",
+    "EmailAdminNew": [],
+    "SignupVerify": "Yes",
+    "SignupAgreement": [],
+    "SignupAdminApp": "No",
+    "SignupAge": "16",
+    "LoginEmail": "No",
+    "SignupAREmail": [],
+    "SignupARSubject": [],
+    "SignupARBody": [],
+    "SignupPage": [],
+    "AutoUser": [],
+    "SignupSecTitle": [],
+    "SignupSecDesc": [],
+    "SignupSelMem": "No"
+  },
+  "MODULE989": {
+    "FacebookAPIKey": [],
+    "GooglereCAPTCHAPublicKey": [],
+    "GooglereCAPTCHAPrivateKey": [],
+    "GoogleAnalyticsID": [],
+    "GoogleAnalyticsClientID": [],
+    "GoogleMapsAPI": [],
+    "TwilioAccountSID": [],
+    "TwilioAuthToken": [],
+    "TwilioPhoneNumber": [],
+    "TwilioVideoSID": [],
+    "TwilioVideoSecret": [],
+    "CloudFlareAPI": [],
+    "CloudFlareEmail": [],
+    "CloudFlareDomain": [],
+    "LinkedInAPI": [],
+    "LinkedInSecret": [],
+    "FedExAccountNum": [],
+    "FedExMeterNum": [],
+    "FedExServiceKey": [],
+    "FedExServicePass": [],
+    "UPSAccountNum": [],
+    "UPSUserName": [],
+    "UPSPassword": [],
+    "UPSShipperNum": [],
+    "USPSUserID": [],
+    "ZoomAPIKey": [],
+    "ZoomAPISecret": [],
+    "PayPalClientID": "Adwsi4IJ6VAgTIK38lNYko1zjBdcUuEciKlpyGnH7UiyV0Vqvqj2OQdD1GFcs3ru69cbcLoItAXsa32Z",
+    "PayPalSecret": "R7KKaMNb3gARwAJ7cwZvKhXzWimza9TDfpfg/o9obGryqf3cnG4sbN8mFR/PF5ZRdYEw3ebSJyOB8SHTpvygKPf0XxFFgouPse4bmciJMbV6AgCeZK8HSg=="
+  },
+  "MODULE67": {
+    "CRMVersion": "Disabled",
+    "STURL": [],
+    "STUser": [],
+    "STPass": [],
+    "STKBEnable": "Yes",
+    "STKBNewsEnable": "Yes",
+    "STDatabase": "NewTicket",
+    "SugarCRMURL": [],
+    "SugarCRMUser": [],
+    "SugarCRMPass": [],
+    "SugarCRMDatabase": "NewTicket",
+    "SuiteCRMURL": [],
+    "SuiteCRMUser": [],
+    "SuiteCRMPass": [],
+    "SuiteCRMDatabase": "NewTicket",
+    "WHMCSURL": [],
+    "WHMCSUser": [],
+    "WHMCSPass": [],
+    "WHMCSKB": "Yes",
+    "WHMCSDatabase": "NewTicket"
+  },
+  "MODULE50": {
+    "SpeakerEnable": "Enable"
+  },
+  "MODULE15": {
+    "StocksSymbols": []
+  },
+  "MODULE7": {
+    "UPagesEnable": "Enable",
+    "UPagesSignupProcess": "Disabled",
+    "UPagesTop10": "No",
+    "UPagesMenu1": [],
+    "UPagesMenu2": [],
+    "UPagesMenu3": [],
+    "UPagesMenu4": [],
+    "UPagesMenu5": [],
+    "UPagesMenu6": [],
+    "UPagesMenu7": [],
+    "UPagesMainMenu1": "No",
+    "UPagesMainMenu2": "No",
+    "UPagesMainMenu3": "No",
+    "UPagesMainMenu4": "No",
+    "UPagesMainMenu5": "No",
+    "UPagesMainMenu6": "No",
+    "UPagesMainMenu7": "No"
+  },
+  "MODULE63": {
+    "ProfilesEnable": "Enable",
+    "ProfilesAskSignup": "Yes",
+    "ProfilesPicNo": "6",
+    "ProfileRequired": "No",
+    "ProfilesType1": [],
+    "ProfilesType2": [],
+    "ProfilesType3": [],
+    "ProfilesColor": "No",
+    "ProfilesAudio": "0"
+  },
+  "MODULE65": {
+    "VoucherEnable": "Enable",
+    "VoucherDaysAdd": [],
+    "VoucherExpireDays": [],
+    "VoucherAgreement": [],
+    "VoucherAgreementBuy": [],
+    "VoucherTop10": "Yes"
+  },
+  "MODULE66": {
+    "PCREnable": "Enable",
+    "PCRAPIKey": [],
+    "PCRAppID": [],
+    "PCRAPIURL": [],
+    "PCRDatabaseId": [],
+    "PCRUserName": [],
+    "PCRPassword": [],
+    "PCRExpireDays": []
+  },
+  "MODULE55": {
+    "WeatherEnable": "Enable"
+  },
+  "MODULE62": {
+    "FeedsEnable": "Enable"
+  },
+  "MODULE993": {
+    "Menu1Text": "Top Menu",
+    "Menu2Text": "Reserved Menu 1",
+    "Menu3Text": "Member Menu",
+    "Menu4Text": "Reserved Menu 2",
+    "Menu5Text": "Reserved Menu 3",
+    "Menu6Text": "Reserved Menu 4",
+    "Menu7Text": "Bottom Menu",
+    "Menu1Sitemap": "Yes",
+    "Menu2Sitemap": "Yes",
+    "Menu3Sitemap": "Yes",
+    "Menu4Sitemap": "Yes",
+    "Menu5Sitemap": "Yes",
+    "Menu6Sitemap": "Yes",
+    "Menu7Sitemap": "Yes",
+    "SiteLogo": [],
+    "RSSTop": "Yes",
+    "FavoritesTop": "Yes",
+    "MainPageTop": "Yes",
+    "SocialSharing": "Yes",
+    "RequireSSL": "No"
+  },
+  "MODULE992": {
+    "WebSiteName": "My Site",
+    "CurrencyCode": "USD",
+    "BadWordFilter": "ahole,ash0le,ash0les,asholes,Ass Monkey,Assface,assh0le,assh0lez,asshole,assholes,assholz,asswipe,azzhole,bastard,bastards,bastardz,basterds,basterdz,Biatch,bitch,bitches,butthole,buttwipe,cockhead,cock-head,CockSucker,cock-sucker,f u c k,f u c k e r,fuck,fucker,fuckin,fucking,fuker,Fukin,Fukker,Fukkin,Motha Fucker,Motha Fuker,Motha Fukkah,Motha Fukker,Mother Fucker,Mother Fukah,Mother Fuker,Mother Fukkah,Mother Fukker,mother-fucker,Mutha Fucker,Mutha Fukah,Mutha Fuker,Mutha Fukkah,Mutha Fukker,nigger,nigur,niiger,niigr,pusse,pussee,pussy,son-of-a-bitch,wh00r,wh0re,whore,b!+ch,bitch,asshole",
+    "RecPerAPage": "20",
+    "MaxImageSize": "2048",
+    "SiteLang": "en-US",
+    "CatCount": "Yes",
+    "TimeOffset": "0",
+    "CatLowestLvl": "Yes"
+  }
+}

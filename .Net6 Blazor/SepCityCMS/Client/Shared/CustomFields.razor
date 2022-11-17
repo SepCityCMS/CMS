@@ -1,0 +1,28 @@
+﻿@inject HttpClient Http
+
+@if (cCustomFields != null)
+{
+    @foreach (var item in cCustomFields)
+    {
+        <p>
+            <label for="@item.FieldID" id="CustomLabel@cCustomFields.CustomID">@item.FieldName:</label>
+            <input type="text" name="@item.FieldID" id="@item.FieldID" class="form-control" value="">
+        </p>
+    }
+}
+
+@code {
+    [Parameter]
+    public int ModuleID { get; set; }
+    [Parameter]
+    public bool isReadOnly { get; set; }
+    [Parameter]
+    public string ?FieldUniqueID { get; set; }
+    [Parameter]
+    public string ?UserID { get; set; }
+	private SepCityCMS.Models.CustomFields[]? cCustomFields;
+	protected override async Task OnInitializedAsync()
+	{
+        cCustomFields = await Http.GetFromJsonAsync<SepCityCMS.Models.CustomFields[]>("/api/customfields?ModuleID="+ModuleID);
+	}
+}

@@ -1,0 +1,82 @@
+﻿<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        @if(startPage > pagesToShow)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url/@(startPage - 1)" aria-label="Previous"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a>
+            </li>
+        }
+        @for (long i = startPage; i <= endPage; i++)
+        {
+            if(@CurrentPage == @i || (@CurrentPage == 0 && @i == 1))
+            {
+                <li class="page-item active"><a class="page-link" href="@Url/@i">@i</a></li>
+            } else
+            {
+                <li class="page-item"><a class="page-link" href="@Url/@i">@i</a></li>
+            }
+            if(i == TotalPages)
+            {
+                break;
+            }
+        }
+        @if(endPage < TotalPages)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url/@(endPage + 1)" aria-label="Next"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a>
+            </li>
+        }
+    </ul>
+</nav>
+
+@code {
+    [Parameter]
+    public long? TotalPages { get; set; }
+    [Parameter]
+    public long CurrentPage { get; set; }
+    [Parameter]
+    public string? Url { get; set; }
+
+    long pagesToShow = 10;
+    long startPage = 1;
+    long? endPage = 10;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        startPage = RoundDown(CurrentPage);
+        if(startPage < 1)
+        {
+            startPage = 1;
+        } else
+        {
+            if(IsDivisible(CurrentPage, pagesToShow))
+            {
+                startPage = (RoundUp(CurrentPage) - pagesToShow) + 1;
+            } else
+            {
+                startPage += 1;
+            }
+        }
+        endPage = RoundUp(CurrentPage);
+        if(endPage < 1)
+        {
+            endPage = pagesToShow;
+        }
+    }
+
+    public bool IsDivisible(long x, long n)
+    {
+       return (x % n) == 0;
+    }
+
+    long RoundUp(long toRound)
+    {
+         if (toRound % 10 == 0) return toRound;
+         return (10 - toRound % 10) + toRound;
+    }
+
+    long RoundDown(long toRound)
+    {
+        return toRound - toRound % 10;
+    }
+}

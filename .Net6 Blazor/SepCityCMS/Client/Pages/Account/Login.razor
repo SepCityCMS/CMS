@@ -1,0 +1,62 @@
+﻿@page "/account/login"
+@inject IAlertService AlertService
+@inject ILocalStorageService _localStorageService
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<div class="card">
+    <h4 class="card-header">Login</h4>
+    <div class="card-body">
+        <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+            <DataAnnotationsValidator />
+            <div class="form-group">
+                <label>Username</label>
+                <InputText @bind-Value="model.UserName" class="form-control" />
+                <ValidationMessage For="@(() => model.UserName)" />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <InputText @bind-Value="model.Password" type="password" class="form-control" />
+                <ValidationMessage For="@(() => model.Password)" />
+            </div>
+            <button disabled="@loading" class="btn btn-primary">
+                @if (loading) 
+                {
+                    <span class="spinner-border spinner-border-sm mr-1"></span>
+                }
+                Login
+            </button>
+            <NavLink href="account/register" class="btn btn-link">Register</NavLink>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private SepCityCMS.Models.LoginRequest model = new SepCityCMS.Models.LoginRequest();
+    private bool loading;
+
+    private async void OnValidSubmit()
+    {
+        AlertService.Clear();
+
+        loading = true;
+
+        HttpResponseMessage response = await Http.PostAsJsonAsync<SepCityCMS.Models.LoginRequest>("/api/members/authenticate", model);
+        string jsonResponse = await response.Content.ReadAsStringAsync();
+        var item = Newtonsoft.Json.JsonConvert.DeserializeObject<SepCityCMS.Models.API.RecordResponse<SepCityCMS.Models.LoginResponse>>(jsonResponse);
+
+        if(item != null)
+        {
+            if(item.Status == 200)
+            {
+                await _localStorageService.SetItem("authToken", item);
+                var returnUrl = NavigationManager.QueryString("returnUrl") ?? "";
+                NavigationManager.NavigateTo(returnUrl);
+            } else {
+                AlertService.Error(item.Message);
+                loading = false;
+                StateHasChanged();
+            }
+        }
+    }
+}

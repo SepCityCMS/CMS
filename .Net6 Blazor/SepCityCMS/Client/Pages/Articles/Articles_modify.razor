@@ -1,0 +1,105 @@
+@page "/articles_modify"
+@inject HttpClient Http
+
+<PageTitle>Articles Modify</PageTitle>
+
+<SepCityCMS.Client.Shared.TopMenus.UTM_Articles />
+
+@if (cContent == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+    <span id="failureNotification">
+        <span id="ErrorMessage" clientidmode="Static"></span>
+    </span>
+
+    <div class="ModFormDiv" id="ModFormDiv">
+
+        <h4 id="ModifyLegend">Post an Article</h4>
+        <input type="hidden" id="ArticleID" />
+
+        <div class="mb-3">
+            <label id="CategoryLabel" clientidmode="Static" for="Category">Select a Category in the box below:</label>
+            <sep:CategoryDropdown ID="Category" ModuleID="35" ClientIDMode="Static" />
+        </div>
+        <div class="mb-3">
+            <label id="HeadlineLabel" clientidmode="Static" for="Headline">Headline:</label>
+            <input type="text" id="Headline" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label id="HeadlineDateLabel" clientidmode="Static" for="HeadlineDate">Headline Date:</label>
+            <input type="text" id="HeadlineDate" class="form-control" clientidmode="Static" />
+        </div>
+        <div class="mb-3">
+            <label id="StartDateLabel" clientidmode="Static" for="StartDate">Start Date:</label>
+            <div class="form-group">
+                <div class="input-group date" id="StartDateDiv">
+                    <input type="text" id="StartDate" class="form-control" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label id="EndDateLabel" clientidmode="Static" for="EndDate">End Date:</label>
+            <div class="form-group">
+                <div class="input-group date" id="EndDateDiv">
+                    <input type="text" id="EndDate" class="form-control" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label id="AuthorLabel" clientidmode="Static" for="Author">Author:</label>
+            <input type="text" id="Author" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label id="SummaryLabel" clientidmode="Static" for="Summary">Summary:</label>
+            <textarea id="Summary" class="form-control"></textarea>
+        </div>
+        <div class="mb-3" id="SourceNameRow">
+            <label id="SourceLabel" clientidmode="Static" for="Source">Article Source Name:</label>
+            <input type="text" id="Source" class="form-control" />
+        </div>
+        <div class="mb-3" id="SourceURLRow">
+            <label id="ArticleURLLabel" clientidmode="Static" for="ArticleURL">URL to the Article Source:</label>
+            <input type="text" id="ArticleURL" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <sep:WYSIWYGEditor ID="ArticleText" Width="99%" Height="450" />
+        </div>
+        <CustomFields />
+        <div class="mb-3">
+            <label id="PicturesLabel" clientidmode="Static" for="Pictures">Pictures:</label>
+            <sep:UploadFiles ID="Pictures" Mode="MultipleFiles" FileType="Images" ModuleID="35" />
+        </div>
+        <div class="mb-3" id="MetaKeywordsRow">
+            <label id="MetaKeywordsLabel" clientidmode="Static" for="SEOMetaKeywords">Meta Keywords:</label>
+            <textarea id="SEOMetaKeywords" class="form-control"></textarea>
+        </div>
+        <div class="mb-3" id="MetaDescriptionRow">
+            <label id="MetaDescriptionLabel" clientidmode="Static" for="SEOMetaDescription">Meta Description:</label>
+            <textarea id="SEOMetaDescription" class="form-control"></textarea>
+        </div>
+
+        <hr class="mb-4" />
+        <div class="mb-3">
+            <button class="btn btn-primary" id="SaveButton" @onclick="SaveButton_Click">Save</button>
+        </div>
+    </div>
+
+}
+
+@code {
+    private SepCityCMS.Models.Articles? cContent;
+    protected override async Task OnInitializedAsync()
+    {
+        cContent = await Http.GetFromJsonAsync<SepCityCMS.Models.Articles>("/api/articles/100817066660753");
+    }
+    private async Task<System.Net.Http.HttpResponseMessage> SaveButton_Click()
+    {
+        var postBody = new SepCityCMS.Models.Articles { Full_Article = "Blazor POST Request Example" };
+        return await Http.PostAsJsonAsync("/api/articles?id=100817066660753", postBody);
+	}
+}

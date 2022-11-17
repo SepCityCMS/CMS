@@ -1,0 +1,104 @@
+@page "/article/{Id:long}/{text?}"
+@inject HttpClient Http
+
+<PageTitle>Articles Display</PageTitle>
+
+<SepCityCMS.Client.Shared.TopMenus.UTM_Articles />
+
+@if (cContent != null)
+{
+    <span id="failureNotification">
+        <span id="ErrorMessage" clientidmode="Static"></span>
+    </span>
+
+    <div id="DisplayContent">
+        <h1 class="ListingTitle">
+            @cContent.Headline
+        </h1>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <span ID="ProfilePic"></span>
+            </div>
+            <div class="col-sm-5">
+                @cContent.Author
+                <br />
+                <span id="CategoryColumn">Category: <span ID="CategoryName"></span></span>
+                <br />
+                <span id="SourceInfo">Source: @cContent.Article_URL</span>
+                <br />
+                <CustomFields ModuleID=35 />
+            </div>
+            <div class="col-sm-5">
+                <span class="pull-right">Viewed @cContent.Visits</span>
+                <br />
+                <span class="pull-right">
+                    <sep:RatingStars ID="RatingStars" ModuleID="35" />
+                </span>
+            </div>
+        </div>
+
+        <hr />
+        <br />
+
+        <div class="mb-3">
+            <div class="col-sm-3" id="ArticlePhotos">
+                <sep:ContentImages ID="ArticleImages" />
+            </div>
+            <div class="col-sm-9" id="ArticleContent">
+                @((MarkupString)cContent.Full_Article)
+            </div>
+        </div>
+
+        <br />
+
+        <div class="mb-3">
+            <div class="col-sm-12">
+                This article was published on:
+				<br />
+                @cContent.Headline_Date
+                <SocialShare />
+            </div>
+        </div>
+
+        <br />
+
+        <div class="mb-3">
+            <div class="col-sm-6">
+                <Comments />
+            </div>
+            <div class="col-sm-6">
+                <div id="ArtAuthorRow">
+                    <span class="pull-right"><b>Articles from This Author</b><br />
+                        <select id="ArtAuthor" width="230" onchange="switchArticle(this.value)" clientidmode="Static">
+                        </select></span>
+                </div>
+                <div id="CatArticlesRow">
+                    <br />
+                    <br />
+                    <span class="pull-right"><b>Articles Under This Category</b><br />
+                        <select id="CatArticles" width="230" onchange="switchArticle(this.value)" clientidmode="Static">
+                        </select></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="col-sm-12">
+                <RatingGraph ModuleID="35" />
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+	private SepCityCMS.Models.Articles? cContent;
+    [Parameter]
+    public string? Text { get; set; }
+    [Parameter]
+    public long Id { get; set; }
+	protected override async Task OnInitializedAsync()
+	{
+        cContent = await Http.GetFromJsonAsync<SepCityCMS.Models.Articles>("/api/articles/"+@Id);
+	}
+}

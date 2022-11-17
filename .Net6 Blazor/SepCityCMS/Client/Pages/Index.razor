@@ -1,0 +1,35 @@
+﻿@page "/"
+@inject HttpClient Http
+@inject ILocalStorageService _localStorageService
+
+<PageTitle>Home Page</PageTitle>
+
+@if (cContent != null)
+{
+    @((MarkupString)cContent.PageText);
+}
+
+@code {
+    private SepCityCMS.Models.WebPages? cContent;
+    protected override async Task OnInitializedAsync()
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get, "/api/pages/16");
+
+        // add authorization header
+        var aToken = await _localStorageService.GetItem<SepCityCMS.Models.API.RecordResponse<SepCityCMS.Models.LoginResponse>>("authToken");
+        if(aToken != null)
+        {
+            request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", aToken.Record.Token);
+        }
+
+        // send request
+        using var httpResponse = await Http.SendAsync(request);
+
+        // convert http response data to UsersResponse object
+        cContent = await httpResponse.Content.ReadFromJsonAsync<SepCityCMS.Models.WebPages>();
+
+
+
+        //cContent = await Http.GetFromJsonAsync<SepCityCMS.Models.WebPages>("/api/pages/16");
+	}
+}

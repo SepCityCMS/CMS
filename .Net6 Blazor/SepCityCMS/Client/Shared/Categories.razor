@@ -1,0 +1,27 @@
+﻿@inject HttpClient Http
+
+@if (cCategories != null)
+{
+    <div class="list-style1">
+        <ul>
+            @foreach (var item in cCategories)
+            {
+                <li><a href="/cat35/@item.CatID/@item.CategoryName">@item.CategoryName (@item.ContentCount)</a></li>
+            }
+        </ul>
+    </div>
+    
+    <div style="clear:both;"></div>
+}
+
+@code {
+    [Parameter]
+    public int ModuleID { get; set; }
+    [Parameter]
+    public long? CategoryID { get; set; }
+	private SepCityCMS.Models.Categories[]? cCategories;
+	protected override async Task OnInitializedAsync()
+	{
+        cCategories = await Http.GetFromJsonAsync<SepCityCMS.Models.Categories[]>("/api/categories/"+ModuleID+"/"+@CategoryID);
+	}
+}

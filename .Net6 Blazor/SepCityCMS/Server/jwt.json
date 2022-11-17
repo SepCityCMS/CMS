@@ -1,0 +1,7 @@
+﻿{
+  "JwtInfo": {
+    "Key": "cf6e09ae-8608-4d96-86dc-40a454f4cd67",
+    "Issuer": "https://localhost:7153",
+    "Audience": "http://localhost:4200"
+  }
+}

@@ -1,0 +1,8 @@
+﻿{
+  "EncryptionKey": "03362831286e4af8a15d6594",
+  "ConnectionString": "DATABASE=SepCity;SERVER=(Local)\\SQLEXPRESS;user id=sepcity;PASSWORD=sep477sfp;MultipleActiveResultSets=true;",
+  "MailServerIP": "mail.sepcity.com",
+  "MailServerUser": "spink@sepcity.com",
+  "MailServerPass": "SSaqwWm7q80otiaZF8h5RQ==",
+  "MailServerPort": "25"
+}

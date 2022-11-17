@@ -1,0 +1,661 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+	background: #ffffff;
+	color: #696969;
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	padding-left: 0px;
+	width: 100% !important;
+}
+
+.navbar-brand {
+  margin:0;
+  padding: 0;
+}
+
+.navbar {
+  background: #4A4A4A;
+  border-radius: 0;
+  margin-bottom: 0;
+  min-height: 0;
+  padding: 0px 0;
+  padding-bottom: 0;
+}
+
+.navbar-nav>li{
+  margin-left: 15px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  line-height: 24px;
+  margin: 0;
+  padding: 5px 12px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+	background-color: #108F34;
+	color: #fff;
+}
+
+.navbar-inverse {
+  border: none;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+  font-size: 36px;
+  line-height: 50px;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #108F34;
+  color: #fff;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu {
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  background-color: rgba(0,0,0,.85);
+  border: 0;
+  border-radius: 0;
+  border-top: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  left: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu:before{
+  position: absolute;
+  top:0;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu > li > a {
+  color: #fff;
+  padding: 8px 15px;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu > li:hover > a,
+.navbar-inverse .navbar-nav .dropdown-menu > li:focus > a,
+.navbar-inverse .navbar-nav .dropdown-menu > li.active > a {
+  background-color: #108F34;
+  color: #fff;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu > li:last-child > a {
+  border-radius: 0 0 3px 3px;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu > li.divider {
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-top: 0;
+  padding-bottom: 0;
+}
+
+#AdminTopBar a {
+	color: #ffffff;
+}
+
+#ManageGridView th a:link, a:visited
+{
+	color: #808080;
+	text-decoration: none;
+}
+
+#ManageGridView th a:hover
+{
+	color: #505050;
+	text-decoration: none;
+}
+
+#ManageGridView th a:active
+{
+	color: #505050;
+	text-decoration: none;
+}
+
+p
+{
+	line-height: 1.6em;
+	margin-bottom: 10px;
+}
+
+/* FORM ELEMENTS
+----------------------------------------------------------*/
+
+.ModFieldset
+{
+	background-color: #F2EFE9;
+	background-repeat: repeat-x;
+	border: 1px solid #BFBAB0;
+	clear: both;
+	float: left;
+	margin: 0 0 1.5em 0;
+	padding: 10px;
+	width: 97%;
+}
+
+.ModFieldset legend
+{
+	color: #000;
+	font-weight: bold;
+	margin-left: 1em;
+	padding: 0;
+}
+
+.ModFieldset label
+{
+	display: block;
+}
+
+.ui-widget label
+{
+	display: inline-block;
+}
+
+.ModFieldsetTab
+{
+	margin: 0;
+	padding: 0;
+}
+
+.ModFieldsetTab li
+{
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding-right: 15px;
+}
+
+.ModFieldsetTab li a
+{
+	background: none repeat scroll 0 0 #D4D4D4;
+	border: 1px solid #FFFFFF;
+	color: #000000;
+	display: block;
+	padding: 4px 16px;
+	text-align: center;
+	text-decoration: none;
+	width: 30px;
+}
+
+.ModFieldsetTab li a:hover
+{
+	background: none repeat scroll 0 0 #407DAD;
+	border: 1px solid #FFFFFF;
+	color: #ffffff;
+	display: block;
+	padding: 4px 16px;
+	text-align: center;
+	text-decoration: none;
+	width: 30px;
+}
+
+.MemberSearch
+{
+	margin-left: 5px;
+	width: 165px;
+}
+
+.dateEntry
+{
+	display: inline-block !important;
+	width: 113px !important;
+}
+
+.textareaEntry
+{
+	height: 80px;
+}
+
+.imageEntry
+{
+	display: block;
+}
+
+.LoginFieldset
+{
+	width:260px;
+}
+
+.LoginFieldset #UserNameLabel
+{
+	display: block;
+}
+
+.LoginFieldset #PasswordLabel
+{
+	display: block;
+}
+
+/* MISC
+----------------------------------------------------------*/
+
+.clear
+{
+	clear: both;
+}
+
+img
+{
+	border:0px;
+}
+
+/* ======================================================================== */
+.GridViewFilter
+{
+	background-color: #dddddd;
+	border: #91a7b4 1px solid;
+	border-collapse: collapse;
+	display: table;
+	height: 43px;
+	margin-bottom: 10px;
+	table-layout: auto;
+	white-space: nowrap;
+	width: 99%;
+}
+
+.GridViewFilterLeft
+{
+	float:left;
+	height:43px;
+	padding-left:10px;
+	padding-top:3px;
+}
+
+.GridViewFilterLeft select
+{
+	height:37px;
+}
+
+.GridViewFilterRight
+{
+	float:right;
+	height:43px;
+	padding-right:10px;
+	padding-top:3px;
+}
+
+.GridViewFilterRight input[type="text"].GridViewSearch
+{
+	height:37px;
+}
+
+.GridViewFilter button
+{
+	margin-right: 15px;
+}
+
+/* Search Box */
+input[type="text"].GridViewSearch
+{
+	height: 2.0em;
+	/*
+		background:#FFFFFF url(../images/gridviewsearch.png) no-repeat 4px 4px;
+		padding:4px 4px 4px 22px;
+		border:1px solid #CCCCCC;
+	*/
+	width:230px;
+}
+
+/* ---------------------------------------------------------- */
+.MultiCheckboxDiv
+{
+	background-color: #ffffff;
+	border: 1px solid #bbbbbb;
+	max-height: 150px;
+	overflow: auto;
+	width: 500px;
+}
+
+.MultiCheckboxDivLeft
+{
+	float: left;
+	width: 240px;
+}
+
+.MultiCheckboxDivRight
+{
+	float: right;
+	width: 240px;
+}
+
+/* Menu Tree (ADMIN) */
+ul.jqueryFileTree
+{
+	line-height: 18px;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.jqueryFileTree li
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 20px;
+	white-space: nowrap;
+}
+
+ul.jqueryFileTree a
+{
+	color: #333333;
+	display: inline-block;
+	padding: 0px 2px;
+	text-decoration: none;
+}
+
+ul.jqueryFileTree a:hover
+{
+	background: #C6CFEA;
+}
+
+/* Core Styles */
+#AdminMenuTree {
+	background: #FFF;
+	border-top: solid 0px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+	overflow: auto;
+	padding: 5px;
+	width: 190px;
+}
+
+#ImgSizeMainContent
+{
+	overflow: auto;
+	padding-left: 10px;
+}
+
+#ImgSizeMainContent label
+{
+	display:block;
+}
+
+#SetupMenuTree {
+	background: #FFF;
+	border-bottom: solid 1px #FFF;
+	border-left: solid 1px #BBB;
+	border-right: solid 1px #FFF;
+	float: left;
+	margin: 0px;
+	overflow: auto;
+	padding: 5px;
+	width: 210px;
+}
+
+#SetupMainContent
+{
+	float: left;
+	overflow: auto;
+	padding-left: 10px;
+}
+
+#SetupMainContent label
+{
+	display:block;
+}
+
+#SetupMainDiv
+{
+	overflow:hidden;
+}
+
+.SetupSaveRow
+{
+	margin-top: 5px;
+	width: 99%;
+}
+
+.SetupSaveRow input
+{
+	margin-left: 10px;
+}
+
+.SetupSaveRow span
+{
+	color: Red;
+	margin-left: 10px;
+}
+
+/* Core Styles */
+.PanelButton
+{
+	display: inline;
+}
+
+.helpCopyright
+{
+	color: #aaaaaa;
+}
+
+.uploadcontrol p
+{
+	margin:10px 5px;
+}
+
+.uploadLog
+{
+	margin:0;
+	padding:0;
+	width:470px;
+}
+
+.uploadLog li
+{
+	background:#fff;
+	border:1px solid #ccc;
+	color:#333;
+	display: inline-block;
+	list-style:none;
+	margin:2px;
+	padding:10px;
+	position:relative;
+}
+
+.uploadLog li .progressbar
+{
+	background:#fff;
+	border:1px solid #333;
+	height:5px;
+}
+
+.uploadLog li .progress
+{
+	background:#999;
+	height:5px;
+	width:0%;
+}
+
+.uploadLog li p
+{
+	line-height:18px;
+	margin:0;
+}
+
+.uploadLog li.success
+{
+	background:#ebebeb;
+	border:1px solid #cccccc;
+	width: 470px;
+}
+
+.uploadleft
+{
+	float: left;
+}
+
+.uploadright
+{
+	float: left;
+	margin-left: 20px;
+}
+
+.uploaddelete
+{
+	float: right;
+}
+
+.uploadLog li span.cancel
+{
+	background:url('../../images/public/upload_cancel.png') no-repeat;
+	cursor:pointer;
+	height:20px;
+	position:absolute;
+	right:5px;
+	top:5px;
+	width:20px;
+}
+
+table caption
+{
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, left top, right top, from(#cecece), to(#ffffff));
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(left, #cecece, #ffffff);
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(left, #cecece, #ffffff);
+	/* IE 10 */
+	background: -ms-linear-gradient(left, #cecece, #ffffff);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(left, #cecece, #ffffff);
+	/* fallback */
+	background-color: #eeeeee;
+
+	background-repeat: repeat-y;
+
+	color: #606060;
+
+	font-weight: bold;
+
+	padding: 3px 0px 3px 10px;
+}
+
+/* Styles below are for the site templates in the admin console */
+#siteTemplates
+{
+	margin: 0;
+	padding:0px;
+	width: 100%;
+}
+
+#siteTemplates ul
+{
+	float: left;
+	list-style: none;
+	margin: 0 0 3em 0;
+	padding: 0;
+	width: 100%;
+}
+
+#siteTemplates li
+{
+	border: 1px solid #bbbbbb;
+	float: left;
+	list-style: none;
+	margin: 10px;
+}
+
+#siteTemplates li div
+{
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cccccc), to(#eeeeee));
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #cccccc, #eeeeee);
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #cccccc, #eeeeee);
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #cccccc, #eeeeee);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #cccccc, #eeeeee);
+	/* fallback */
+	background-color: #cccccc;
+	color: #000000;
+
+	font-weight: bold;
+
+	height: 30px;
+
+	line-height: 30px;
+
+	padding-left: 10px;
+
+	width:220px;
+}
+
+.pagination-ys {
+    border-radius: 4px;
+    margin: 20px 0;
+    /*display: inline-block;*/
+    padding-left: 0;
+}
+
+.pagination-ys table > tbody > tr > td {
+    display: inline;
+}
+
+.pagination-ys table > tbody > tr > td > a,
+.pagination-ys table > tbody > tr > td > span {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    color: #23527c;
+    float: left;
+    line-height: 1.42857143;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+}
+
+.pagination-ys table > tbody > tr > td > span {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #ffffff;
+    cursor: default;
+    float: left;
+    line-height: 1.42857143;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.pagination-ys table > tbody > tr > td:first-child > a,
+.pagination-ys table > tbody > tr > td:first-child > span {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-left: 0;
+}
+
+.pagination-ys table > tbody > tr > td:last-child > a,
+.pagination-ys table > tbody > tr > td:last-child > span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.pagination-ys table > tbody > tr > td > a:hover,
+.pagination-ys table > tbody > tr > td > a:focus {
+    background-color: #eeeeee;
+    border-color: #dddddd;
+    color: #23527c;
+}

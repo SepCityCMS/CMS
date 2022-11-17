@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ROOTLEVEL>
+	<Username>@@AUSER_NAME@@</Username>
+	<Password>@@MD5PASSWORD@@</Password>
+	<LicenseKey>@@LICENSE_KEY@@</LicenseKey>
+	<LastChecked>@@INSTALL_DATE@@</LastChecked>
+	<ModuleList></ModuleList>
+	<Version>Standard</Version>
+</ROOTLEVEL>

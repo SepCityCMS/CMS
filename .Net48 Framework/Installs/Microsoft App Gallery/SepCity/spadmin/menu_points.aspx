@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" codebehind="menu_points.aspx.cs" inherits="wwwroot.menu_points" %>

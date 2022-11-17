@@ -1,0 +1,59 @@
+﻿#jquery-colour-picker {
+    -moz-border-radius: 10px;
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+    background: #fafafa;
+
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    border: 1px solid #666;
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 5px 5px 10px;
+    width: 180px;
+
+    z-index: 99;
+}
+
+#jquery-colour-picker h2 {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+#jquery-colour-picker ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+}
+
+#jquery-colour-picker ul:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+#jquery-colour-picker ul li {
+    float: left;
+    margin: 0 5px 5px 0;
+}
+
+#jquery-colour-picker ul li a {
+    border: 1px solid #aaa;
+
+    display: block;
+    height: 13px;
+
+    outline: 0;
+    text-decoration: none;
+    text-indent: -100000px;
+
+    width: 13px;
+}
+
+#jquery-colour-picker ul li a:hover { border-color: #000; }

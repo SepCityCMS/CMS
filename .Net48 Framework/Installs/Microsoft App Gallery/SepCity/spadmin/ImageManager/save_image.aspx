@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="save_image.aspx.cs" Inherits="wwwroot.spadmin.ImageManager.save_image" %>

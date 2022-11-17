@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ROOTLEVEL>
+  <EncryptionKey>@@ENCRYPTION_KEY@@</EncryptionKey>
+  <ConnectionString>@@CONNECTIONSTRING@@</ConnectionString>
+  <FolderPath>@@ROOT_DIR@@</FolderPath>
+  <MailServerIP>@@NSMTPSERVER@@</MailServerIP>
+  <MailServerUser>@@OSMTPUSER@@</MailServerUser>
+  <MailServerPass>@@PSMTPPASS@@</MailServerPass>
+  <MailServerPort>25</MailServerPort>
+</ROOTLEVEL>

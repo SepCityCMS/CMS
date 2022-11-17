@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<FeatureList>
+		<Feature id="Banners" text="Banners">1</Feature>
+	</FeatureList>
+  <UPFeatureList>
+    <UPFeature id="Advertisements" text="Advertisements">1</UPFeature>
+  </UPFeatureList>
+  <CustomVariables>
+    <Variable name="HeaderImg">
+      <Question type="Image">File name to header image (Default is a 970x231 Image)</Question>
+      <Value>header.jpg</Value>
+    </Variable>
+  </CustomVariables>
+</root>

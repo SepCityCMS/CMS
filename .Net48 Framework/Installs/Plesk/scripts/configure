@@ -1,0 +1,1487 @@
+on error resume next
+
+Dim sEncryptionKey
+sEncryptionKey = GenerateGUID()
+
+Private Const BITS_TO_A_BYTE = 8
+Private Const BYTES_TO_A_WORD = 4
+Private Const BITS_TO_A_WORD = 32
+
+Private m_lOnBits(30)
+Private m_l2Power(30)
+ 
+m_lOnBits(0) = CLng(1)
+m_lOnBits(1) = CLng(3)
+m_lOnBits(2) = CLng(7)
+m_lOnBits(3) = CLng(15)
+m_lOnBits(4) = CLng(31)
+m_lOnBits(5) = CLng(63)
+m_lOnBits(6) = CLng(127)
+m_lOnBits(7) = CLng(255)
+m_lOnBits(8) = CLng(511)
+m_lOnBits(9) = CLng(1023)
+m_lOnBits(10) = CLng(2047)
+m_lOnBits(11) = CLng(4095)
+m_lOnBits(12) = CLng(8191)
+m_lOnBits(13) = CLng(16383)
+m_lOnBits(14) = CLng(32767)
+m_lOnBits(15) = CLng(65535)
+m_lOnBits(16) = CLng(131071)
+m_lOnBits(17) = CLng(262143)
+m_lOnBits(18) = CLng(524287)
+m_lOnBits(19) = CLng(1048575)
+m_lOnBits(20) = CLng(2097151)
+m_lOnBits(21) = CLng(4194303)
+m_lOnBits(22) = CLng(8388607)
+m_lOnBits(23) = CLng(16777215)
+m_lOnBits(24) = CLng(33554431)
+m_lOnBits(25) = CLng(67108863)
+m_lOnBits(26) = CLng(134217727)
+m_lOnBits(27) = CLng(268435455)
+m_lOnBits(28) = CLng(536870911)
+m_lOnBits(29) = CLng(1073741823)
+m_lOnBits(30) = CLng(2147483647)
+
+m_l2Power(0) = CLng(1)
+m_l2Power(1) = CLng(2)
+m_l2Power(2) = CLng(4)
+m_l2Power(3) = CLng(8)
+m_l2Power(4) = CLng(16)
+m_l2Power(5) = CLng(32)
+m_l2Power(6) = CLng(64)
+m_l2Power(7) = CLng(128)
+m_l2Power(8) = CLng(256)
+m_l2Power(9) = CLng(512)
+m_l2Power(10) = CLng(1024)
+m_l2Power(11) = CLng(2048)
+m_l2Power(12) = CLng(4096)
+m_l2Power(13) = CLng(8192)
+m_l2Power(14) = CLng(16384)
+m_l2Power(15) = CLng(32768)
+m_l2Power(16) = CLng(65536)
+m_l2Power(17) = CLng(131072)
+m_l2Power(18) = CLng(262144)
+m_l2Power(19) = CLng(524288)
+m_l2Power(20) = CLng(1048576)
+m_l2Power(21) = CLng(2097152)
+m_l2Power(22) = CLng(4194304)
+m_l2Power(23) = CLng(8388608)
+m_l2Power(24) = CLng(16777216)
+m_l2Power(25) = CLng(33554432)
+m_l2Power(26) = CLng(67108864)
+m_l2Power(27) = CLng(134217728)
+m_l2Power(28) = CLng(268435456)
+m_l2Power(29) = CLng(536870912)
+m_l2Power(30) = CLng(1073741824)
+
+Function GenerateGUID()
+
+	on error resume next
+	
+	Dim GenGUID
+	Set GenGUID = CreateObject("Scriptlet.TypeLib")
+	GenerateGUID = Trim(Replace(Replace(Left(GenGUID.Guid, 38), "}", ""), "{", ""))
+	
+    if Err <> 0 Then
+        debug_log "GenerateGUID() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+
+End Function
+
+Function LShift(lValue, iShiftBits)
+
+	on error resume next
+	
+    If iShiftBits = 0 Then
+        LShift = lValue
+        Exit Function
+    ElseIf iShiftBits = 31 Then
+        If lValue And 1 Then
+            LShift = &H80000000
+        Else
+            LShift = 0
+        End If
+        Exit Function
+    ElseIf iShiftBits < 0 Or iShiftBits > 31 Then
+        Err.Raise 6
+    End If
+
+    If (lValue And m_l2Power(31 - iShiftBits)) Then
+        LShift = ((lValue And m_lOnBits(31 - (iShiftBits + 1))) * m_l2Power(iShiftBits)) Or &H80000000
+    Else
+        LShift = ((lValue And m_lOnBits(31 - iShiftBits)) * m_l2Power(iShiftBits))
+    End If
+	
+    if Err <> 0 Then
+        debug_log "LShift() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function RShift(lValue, iShiftBits)
+
+	on error resume next
+	
+    If iShiftBits = 0 Then
+        RShift = lValue
+        Exit Function
+    ElseIf iShiftBits = 31 Then
+        If lValue And &H80000000 Then
+            RShift = 1
+        Else
+            RShift = 0
+        End If
+        Exit Function
+    ElseIf iShiftBits < 0 Or iShiftBits > 31 Then
+        Err.Raise 6
+    End If
+    
+    RShift = (lValue And &H7FFFFFFE) \ m_l2Power(iShiftBits)
+
+    If (lValue And &H80000000) Then
+        RShift = (RShift Or (&H40000000 \ m_l2Power(iShiftBits - 1)))
+    End If
+	
+    if Err <> 0 Then
+        debug_log "RShift() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function RotateLeft(lValue, iShiftBits)
+    RotateLeft = LShift(lValue, iShiftBits) Or RShift(lValue, (32 - iShiftBits))
+End Function
+
+Function AddUnsigned(lX, lY)
+
+	on error resume next
+	
+    Dim lX4
+    Dim lY4
+    Dim lX8
+    Dim lY8
+    Dim lResult
+ 
+    lX8 = lX And &H80000000
+    lY8 = lY And &H80000000
+    lX4 = lX And &H40000000
+    lY4 = lY And &H40000000
+ 
+    lResult = (lX And &H3FFFFFFF) + (lY And &H3FFFFFFF)
+ 
+    If lX4 And lY4 Then
+        lResult = lResult Xor &H80000000 Xor lX8 Xor lY8
+    ElseIf lX4 Or lY4 Then
+        If lResult And &H40000000 Then
+            lResult = lResult Xor &HC0000000 Xor lX8 Xor lY8
+        Else
+            lResult = lResult Xor &H40000000 Xor lX8 Xor lY8
+        End If
+    Else
+        lResult = lResult Xor lX8 Xor lY8
+    End If
+ 
+    AddUnsigned = lResult
+	
+    if Err <> 0 Then
+        debug_log "AddUnsigned() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function F(x, y, z)
+    F = (x And y) Or ((Not x) And z)
+End Function
+
+Function G(x, y, z)
+    G = (x And z) Or (y And (Not z))
+End Function
+
+Function H(x, y, z)
+    H = (x Xor y Xor z)
+End Function
+
+Function I(x, y, z)
+    I = (y Xor (x Or (Not z)))
+End Function
+
+Private Sub FF(a, b, c, d, x, s, ac)
+    a = AddUnsigned(a, AddUnsigned(AddUnsigned(F(b, c, d), x), ac))
+    a = RotateLeft(a, s)
+    a = AddUnsigned(a, b)
+End Sub
+
+Private Sub GG(a, b, c, d, x, s, ac)
+    a = AddUnsigned(a, AddUnsigned(AddUnsigned(G(b, c, d), x), ac))
+    a = RotateLeft(a, s)
+    a = AddUnsigned(a, b)
+End Sub
+
+Private Sub HH(a, b, c, d, x, s, ac)
+    a = AddUnsigned(a, AddUnsigned(AddUnsigned(H(b, c, d), x), ac))
+    a = RotateLeft(a, s)
+    a = AddUnsigned(a, b)
+End Sub
+
+Private Sub II(a, b, c, d, x, s, ac)
+    a = AddUnsigned(a, AddUnsigned(AddUnsigned(I(b, c, d), x), ac))
+    a = RotateLeft(a, s)
+    a = AddUnsigned(a, b)
+End Sub
+
+Function ConvertToWordArray(sMessage)
+
+	on error resume next
+	
+    Dim lMessageLength
+    Dim lNumberOfWords
+    Dim lWordArray()
+    Dim lBytePosition
+    Dim lByteCount
+    Dim lWordCount
+    
+    Const MODULUS_BITS = 512
+    Const CONGRUENT_BITS = 448
+    
+    lMessageLength = Len(sMessage)
+    
+    lNumberOfWords = (((lMessageLength + ((MODULUS_BITS - CONGRUENT_BITS) \ BITS_TO_A_BYTE)) \ (MODULUS_BITS \ BITS_TO_A_BYTE)) + 1) * (MODULUS_BITS \ BITS_TO_A_WORD)
+    ReDim lWordArray(lNumberOfWords - 1)
+    
+    lBytePosition = 0
+    lByteCount = 0
+    Do Until lByteCount >= lMessageLength
+        lWordCount = lByteCount \ BYTES_TO_A_WORD
+        lBytePosition = (lByteCount Mod BYTES_TO_A_WORD) * BITS_TO_A_BYTE
+        lWordArray(lWordCount) = lWordArray(lWordCount) Or LShift(Asc(Mid(sMessage, lByteCount + 1, 1)), lBytePosition)
+        lByteCount = lByteCount + 1
+    Loop
+
+    lWordCount = lByteCount \ BYTES_TO_A_WORD
+    lBytePosition = (lByteCount Mod BYTES_TO_A_WORD) * BITS_TO_A_BYTE
+
+    lWordArray(lWordCount) = lWordArray(lWordCount) Or LShift(&H80, lBytePosition)
+
+    lWordArray(lNumberOfWords - 2) = LShift(lMessageLength, 3)
+    lWordArray(lNumberOfWords - 1) = RShift(lMessageLength, 29)
+    
+    ConvertToWordArray = lWordArray
+	
+    if Err <> 0 Then
+        debug_log "ConvertToWordArray() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function WordToHex(lValue)
+
+	on error resume next
+
+    Dim lByte
+    Dim lCount
+    
+    For lCount = 0 To 3
+        lByte = RShift(lValue, lCount * BITS_TO_A_BYTE) And m_lOnBits(BITS_TO_A_BYTE - 1)
+        WordToHex = WordToHex & Right("0" & Hex(lByte), 2)
+    Next
+	
+    if Err <> 0 Then
+        debug_log "WordToHex() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Public Function MD5(sMessage)
+
+	on error resume next
+	
+    Dim x
+    Dim k
+    Dim AA
+    Dim BB
+    Dim CC
+    Dim DD
+    Dim a
+    Dim b
+    Dim c
+    Dim d
+    
+    Const S11 = 7
+    Const S12 = 12
+    Const S13 = 17
+    Const S14 = 22
+    Const S21 = 5
+    Const S22 = 9
+    Const S23 = 14
+    Const S24 = 20
+    Const S31 = 4
+    Const S32 = 11
+    Const S33 = 16
+    Const S34 = 23
+    Const S41 = 6
+    Const S42 = 10
+    Const S43 = 15
+    Const S44 = 21
+
+    x = ConvertToWordArray(sMessage)
+    
+    a = &H67452301
+    b = &HEFCDAB89
+    c = &H98BADCFE
+    d = &H10325476
+
+    For k = 0 To UBound(x) Step 16
+        AA = a
+        BB = b
+        CC = c
+        DD = d
+    
+        FF a, b, c, d, x(k + 0), S11, &HD76AA478
+        FF d, a, b, c, x(k + 1), S12, &HE8C7B756
+        FF c, d, a, b, x(k + 2), S13, &H242070DB
+        FF b, c, d, a, x(k + 3), S14, &HC1BDCEEE
+        FF a, b, c, d, x(k + 4), S11, &HF57C0FAF
+        FF d, a, b, c, x(k + 5), S12, &H4787C62A
+        FF c, d, a, b, x(k + 6), S13, &HA8304613
+        FF b, c, d, a, x(k + 7), S14, &HFD469501
+        FF a, b, c, d, x(k + 8), S11, &H698098D8
+        FF d, a, b, c, x(k + 9), S12, &H8B44F7AF
+        FF c, d, a, b, x(k + 10), S13, &HFFFF5BB1
+        FF b, c, d, a, x(k + 11), S14, &H895CD7BE
+        FF a, b, c, d, x(k + 12), S11, &H6B901122
+        FF d, a, b, c, x(k + 13), S12, &HFD987193
+        FF c, d, a, b, x(k + 14), S13, &HA679438E
+        FF b, c, d, a, x(k + 15), S14, &H49B40821
+    
+        GG a, b, c, d, x(k + 1), S21, &HF61E2562
+        GG d, a, b, c, x(k + 6), S22, &HC040B340
+        GG c, d, a, b, x(k + 11), S23, &H265E5A51
+        GG b, c, d, a, x(k + 0), S24, &HE9B6C7AA
+        GG a, b, c, d, x(k + 5), S21, &HD62F105D
+        GG d, a, b, c, x(k + 10), S22, &H2441453
+        GG c, d, a, b, x(k + 15), S23, &HD8A1E681
+        GG b, c, d, a, x(k + 4), S24, &HE7D3FBC8
+        GG a, b, c, d, x(k + 9), S21, &H21E1CDE6
+        GG d, a, b, c, x(k + 14), S22, &HC33707D6
+        GG c, d, a, b, x(k + 3), S23, &HF4D50D87
+        GG b, c, d, a, x(k + 8), S24, &H455A14ED
+        GG a, b, c, d, x(k + 13), S21, &HA9E3E905
+        GG d, a, b, c, x(k + 2), S22, &HFCEFA3F8
+        GG c, d, a, b, x(k + 7), S23, &H676F02D9
+        GG b, c, d, a, x(k + 12), S24, &H8D2A4C8A
+            
+        HH a, b, c, d, x(k + 5), S31, &HFFFA3942
+        HH d, a, b, c, x(k + 8), S32, &H8771F681
+        HH c, d, a, b, x(k + 11), S33, &H6D9D6122
+        HH b, c, d, a, x(k + 14), S34, &HFDE5380C
+        HH a, b, c, d, x(k + 1), S31, &HA4BEEA44
+        HH d, a, b, c, x(k + 4), S32, &H4BDECFA9
+        HH c, d, a, b, x(k + 7), S33, &HF6BB4B60
+        HH b, c, d, a, x(k + 10), S34, &HBEBFBC70
+        HH a, b, c, d, x(k + 13), S31, &H289B7EC6
+        HH d, a, b, c, x(k + 0), S32, &HEAA127FA
+        HH c, d, a, b, x(k + 3), S33, &HD4EF3085
+        HH b, c, d, a, x(k + 6), S34, &H4881D05
+        HH a, b, c, d, x(k + 9), S31, &HD9D4D039
+        HH d, a, b, c, x(k + 12), S32, &HE6DB99E5
+        HH c, d, a, b, x(k + 15), S33, &H1FA27CF8
+        HH b, c, d, a, x(k + 2), S34, &HC4AC5665
+    
+        II a, b, c, d, x(k + 0), S41, &HF4292244
+        II d, a, b, c, x(k + 7), S42, &H432AFF97
+        II c, d, a, b, x(k + 14), S43, &HAB9423A7
+        II b, c, d, a, x(k + 5), S44, &HFC93A039
+        II a, b, c, d, x(k + 12), S41, &H655B59C3
+        II d, a, b, c, x(k + 3), S42, &H8F0CCC92
+        II c, d, a, b, x(k + 10), S43, &HFFEFF47D
+        II b, c, d, a, x(k + 1), S44, &H85845DD1
+        II a, b, c, d, x(k + 8), S41, &H6FA87E4F
+        II d, a, b, c, x(k + 15), S42, &HFE2CE6E0
+        II c, d, a, b, x(k + 6), S43, &HA3014314
+        II b, c, d, a, x(k + 13), S44, &H4E0811A1
+        II a, b, c, d, x(k + 4), S41, &HF7537E82
+        II d, a, b, c, x(k + 11), S42, &HBD3AF235
+        II c, d, a, b, x(k + 2), S43, &H2AD7D2BB
+        II b, c, d, a, x(k + 9), S44, &HEB86D391
+    
+        a = AddUnsigned(a, AA)
+        b = AddUnsigned(b, BB)
+        c = AddUnsigned(c, CC)
+        d = AddUnsigned(d, DD)
+    Next
+    
+    MD5 = LCase(WordToHex(a) & WordToHex(b) & WordToHex(c) & WordToHex(d))
+	
+    if Err <> 0 Then
+        debug_log "MD5() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function GetLicenseKey(Username, Password, EmailAddress, FirstName, LastName)
+
+	on error resume next
+
+	Dim oWinHttp,sContentType 
+	Dim sSOAPRequest
+
+	sSOAPRequest = "<?xml version=""1.0"" encoding=""utf-8""?>"
+	sSOAPRequest = SSOAPRequest & "<soap:Envelope xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"">"
+	sSOAPRequest = SSOAPRequest & "<soap:Body>"
+	sSOAPRequest = SSOAPRequest & "<New_License xmlns=""http://tempuri.org/"">"
+	sSOAPRequest = SSOAPRequest & "<APIKey>23BDEE03-782D-4137-A05F-2D6E28D476FC</APIKey>"
+	sSOAPRequest = SSOAPRequest & "<Username>" & Username & "</Username>"
+	sSOAPRequest = SSOAPRequest & "<Password>" & MD5(Password) & "</Password>"
+	sSOAPRequest = SSOAPRequest & "<EmailAddress>" & EmailAddress & "</EmailAddress>"
+	sSOAPRequest = SSOAPRequest & "<FirstName>" & FirstName & "</FirstName>"
+	sSOAPRequest = SSOAPRequest & "<LastName>" & LastName & "</LastName>"
+	sSOAPRequest = SSOAPRequest & "<StreetAddress></StreetAddress>"
+	sSOAPRequest = SSOAPRequest & "<City></City>"
+	sSOAPRequest = SSOAPRequest & "<State></State>"
+	sSOAPRequest = SSOAPRequest & "<PostalCode></PostalCode>"
+	sSOAPRequest = SSOAPRequest & "<Country>US</Country>"
+	sSOAPRequest = SSOAPRequest & "<PhoneNumber></PhoneNumber>"
+	sSOAPRequest = SSOAPRequest & "<SecretQuestion></SecretQuestion>"
+	sSOAPRequest = SSOAPRequest & "<SecretAnswer></SecretAnswer>"
+	sSOAPRequest = SSOAPRequest & "<ReferrerSite>Plesk</ReferrerSite>"
+	sSOAPRequest = SSOAPRequest & "<FromPlesk>true</FromPlesk>"
+	sSOAPRequest = SSOAPRequest & "<Reseller_Id></Reseller_Id>"
+	sSOAPRequest = SSOAPRequest & "</New_License>"
+	sSOAPRequest = SSOAPRequest & "</soap:Body>"
+	sSOAPRequest = SSOAPRequest & "</soap:Envelope>"
+
+	Set oWinHttp = CreateObject("WinHttp.WinHttpRequest.5.1")
+	'Open HTTP connection  
+	oWinHttp.Open "POST", "https://www.sepcity.com/services/activation.asmx?op=New_License", False 
+
+	'Setting request headers  
+	oWinHttp.setRequestHeader "Content-Type", "text/xml; charset=utf-8"
+	oWinHttp.setRequestHeader "SOAPAction", "http://tempuri.org/New_License"
+
+	'Send SOAP request 
+	oWinHttp.Send  sSOAPRequest 
+
+	'Get XML Response 
+	sResponse = oWinHttp.ResponseText 
+
+	Set oWinHttp = Nothing 
+	
+	GetLicenseKey = sResponse
+	
+    if Err <> 0 Then
+        debug_log "GetLicenseKey() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+	
+End Function
+
+Function add_dictionary(dict, add)
+
+    on error resume next
+    
+    Dim res_dict
+    Set res_dict = CreateObject("Scripting.Dictionary")
+    
+	If dict.Count <> 0 Then
+	    For Each key in dict.Keys
+                res_dict.Add key, dict.Item(key)
+        next
+    End If
+    
+    If Not add.Count=0 Then
+	    For Each key in add.Keys
+            res_dict.Add key, add.Item(key)
+        next
+    End If
+    
+    if Err <> 0 Then
+        debug_log "add_dictionary() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+    Set add_dictionary = res_dict
+    
+End Function
+
+Function add_array(arr, add)
+
+    on error resume next
+    
+    Dim i
+    i = UBound(arr) + 1
+
+    ReDim Preserve arr( UBound(arr) + UBound(add) + 1 )
+    For Each el in add
+        arr(i) = el
+	i = i + 1
+    next
+    
+    add_array = arr
+    
+    if Err <> 0 Then
+        debug_log "add_array() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function fix_xml_special_chars(value)
+
+	value = Replace(value, "&", "&amp;")
+	value = Replace(value, ">", "&gt;")
+	value = Replace(value, "<", "&lt;")
+	value = Replace(value, """", "&quot;")
+	value = Replace(value, "'", "&apos;")
+	
+	fix_xml_special_chars = value
+	
+End Function
+
+Function fix_db_connection(db_modify_hash)
+
+    Dim web_config_file, db_connection_pattern, db_connection_string, db_connection_string_fix, fcontents
+    
+    web_config_file = get_web_dir("/") & "/" & "web.config"
+
+    db_connection_pattern = "<!--[^<>]*SQL Server 2005[^>]*-->[^>]*>[^>]*Server=\(local\);Database=SepCity;uid=;pwd=;[^-]*-->"
+
+    db_connection_string = get_key(web_config_file, db_connection_pattern)
+    modify_file "db.connection.in", "db.connection.fix", db_modify_hash
+    db_connection_string_fix = read_file("db.connection.fix")
+
+    if Len(db_connection_string) > 0 AND Len(db_connection_string_fix) > 0 Then
+        Dim fixed_fcontent, fcontent
+        fcontent = read_file(web_config_file)
+        fixed_fcontent = Replace(fcontent, db_connection_string, db_connection_string_fix)
+        write_file web_config_file, fixed_fcontent
+    End If
+End Function
+
+Function configure(config_files, schema_files, db_ids, psa_modify_hash, db_modify_hash, settings_modify_hash, crypt_settings_modify_hash, settings_enum_modify_hash)
+
+    on error resume next
+	
+    debug_log "Loading configure()"
+	
+    For Each web_id in config_files.Keys
+		For Each arr In config_files.Item(web_id)
+		    Dim template_file, dest_path, modify_dict
+		    Set modify_dict = CreateObject("Scripting.Dictionary")
+		    template_file = arr(0)
+		    dest_path = get_web_dir(web_id) & arr(1)
+            debug_log "Loading template_file (" & template_file & ")"
+            Set modify_dict = add_dictionary(crypt_settings_modify_hash, settings_enum_modify_hash)
+            Set modify_dict = add_dictionary(modify_dict, settings_modify_hash)
+		    Set modify_dict = add_dictionary(modify_dict, db_modify_hash)
+		    Set modify_dict = add_dictionary(modify_dict, psa_modify_hash)
+            modify_file template_file, dest_path, modify_dict
+		Next
+    Next
+	
+    Dim FSO
+    Set FSO = CreateObject("Scripting.FileSystemObject")
+    For Each db_id in db_ids
+	    For Each schema_file_key In schema_files
+            debug_log "Executing SQL File (" & schema_file_key & ")"
+			Dim modify_dicti
+			Set modify_dicti = CreateObject("Scripting.Dictionary")
+			Set modify_dicti = add_dictionary(crypt_settings_modify_hash, settings_enum_modify_hash)
+			Set modify_dicti = add_dictionary(modify_dicti, settings_modify_hash)
+			Set modify_dicti = add_dictionary(modify_dicti, db_modify_hash)
+			Set modify_dicti = add_dictionary(modify_dicti, psa_modify_hash)
+			modify_file schema_file_key, get_web_dir("/") & schema_file_key & ".copy", modify_dicti
+			execute_sql_file get_db_address(db_id), get_db_name(db_id), get_db_login(db_id), get_db_password(db_id), get_web_dir("/") & schema_file_key & ".copy"
+			FSO.DeleteFile get_web_dir("/") & schema_file_key & ".copy"
+	    Next
+    Next
+
+    if Err <> 0 Then
+        debug_log "configure() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function remove_app(schema_files, db_ids, psa_modify_hash, db_modify_hash, settings_modify_hash, crypt_settings_modify_hash, settings_enum_modify_hash)
+    
+    on error resume next
+	
+    Dim FSO
+    Set FSO = CreateObject("Scripting.FileSystemObject")
+    For Each db_id in db_ids
+	    For Each schema_file_key In schema_files
+            debug_log "Executing SQL File (" & schema_file_key & ")"
+			Dim modify_dicti
+			Set modify_dicti = CreateObject("Scripting.Dictionary")
+			Set modify_dicti = add_dictionary(crypt_settings_modify_hash, settings_enum_modify_hash)
+			Set modify_dicti = add_dictionary(modify_dicti, settings_modify_hash)
+			Set modify_dicti = add_dictionary(modify_dicti, db_modify_hash)
+			Set modify_dicti = add_dictionary(modify_dicti, psa_modify_hash)
+			modify_file schema_file_key, get_web_dir("/") & schema_file_key & ".copy", modify_dicti
+			execute_sql_file get_db_address(db_id), get_db_name(db_id), get_db_login(db_id), get_db_password(db_id), get_web_dir("/") & schema_file_key & ".copy"
+			FSO.DeleteFile get_web_dir("/") & schema_file_key & ".copy"
+	    Next
+    Next
+
+    if Err <> 0 Then
+        debug_log "remove_app() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_key(config_file, pattern)
+
+	Dim file_content, objRegExp
+	file_content = read_file(config_file)
+
+	Set objRegExp = New RegExp
+	objRegExp.Pattern = pattern
+	objRegExp.Global = True
+	If (objRegExp.Test(file_content) = True) Then
+		Set colMatches = objRegExp.Execute(file_content) 
+		Set ourkey = colMatches(0)
+		get_key = ourkey.Value
+	Else
+		get_key = ""
+	End If
+	
+End Function
+	
+Function backup_file(config_file)
+	Dim file_content
+
+	file_content = read_file(config_file)
+	write_file config_file & ".backup", file_content
+End Function
+
+Function fetch_env_var(envvar)
+
+    on error resume next
+    
+    Dim procEnv
+    set procEnv = shell.Environment("Process")
+    fetch_env_var = procEnv(envvar)
+    
+    if Err <> 0 Then
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_psa_modify_hash(params, sLicense)
+
+    on error resume next
+    
+    Dim scheme, host, port, path, full
+    scheme = fetch_env_var("BASE_URL_SCHEME")
+    host = fetch_env_var("BASE_URL_HOST")
+    port = fetch_env_var("BASE_URL_PORT")
+    path = fetch_env_var("BASE_URL_PATH")
+
+    full = "" & scheme & "://" & host 
+    
+    If Not port = "" Then
+		full = full & ":" & port
+    End If
+    
+    If Left(path, 1) = "/" Then
+		full = full & path
+    Else
+		full = full & "/" & path
+    End If
+
+    Dim parameters
+    Set parameters = CreateObject("Scripting.Dictionary")
+    
+    parameters.Item("@@BASE_URL_SCHEME@@") = scheme
+    If scheme = "http" Then
+		parameters.Item("@@SSL_ENABLED@@") = 0
+		parameters.Item("@@SSL_ENABLED_YN@@") = "n"
+    ElseIf scheme = "https" Then
+		parameters.Item("@@SSL_ENABLED@@") = 1
+		parameters.Item("@@SSL_ENABLED_YN@@") = "y"
+    End If
+    parameters.Item("@@BASE_URL_HOST@@") = host
+    parameters.Item("@@BASE_URL_PORT@@") = port
+
+    Dim my_url_path
+    my_url_path = path
+    If my_url_path = "/" Then
+		my_url_path = "."
+    ElseIf Mid(my_url_path, Len(my_url_path), 1) = "/" Then
+		my_url_path = Mid(my_url_path, 1, Len(my_url_path)-1)
+    End If
+    parameters.Item("@@BASE_URL_PATH@@") = my_url_path
+
+    Dim my_root_url
+    my_root_url = full
+    
+    If Mid(my_root_url, Len(my_root_url), 1) = "/" Then
+		my_root_url = Mid(my_root_url, 1, Len(my_root_url)-1)
+    End If
+    parameters.Item("@@ROOT_URL@@") = my_root_url
+
+    parameters.Item("@@ENCRYPTION_KEY@@") = sEncryptionKey
+
+    parameters.Item("@@MD5PASSWORD@@") = MD5(fetch_env_var("SETTINGS_bpassword"))
+
+	Dim sConnStr
+	sConnStr = "DATABASE=" & get_db_name("main") & ";SERVER=" & get_db_address("main") & ";user id=" & get_db_login("main") & ";PASSWORD=" & get_db_password("main") & ";MultipleActiveResultSets=true;"
+	sConnStr = sConnStr
+    parameters.Item("@@CONNECTIONSTRING@@") = sConnStr
+    
+    parameters.Item("@@LICENSE_KEY@@") = replace(replace(sLicense, "Successful (", ""),")","")
+    
+    parameters.Item("@@INSTALL_DATE@@") = Date()
+    
+    Dim my_web_dir
+    my_web_dir = fetch_env_var("WEB___DIR")
+    
+    If Mid(my_web_dir, Len(my_web_dir), 1) = "/" Then
+		my_web_dir = Mid(my_web_dir, 1, Len(my_web_dir)-1)
+    End If
+    parameters.Item("@@ROOT_DIR@@") = my_web_dir
+
+    Set get_psa_modify_hash = parameters
+    
+    if Err <> 0 Then
+        debug_log "get_psa_modify_hash() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_db_type(db_id)
+
+    on error resume next
+    
+    get_db_type = fetch_env_var("DB_" & db_id & "_TYPE")
+    
+    if Err <> 0 Then
+        debug_log "get_db_type() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_db_name(db_id)
+
+    on error resume next
+    
+    get_db_name = fetch_env_var("DB_" & db_id & "_NAME")
+    
+    if Err <> 0 Then
+        debug_log "get_db_name() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_db_login(db_id)
+
+    on error resume next
+    
+    get_db_login = fetch_env_var("DB_" & db_id & "_LOGIN")
+    
+    if Err <> 0 Then
+        debug_log "get_db_login() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_db_password(db_id)
+
+    on error resume next
+    
+    get_db_password = fix_xml_special_chars(fetch_env_var("DB_" & db_id & "_PASSWORD"))
+	
+    if Err <> 0 Then
+        debug_log "get_db_password() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_db_address(db_id)
+
+    on error resume next
+    
+    Dim db_address
+    db_address = fetch_env_var("DB_" & db_id & "_HOST")
+    
+    If Not fetch_env_var("DB_" & db_id & "_PORT") = "" Then
+        If Not fetch_env_var("DB_" & db_id & "_PORT") = "0" Then
+            db_address = db_address & "," & fetch_env_var("DB_" & db_id & "_PORT")
+		End If
+    End If
+    
+    get_db_address = db_address
+    
+    if Err <> 0 Then
+        debug_log "get_db_address() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_db_modify_hash(db_ids)
+
+    on error resume next
+    
+    Dim parameters, db_id
+    Set parameters = CreateObject("Scripting.Dictionary")
+
+    For Each db_id In db_ids
+        parameters.Item("@@DB_" & UCase(db_id) & "_TYPE@@") = get_db_type(db_id)
+		parameters.Item("@@DB_" & UCase(db_id) & "_NAME@@") = get_db_name(db_id)
+		parameters.Item("@@DB_" & UCase(db_id) & "_LOGIN@@") = get_db_login(db_id)
+		parameters.Item("@@DB_" & UCase(db_id) & "_PASSWORD@@") = get_db_password(db_id)
+		parameters.Item("@@DB_" & UCase(db_id) & "_HOST@@") = fetch_env_var("DB_" & db_id & "_HOST")
+		parameters.Item("@@DB_" & UCase(db_id) & "_VERSION@@") = fetch_env_var("DB_" & db_id & "_VERSION")
+		parameters.Item("@@DB_" & UCase(db_id) & "_PORT@@") = fetch_env_var("DB_" & db_id & "_PORT")
+		parameters.Item("@@DB_" & UCase(db_id) & "_ADDRESS@@") = get_db_address(db_id)
+    Next
+
+    Set get_db_modify_hash = parameters
+    
+    if Err <> 0 Then
+        debug_log "get_db_modify_hash() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_web_dir(web_id)
+
+    on error resume next
+    
+    Dim web_id_parameter
+    web_id_parameter = Replace(web_id, "/", "_")
+    get_web_dir = fetch_env_var("WEB_" & web_id_parameter & "_DIR")
+    
+    if Err <> 0 Then
+        debug_log "get_web_dir() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_web_modify_hash(web_ids)
+
+    on error resume next
+    
+    Dim parameters, web_id
+    Set parameters = CreateObject("Scripting.Dictionary")
+
+    For Each web_id In web_ids
+	Dim web_id_parameter
+        web_id_parameter = Replace(web_id, "/", "_")
+        parameters.Item("@@" & UCase(web_id) & "_DIR@@") = fetch_env_var("WEB_" & web_id_parameter & "_DIR")
+    Next
+
+    Set get_web_modify_hash = parameters
+    
+    if Err <> 0 Then
+        debug_log "get_web_modify_hash() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_settings_modify_hash(params)
+
+    on error resume next
+    
+    Dim parameters, param
+    Set parameters = CreateObject("Scripting.Dictionary")
+
+    For Each param In params
+		If (UCase(param) = "OSMTPUSER" Or UCase(param) = "PSMTPPASS") And fix_xml_special_chars(fetch_env_var("SETTINGS_" & param & "")) <> "" Then
+			parameters.Item("@@" & UCase(param) & "@@") = fix_xml_special_chars(fetch_env_var("SETTINGS_" & param & ""))
+		Else
+			parameters.Item("@@" & UCase(param) & "@@") = fix_xml_special_chars(fetch_env_var("SETTINGS_" & param & ""))
+		End If
+    Next
+
+    Set get_settings_modify_hash = parameters
+    
+    if Err <> 0 Then
+        debug_log "get_settings_modify_hash() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_settings_enum_modify_hash(enum_params)
+    on error resume next
+    Dim parameters, key, el
+    Set parameters = CreateObject("Scripting.Dictionary")
+
+    For Each key In enum_params.Keys
+	Dim param_value
+	param_value = fetch_env_var("SETTINGS_" & key & "")
+	For Each el In enum_params.Item(key).Keys
+	    If param_value = el Then
+		parameters.Item("@@" & UCase(key)  & "@@") = enum_params.Item(key).Item(el)
+	    End If
+	Next
+    Next
+
+    Set get_settings_enum_modify_hash = parameters
+    
+    if Err <> 0 Then
+        debug_log "get_settings_enum_modify_hash() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function get_crypt_settings_modify_hash(crypt_params)
+
+    on error resume next
+    
+    Dim parameters, db_id
+    Set parameters = CreateObject("Scripting.Dictionary")
+
+    For Each param In crypt_params
+	Dim fname, crypted
+	fname = "" & param & "_crypt"
+	execute("crypted = " & fname & "("""&fetch_env_var("SETTINGS_" & param & "")&""")")
+'	parameters.Item("@@" & UCase(param)  & "@@") = execute(fname(fetch_env_var("SETTINGS_" & param & "")))
+	parameters.Item("@@" & UCase(param)  & "@@") = crypted
+    Next
+
+    Set get_crypt_settings_modify_hash = parameters
+    
+    if Err <> 0 Then
+        debug_log "get_crypt_settings_modify_hash() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function print_stderr(message)
+    WScript.Echo message
+    WScript.Quit(1)
+End Function
+
+Function read_file(ByVal FilePath)
+
+    on error resume next
+    
+    Const ForReading = 1, TristateUseDefault = -2
+    Dim fso, file
+    Set fso = CreateObject("Scripting.FileSystemObject")
+    If fso.FileExists(FilePath) Then
+		Set file = fso.OpenTextFile(FilePath, ForReading, False, TristateUseDefault)
+		If file.AtEndOfStream = False Then
+		    read_file = file.ReadAll
+		End If
+		file.Close
+    End If
+    
+    if Err <> 0 Then
+        debug_log "read_file() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function write_file(ByVal FilePath, ByVal Text)
+
+    on error resume next
+    
+    WriteFile = False
+    Const ForWriting = 2, TristateUseDefault = -2
+    Dim fso, file
+    Set fso = CreateObject("Scripting.FileSystemObject")
+    Set file = fso.OpenTextFile(FilePath, ForWriting, True, TristateUseDefault)
+    file.Write Text
+    file.Close
+    
+    If Err.Number = 0 Then
+		WriteFile = True
+    End If
+    
+    if Err <> 0 Then
+        debug_log "write_file() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function modify_file(file_source, file_dest, modify_hash)
+
+    on error resume next
+    
+    Dim file_content
+    file_content = modify_content(file_source, modify_hash)
+    write_file file_dest, file_content
+    
+    if Err <> 0 Then
+        debug_log "modify_file() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function modify_content(file_source, modify_hash)
+
+    on error resume next
+    
+    Dim file_content, key
+    file_content = read_file(file_source)
+    For Each key in modify_hash.keys
+		If modify_hash.Exists(key) Then
+	            file_content = Replace(file_content, key, modify_hash.Item(key))
+		End If
+    Next
+    
+    modify_content = file_content
+    
+    if Err <> 0 Then
+        debug_log "modify_content() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function delete_directory(dir)
+	Dim filesys
+	Set filesys = CreateObject("Scripting.FileSystemObject")
+	If filesys.FolderExists(dir) Then 
+		filesys.DeleteFolder dir
+	End If 
+End Function
+
+Function execute_sql_file(dbhost, dbname, dbuser, dbpassword, filename)
+
+    on error resume next
+    
+    Dim db_conn_str
+    db_conn_str = "Provider=SQLOLEDB.1;Password=" & dbpassword & ";User ID=" & dbuser & ";Initial Catalog=" & dbname & ";Data Source=" & dbhost
+
+    Dim FSO
+    Dim cn
+    Dim Source
+    Set FSO = CreateObject("Scripting.FileSystemObject")
+    Set cn = CreateObject("ADODB.Connection")
+    cn.ConnectionString = db_conn_str
+    cn.Open
+    
+    Set Source=FSO.OpenTextFile(filename, 1, False)
+    Dim sqlcommand
+    sqlcommand = ""
+    Do While Source.AtEndOfStream <> true
+	Dim sqlLine
+	sqlLine = Source.ReadLine
+	If (sqlLine = "GO") OR (sqlLine = "go") OR (sqlLine = "Go") Then
+	    cn.Execute(sqlcommand)
+	    sqlcommand = ""
+	Else
+	    sqlcommand = sqlcommand & Chr(10) & sqlLine
+	End If
+    Loop
+    Source.close
+    cn.Close
+    
+    if Err <> 0 Then
+        debug_log "execute_sql_file() Error - " & Err.Description
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Function
+
+Function open_db_connection(dbhost, dbname, dbuser, dbpassword)
+
+	Dim db_conn_str
+	db_conn_str = "Provider=SQLOLEDB.1;Password="&dbpassword&";User ID="&dbuser&";Initial Catalog="&dbname&";Data Source="&dbhost
+
+	Dim FSO
+	Dim cn
+	Dim Source
+
+	Set FSO = CreateObject("Scripting.FileSystemObject")
+	Set cn = CreateObject("ADODB.Connection")
+	cn.ConnectionString = db_conn_str
+	cn.Open
+
+	Set open_db_connection = cn
+
+End Function
+
+Function check_mssql2000()
+
+	Dim dbConn
+	Set dbConn = open_db_connection(get_db_address("main"), get_db_name("main"), get_db_login("main"), get_db_password("main"))
+
+	Set rs = dbConn.Execute("SELECT @@version")
+	version = rs(0).value
+
+	Set objRegExp = New RegExp
+	objRegExp.Pattern = "SQL *Server *2000"
+	objRegExp.Global = True
+	If objRegExp.Test(version) = True Then
+		' This is MS SQL 2000!
+		check_mssql2000 = True
+	Else 
+		check_mssql2000 = False
+	End If
+	dbConn.Close
+	
+End Function
+
+Function base64Encode(str)
+
+    Set oEncoding = CreateObject("System.Text.UnicodeEncoding")
+       
+    Set objXML = createobject("MSXML2.DOMDocument.3.0")
+    Set objNode = objXML.createElement("b64")
+
+    objNode.dataType = "bin.base64"
+    objNode.nodeTypedValue = oEncoding.GetBytes_4(str)
+    base64Encode = objNode.Text  
+      
+End Function
+
+Function compare_version(major_number, minor_number)    
+
+	Dim dbConn, rs
+	Set dbConn = open_db_connection(get_db_address("main"), get_db_name("main"), get_db_login("main"), get_db_password("main"))
+
+    Set rs = dbConn.Execute("SELECT Major, Minor FROM " & get_db_login("main") & ".Version order by CreatedDate desc")
+    
+    If rs.EOF Then
+        compare_version = True
+    Else
+        current_major = rs(0).value
+        current_minor = rs(1).value
+        If current_major > major_number Then
+            compare_version = False
+        ElseIf current_major = major_number And current_minor >= minor_number Then
+            compare_version = False
+        Else
+            compare_version = True
+        End If
+    End If
+	dbConn.Close
+	
+End Function
+
+Function database_empty()
+
+	Dim dbConn, rs
+	Set dbConn = open_db_connection(get_db_address("main"), get_db_name("main"), get_db_login("main"), get_db_password("main"))
+
+	Set rs = dbConn.Execute("SELECT * FROM sys.tables")
+
+    If rs.EOF Then
+		database_empty = True
+	Else
+		database_empty = False
+	End If
+	dbConn.Close
+	
+End Function
+
+'@@FUNCTION_EXECUTE_SQL@@
+
+Sub checkErrors(message)
+	If Err <> 0 Then
+        debug_log "checkErrors() Error - " & Err.Description
+		WScript.Echo message
+		WScript.Echo Err.Description
+		WScript.Quit(1)
+	End if
+End Sub
+
+Function ParseXML(fieldname, apstring)
+
+	on error resume next
+	
+    Dim posa
+    Dim posb
+
+    If InStr(1, apstring, "<" & fieldname & ">", 1) > 0 And InStr(1, apstring, "</" & fieldname & ">", 1) > 0 Then
+        posa = InStr(1, apstring, "<" & fieldname & ">", 1)
+        posb = InStr(posa, apstring, "</" & fieldname & ">", 1)
+
+        ParseXML = Mid(apstring, posa + Len(fieldname) + 2, posb - posa - Len(fieldname) - 2)
+    Else
+    	ParseXML = apstring
+    End If
+
+	If Err <> 0 Then
+        debug_log "ParseXML() Error - " & Err.Description
+	End if
+	
+End Function
+
+Function FixWord(sword)
+	FixWord = Replace(sword, "'", "''")
+End Function
+
+Sub debug_log(stext)
+
+    on error resume next
+
+    Dim my_web_dir
+    my_web_dir = fetch_env_var("WEB___DIR")
+    
+    If Mid(my_web_dir, Len(my_web_dir), 1) = "/" Then
+		my_web_dir = Mid(my_web_dir, 1, Len(my_web_dir)-1)
+    End If
+    
+    Dim fso
+    Dim objLogFile
+
+    'Set Objects
+    Set fso = CreateObject("Scripting.FileSystemObject")
+    Set objLogFile = fso.OpenTextFile(my_web_dir & "install.log", 8, true)
+    objLogFile.Writeline Now & ": " & stext
+    objLogFile.close
+
+    Set fso = Nothing
+    Set objLogFile = Nothing
+
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Dim Shell
+Set Shell = WScript.CreateObject("WScript.Shell")
+
+Dim sLicense
+sLicense = GetLicenseKey(fetch_env_var("SETTINGS_auser_name"), fetch_env_var("SETTINGS_bpassword"), fetch_env_var("SETTINGS_cemail_address"), fetch_env_var("SETTINGS_dfirst_name"), fetch_env_var("SETTINGS_elast_name"))
+sLicense = ParseXML("New_LicenseResult", sLicense)
+
+Dim config_files
+Set config_files = CreateObject("Scripting.Dictionary")
+config_files.Add "/", Array( Array("image_sizes.xml.in", "app_data\image_sizes.xml"), Array("points.xml.in", "app_data\points.xml"), Array("security.xml.in", "app_data\security.xml"), Array("settings.xml.in", "app_data\settings.xml"), Array("system.xml.in", "app_data\system.xml"), Array("license.xml.in", "app_data\license.xml"))
+
+Dim config_files_upg
+Set config_files_upg = CreateObject("Scripting.Dictionary")
+
+Dim config_files_configure
+Set config_files_configure = CreateObject("Scripting.Dictionary")
+
+Dim schema_files
+schema_files = Array("create_tables.sql", "default_data.sql", "event_types.sql", "job_titles.sql", "postcards.sql")
+
+Dim remove_schema_files
+remove_schema_files = Array("uninstall.sql")
+
+Dim psa_params
+psa_params = Array( )
+Dim db_ids
+db_ids = Array( "main" )
+Dim web_ids
+web_ids = Array( "/" )
+Dim settings_params
+settings_params = Array("auser_name", "bpassword", "cemail_address", "dfirst_name", "elast_name", "msite_name", "nsmtpserver", "osmtpuser", "psmtppass")
+
+Dim settings_enum_params
+Set settings_enum_params = CreateObject("Scripting.Dictionary")
+
+Dim crypt_settings_params
+crypt_settings_params = Array(  )
+
+Dim psa_modify_hash
+Set psa_modify_hash = CreateObject("Scripting.Dictionary")
+Set psa_modify_hash = get_psa_modify_hash(psa_params, sLicense)
+Dim db_modify_hash
+Set db_modify_hash = CreateObject("Scripting.Dictionary")
+Set db_modify_hash = get_db_modify_hash(db_ids)
+Dim web_modify_hash
+Set web_modify_hash = CreateObject("Scripting.Dictionary")
+Set web_modify_hash = get_web_modify_hash(web_ids)
+Dim settings_modify_hash
+Set settings_modify_hash = CreateObject("Scripting.Dictionary")
+Set settings_modify_hash = get_settings_modify_hash(settings_params)
+Dim settings_enum_modify_hash
+Set settings_enum_modify_hash = CreateObject("Scripting.Dictionary")
+Set settings_enum_modify_hash = get_settings_enum_modify_hash(settings_enum_params)
+Dim crypt_settings_modify_hash
+Set crypt_settings_modify_hash = CreateObject("Scripting.Dictionary")
+Set crypt_settings_modify_hash = get_crypt_settings_modify_hash(crypt_settings_params)
+
+If Wscript.Arguments.length < 1 Then
+	debug_log "Too few arguments"
+    WScript.Echo "Too few arguments"
+    WScript.Quit(1)
+End If
+
+Dim command
+command = Wscript.Arguments(0)
+
+on error resume next
+isM2000 = check_mssql2000()
+checkErrors "Error during MSSQL version checking" 
+
+If isM2000 = True Then
+	 settings_modify_hash.Item("@@AUTO_UPGRADE@@") = "false"
+Else
+	 settings_modify_hash.Item("@@AUTO_UPGRADE@@") = "true"
+End If
+
+If command = "upgrade" Then
+    Dim machine_key, machine_key_live, db_connection_string
+    backup_file(get_web_dir("/") & "/" & "web.config")
+    machine_key_live = get_key(get_web_dir("/") & "/" & "web.config", "<machineKey[^>]*>")
+    machine_key_dummy = get_key("web.config.in", "<machineKey[^>]*>")
+
+    If Len(machine_key_live) > 0 AND Len(machine_key_dummy) > 0 Then
+    	settings_modify_hash.Item(machine_key_dummy) = machine_key_live
+    End If
+
+	delete_directory get_web_dir("/") & "/App_Code/HTML"
+
+	' checking if updating configs is required. configs should not be updated in case of minor release. Comparing this version with intalled one
+	If database_empty() Or compare_version(6, 1) Then
+		configure config_files_upg, schema_files, db_ids, psa_modify_hash, db_modify_hash, settings_modify_hash, crypt_settings_modify_hash, settings_enum_modify_hash
+	Else
+		'fix Teleric module version in web.config
+		Dim telerik_version_fix
+		Set telerik_version_fix = CreateObject("Scripting.Dictionary")
+		telerik_version_fix.Item("2011.3.1115.35") = "2013.1.403.40"
+		telerik_version_fix.Item("2011.2.915.35") = "2013.1.403.40"
+		telerik_version_fix.Item("2012.1.411.35") = "2013.1.403.40"
+		telerik_version_fix.Item("2012.2.724.35") = "2013.1.403.40"
+		telerik_version_fix.Item("2012.3.1205.40") = "2013.1.403.40"
+		telerik_version_fix.Item("2013.1.220.40") = "2013.1.403.40"
+
+		modify_file get_web_dir("/") & "/web.config", get_web_dir("/") & "/web.config", telerik_version_fix
+	End If
+
+	If ( isM2000 = True ) Then
+    	debug_log "MSSQL 2000 is no longer supported by DotNetNuke! Please upgrade your database!"
+		WScript.Echo "MSSQL 2000 is no longer supported by DotNetNuke! Please upgrade your database!"
+		WScript.Quit(1)
+	End If	
+	
+    WScript.Quit(0)
+End If
+
+If command = "install" Then
+	If Left(sLicense, 10) <> "Successful" Then
+		debug_log "Cannot load successful license: (" & sLicense & ")"
+		WScript.Echo "There has been an error connecting to the license server to generate you a key. (" & sLicense & ")"
+		WScript.Quit(1)
+	End If
+	sLicense =  replace(replace(sLicense, "Successful (", ""),")","")
+	debug_log "License Key (" & sLicense & ")"
+	
+    configure config_files, schema_files, db_ids, psa_modify_hash, db_modify_hash, settings_modify_hash, crypt_settings_modify_hash, settings_enum_modify_hash
+	If ( isM2000 = True ) Then
+        debug_log "MSSQL 2000 is no longer supported by DotNetNuke! Please upgrade your database!"
+		WScript.Echo "MSSQL 2000 is no longer supported by DotNetNuke! Please upgrade your database!"
+		WScript.Quit(1)
+	End If	
+
+    Dim UserID
+    UserID = GenerateGUID()
+    
+	Execute_SQL "insert into Advertisements (AdID, MaxClicks, MaxExposures, TotalClicks, TotalExposures, ImageURL, SiteURL, UserID, UseHTML, StartDate, ZoneID, CatIDs, PortalIDs, EndDate, Status, DatePosted, PageIDs, Description, HTMLCode) VALUES('938475778847501','100000', '100000', '1', '1', '/" & fetch_env_var("BASE_URL_PATH") & "images/banner1.gif', '/" & fetch_env_var("BASE_URL_PATH") & "advertising.aspx', '" & UserID & "', '0', '" & Date() & "', '192837456', '|0|', '|0|','" & DateAdd("y", 4, Date()) & "','1','" & Date() & "', '|-1|', 'Advertise Here 1', '')"
+	Execute_SQL "insert into Advertisements (AdID, MaxClicks, MaxExposures, TotalClicks, TotalExposures, ImageURL, SiteURL, UserID, UseHTML, StartDate, ZoneID, CatIDs, PortalIDs, EndDate, Status, DatePosted, PageIDs, Description, HTMLCode) VALUES('938475778847502','100000', '100000', '1', '1', '/" & fetch_env_var("BASE_URL_PATH") & "images/banner1.gif', '/" & fetch_env_var("BASE_URL_PATH") & "advertising.aspx', '" & UserID & "', '0', '" & Date() & "', '192837456', '|0|', '|0|','" & DateAdd("y", 4, Date()) & "','1','" & Date() & "', '|-1|', 'Advertise Here 2', '')"
+	Execute_SQL "insert into Advertisements (AdID, MaxClicks, MaxExposures, TotalClicks, TotalExposures, ImageURL, SiteURL, UserID, UseHTML, StartDate, ZoneID, CatIDs, PortalIDs, EndDate, Status, DatePosted, PageIDs, Description, HTMLCode) VALUES('938475778847503','100000', '100000', '1', '1', '/" & fetch_env_var("BASE_URL_PATH") & "images/banner1.gif', '/" & fetch_env_var("BASE_URL_PATH") & "advertising.aspx', '" & UserID & "', '0', '" & Date() & "', '192837456', '|0|', '|0|','" & DateAdd("y", 4, Date()) & "','1','" & Date() & "', '|-1|', 'Advertise Here 3', '')"
+	Execute_SQL "insert into Advertisements (AdID, MaxClicks, MaxExposures, TotalClicks, TotalExposures, ImageURL, SiteURL, UserID, UseHTML, StartDate, ZoneID, CatIDs, PortalIDs, EndDate, Status, DatePosted, PageIDs, Description, HTMLCode) VALUES('938475778847504','100000', '100000', '1', '1', '/" & fetch_env_var("BASE_URL_PATH") & "images/banner1.gif', '/" & fetch_env_var("BASE_URL_PATH") & "advertising.aspx', '" & UserID & "', '0', '" & Date() & "', '192837456', '|0|', '|0|','" & DateAdd("y", 4, Date()) & "','1','" & Date() & "', '|-1|', 'Advertise Here 4', '')"
+	Execute_SQL "insert into Advertisements (AdID, MaxClicks, MaxExposures, TotalClicks, TotalExposures, ImageURL, SiteURL, UserID, UseHTML, StartDate, ZoneID, CatIDs, PortalIDs, EndDate, Status, DatePosted, PageIDs, Description, HTMLCode) VALUES('938475778847505','100000', '100000', '1', '1', '/" & fetch_env_var("BASE_URL_PATH") & "images/banner1.gif', '/" & fetch_env_var("BASE_URL_PATH") & "advertising.aspx', '" & UserID & "', '0', '" & Date() & "', '192837456', '|0|', '|0|','" & DateAdd("y", 4, Date()) & "','1','" & Date() & "', '|-1|', 'Advertise Here 5', '')"
+	Execute_SQL "insert into Advertisements (AdID, MaxClicks, MaxExposures, TotalClicks, TotalExposures, ImageURL, SiteURL, UserID, UseHTML, StartDate, ZoneID, CatIDs, PortalIDs, EndDate, Status, DatePosted, PageIDs, Description, HTMLCode) VALUES('938475778847506','100000', '100000', '1', '1', '/" & fetch_env_var("BASE_URL_PATH") & "images/banner1.gif', '/" & fetch_env_var("BASE_URL_PATH") & "advertising.aspx', '" & UserID & "', '0', '" & Date() & "', '192837456', '|0|', '|0|','" & DateAdd("y", 4, Date()) & "','1','" & Date() & "', '|-1|', 'Advertise Here 6', '')"
+	Execute_SQL "insert into Members (UserID, UserName, Password, EmailAddress, FirstName, LastName, Male, BirthDate, AccessClass, AccessKeys, Status, LastLogin, CreateDate, PortalID, UserNotes, StreetAddress, City, State, ZipCode, PhoneNumber, Country, ApproveFriends, IPAddress, PayPal, ClassChanged, UserPoints, AffiliateID, Secret_Answer, Secret_Question) VALUES('" & UserID & "','" & FixWord(fetch_env_var("SETTINGS_auser_name")) & "', '" & FixWord(MD5(fetch_env_var("SETTINGS_bpassword"))) & "', '" & FixWord(fetch_env_var("SETTINGS_cemail_address")) & "', '" & FixWord(fetch_env_var("SETTINGS_dfirst_name")) & "', '" & FixWord(fetch_env_var("SETTINGS_elast_name")) & "', '1', '" & Date() & "', '2', '|1|,|2|,|3|,|4|', '1', '" & Now() & "', '" & Now() & "', '0', '', 'Street', 'City', 'CA', '55555', '(555) 555-5555', 'us', 'Yes', '', '', '" & Now() & "', '0', '937485671162905', '" & FixWord(fetch_env_var("SETTINGS_auser_name")) & "', 'What is your user name?')"
+    
+    if Err <> 0 Then
+        debug_log "Install Error (" & Err.Description & ")"
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+    WScript.Quit(0)
+End If
+
+Sub Execute_SQL(sStatement)
+
+	on error resume next
+	
+    Dim db_conn_str
+    db_conn_str = "Provider=SQLOLEDB.1;Password=" & get_db_password("main") & ";User ID=" & get_db_login("main") & ";Initial Catalog=" & get_db_name("main") & ";Data Source=" & get_db_address("main")
+
+    Dim cn
+    Set cn = CreateObject("ADODB.Connection")
+    cn.ConnectionString = db_conn_str
+    cn.Open
+	cn.Execute(sStatement)
+    cn.Close
+    
+    if Err <> 0 Then
+        debug_log "Execute_SQL() Error (" & Err.Description & ")"
+        WScript.Echo Err.Description
+        Err.Clear
+    End if
+    
+End Sub
+
+If command="remove" Then
+    remove_app remove_schema_files, db_ids, psa_modify_hash, db_modify_hash, settings_modify_hash, crypt_settings_modify_hash, settings_enum_modify_hash
+    WScript.Quit(0)
+End If
+
+If command="configure" Then
+	If database_empty() Then
+		configure config_files_configure, schema_files, db_ids, psa_modify_hash, db_modify_hash, settings_modify_hash, crypt_settings_modify_hash, settings_enum_modify_hash
+	Else
+		on error resume next
+    	debug_log "Error during admin password resetting" 
+		checkErrors "Error during admin password resetting" 
+	End If
+    WScript.Quit(0)
+End If
+
+if Err <> 0 Then
+    debug_log "Root Error - " & Err.Description
+    WScript.Echo Err.Description
+    Err.Clear
+End if
+
+WScript.Echo "Error: unknown command " & command & ".\n"
+debug_log "Error: unknown command " & command & "."
+WScript.Quit(1)

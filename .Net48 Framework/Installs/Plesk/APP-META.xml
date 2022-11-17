@@ -1,0 +1,405 @@
+<application xmlns="http://apstandard.com/ns/1" version="1.2" packaged="2010-06-16T14:03:48">
+	<id>http://www.sepcity.com/</id>
+	<name>SepCity CMS</name>
+	<version>2.9</version>
+	<release>1</release>
+
+	<homepage>http://www.sepcity.com</homepage>
+
+	<vendor>
+		<name>SepCity, Inc.</name>
+		<homepage>http://www.sepcity.com</homepage>
+		<icon path="images/icon.png" />
+	</vendor>
+
+	<packager>
+		<name>SepCity, Inc.</name>
+		<homepage>http://www.sepcity.com</homepage>
+		<icon path="images/icon.png" />
+		<uri>uuid:939366E8-234D-43A9-B427-BD6E4BECAEB3</uri>
+	</packager>
+
+	<presentation>
+		<summary>SepCity membership portal software is built for the end user to have complete control of their website content without any knowledge of HTML or other programming languages. Besides the portal package, SepCity in addition offers over 30 modules.</summary>
+		<description>SepCity membership web portal software is built for the end user to have complete control of their website content without any knowledge of HTML or other programming languages. Besides the standard web portal package, SepCity has over 30 extra plugins. New customers get all the plugins activated FREE for 90 days enabling them to play with the entire SepCity web portal package.
+		
+The following are some of the plugins; Shopping Mall, Articles, Blogs, Profiles, Polls, Business Listings, Classified ads, Event calendar, User feeds, File downloads and much more. Our web portal software is built to be user-friendly with options to control access to membership groups. Our web portal software platform is built to be SEO friendly without any additional addons. SepCity is built from ground up so there are no 3rd party's our customers have to deal with unless they opt to activate any third-party integrations we provide such as; SMS messaging, shipping calculators, CloudFlare for CDN and others.</description>
+
+		<icon path="images/icon.png"/>
+	
+		<screenshot path="images/main_screenshot.jpg">
+			<description>
+				Main screenshot.
+			</description>
+		</screenshot>
+	
+		<changelog>
+			<version release="1" version="2.9">
+				<entry>RELEASE NOTES
+Added: Users who upload files can now manage their own files and update them.
+Changed: Updated JQuery to the latest 3.x version
+Changed: Updated Bootstrap to the latest 4.x version
+Changed: Updated all the built in templates to bootstrap 4.
+Changed: Changed the appearance of the administration console and updated to bootstrap 4.
+Changed: The appearance of the FAQ's, articles, shopping mall, and business directory modules on the user interface.
+Updated: We are now PCI Compliant again out of the box
+Fixed: Shopping Mall Custom Fields were not saving correctly.
+Fixed: Any other known bug in our system has been fixed.
+				</entry>
+			</version>
+			<version release="1" version="2.8">
+				<entry>RELEASE NOTES
+Added: New Twilio integration module.
+Fixed: Any known bug in our helpdesk are now fixed.
+				</entry>
+			</version>
+			<version release="1" version="2.7">
+				<entry>RELEASE NOTES
+Added: You can now setup pricing plans in the portals module to sell a community to your customers.
+Added: LDAP Integration module to enable you to use your LDAP server to manage your users and groups.
+Added: Google Analytics so it records events that users do on your site.
+Added: Google Maps for the business directory and real estate module.
+Added: Several new API calls added.
+Added: An option to hide purchasing credits on the signup page.
+Added: CRM/Support Integration Bungle. (Support for SugarCRM, SuiteCRM, WHMCS and SmarterTrack)
+Added: In the site templates you can now download a zip file of the template directories in the advance file manager.
+Added: When content is changed on your site you can now go back to the change logs and remove previous versions of changed items.
+Added: Options so user pages can have their own menus or place items on your main website menus.
+Added: You can now add the newest polls to your web pages.
+Added: Select All and Deselect All to checkbox controls.
+Updated: Added shopping mall product image on the newest product listings.
+Updated: Updated all of our 3rd party controls that we use.
+Fixed: Any known bug in our helpdesk are now fixed.
+				</entry>
+			</version>
+			<version release="1" version="2.6">
+				<entry>RELEASE NOTES
+Changed: Made some screens more user friendly and quicker to use
+Fixed: Any known bug in our helpdesk are now fixed
+				</entry>
+			</version>
+			<version release="1" version="2.5">
+				<entry>RELEASE NOTES
+Added: Job Board - Can now upload a company Logo.
+Added: Job Board - Added the ability to customize which fields show up when posting or browsing candidates and positions
+Added: Real Estate - Changed the way when posting properties so unwanted fields don't know when selling or renting properties
+Added: Real Estate - Added a tenant section so landlords can rate tenants
+Added: Real Estate - Landlords can manage tenants and search for tenant reviews.
+Added: E-Learning - Added no end date when added courses
+Added: Event Calendar - Users can have permissions to sell events online
+Added: Signup/Login - You can setup LinkedIn so users can login and signup with their LinkedIn information
+Changed: Removed unused variables and made several performance changes
+Changed: Updated all new 3rd party components to use the latest version
+Fixed: Any known bug in our helpdesk are now fixed
+				</entry>
+			</version>
+			<version release="1" version="2.4">
+				<entry>RELEASE NOTES
+Added: Shopping Mall - Admin can give access keys for who can create their own stores
+Added: Shopping Mall - Added UPS, USPS, and FedEx as shipping methods
+Added: FAQ's - Added search function to search through the FAQ's
+Added: Event Calendar - Posted By in the admin panel grid so the admin can see who posted an event before clicking on it
+Added: Affiliate - When users want to link to your site they have a link to automatically select the HTML code to copy and paste
+Added: E-Learning - Newest Courses added to your web site
+Added: E-Learning - RSS Feeds
+Changed: Updated how the indexes work for the search engines on your site
+           (You may need to reindex your database by going to Utilities, Database Tools in the admin console)
+Changed: Checkout process to the shopping cart to make things more efficient
+Changed: Portals - Performance changes
+Changed: All the paging controls in all the modules to make it look more modern
+Changed: Updated all of our 3rd party codebase to the latest
+Fixed: Any known bug in our helpdesk are now fixed
+				</entry>
+			</version>
+			<version release="2" version="2.3">
+				<entry>RELEASE NOTES
+We have fixed any known bugs in our previous release.
+				</entry>
+			</version>
+			<version release="1" version="2.3">
+				<entry>RELEASE NOTES
+Added: View activities by module
+Added: Any emails sent is not recorded as an activity
+Added: New dashboard with more graphs reporting on site usage
+Added: Option to allow users to upload files in the contact form
+Added: New customers now receive a 90 trial of all of our modules
+Added: Integration into Google Analytics
+Changed: Performance changes were made through-out our software
+Fixed: Any known bug in our helpdesk is now fixed
+				</entry>
+			</version>
+			<version release="1" version="2.2">
+				<entry>RELEASE NOTES
+
+Fixes:
+All known bugs that have been reported
+Support for TLS 1.2
+Security changes
+Perofmrnace changes
+				</entry>
+			</version>
+			<version release="1" version="2.1">
+				<entry>RELEASE NOTES
+
+Articles:
+Changed: Redesigned the newest article listings.
+Added: Users can manage their own articles.
+Added: Users can set the start and end date of their articles.
+
+Blogs:
+Added: Admin can create categories for users to post to.
+Added: Start and end date for the news to display on your web site.
+
+News:
+Added: Admin can create categories for users to post to.
+Added: Start and end date for the news to display on your web site.
+
+User Pages:
+Added: Admin can create categories for users to post to.
+Added: Users can put newest content they posted on their pages
+Added: Setting under general setup, user pages to show newest content for each module
+Added: Password protected pages
+Added: Users pages can be invite only to view the sites
+Added: If users signup their a user page it is now tracked for the admin as a referral and adds them to the affiliate to the user that created the user page
+
+All Modules Except the Downloads and Forums Module
+Changed: Categories are now optional
+
+Signup:
+Added: Option under general setup, account setup for the landing page after signup
+
+Shopping Mall:
+Added: Integration to use Wholesale2b so the admin can have instant products using feeds from different providers to populate their shopping mall.
+
+My Feeds:
+This is a new module that is now available so users can see feeds on the web site and post messages to their feeds for their friends to see them.
+
+Chat Rooms:
+Changed: Our old chat integration into 123flashchat was changed to use Cute Chat
+
+Instant Messenger:
+Changed: Our old messenger integration into 123flashmessenger was changed to use Cute Web Message
+
+Other:
+Added: oAuth integration / single sign on
+Changed: Performance changes to the external javascript files
+Changed: Caching to increase performance
+Fixed: Any known bugs that was reported to us
+				</entry>
+			</version>
+			<version release="1" version="2.0">
+				<entry>RELEASE NOTES
+
+1). Upload control is changed to carry the same theme as the rest of the site.
+2). Changed the rating system to use the same theme as the rest of the site.
+3). Added an option to use TinyMCE as an HTML Editor in your portal site.
+4). Changed the audio and video players in the downloads module to use the same theme as the rest of your web site.
+5). Added an option in the user profiles module so your members can upload audio files to their profile.
+6). Added an option to the user profiles so members can change their profile colors.
+7). Fixed any known bugs/issues in the portal software.</entry>
+			</version>
+			<version release="1" version="1.9">
+				<entry>RELEASE NOTES
+
+Added: Start and End Dates to the blogs module
+Added: Start and End Dates to the news module
+Added: Members can manage their own articles in the articles module
+Added: Added a setting so users can select a user page to be associated with upon signup
+Added: User pages can be setup so users have to be invited to the user pages
+Added: Users can password protect their page in the user pages module
+Changed: Performance in the affiliate program is much faster
+Changed: Database indexes to improve performance in our software
+Fixed: Any bugs that was in our database was fixed.
+				</entry>
+			</version>
+			<version release="1" version="1.8">
+				<entry>RELEASE NOTES
+
+Added: The admin console is now responsive for tablets and smart phones.
+Added: The admin console shows tips on using our software.
+Added: The admin can control who has access to certain templates for the user pages module.
+Added: Users can reorder images that they upload to modules.
+Added: Job board is now available in the portals module.
+Changed: The drop down calendars uses a different style to look better.
+Fixed: A couple indexes was missing causing slowness on larger web sites.
+Fixed: Any bugs that was in our database was fixed.
+				</entry>
+			</version>
+			<version release="1" version="1.7">
+				<entry>RELEASE NOTES
+
+Added: User Pages Module - Have your users create their own personal web sites within your portal
+Added: Vouchers Module - Have your users sell vouchers for their business
+Added: Auctions - Provide your users to post new ads for auction on your web site and leave feedback on each other. (Supports PayPal)
+Added: Speaker's Bureau - Have your users request a speaker to come to their location to speak on a topic
+				</entry>
+			</version>
+			<version release="1" version="1.6">
+				<entry>RELEASE NOTES
+
+Added: Job Board addon
+Added: User Pages addons
+Added: We have added a responsive template that uses BootStrap
+Added: Logout link in the admin console
+Fixed: Paging in the admin console is now fixed.
+Fixed: Invoices now get marked as paid if your selling paying memberships
+Fixed: Uploading images in the HTML editor when using the portals module
+				</entry>
+			</version>
+			<version release="1" version="1.5">
+				<entry>RELEASE NOTES
+
+1). Upload control is changed to carry the same theme as the rest of the site.
+2). Changed the rating system to use the same theme as the rest of the site.
+3). Added an option to use TinyMCE as an HTML Editor in your portal site.
+4). Changed the audio and video players in the downloads module to use the same theme as the rest of your web site.
+5). Added an option in the user profiles module so your members can upload audio files to their profile.
+6). Added an option to the user profiles so members can change their profile colors.
+7). Fixed any known bugs/issues in the portal software.
+				</entry>
+			</version>
+			<version release="1" version="1.4">
+				<entry>New Release of SepCity.</entry>
+			</version>
+		</changelog>
+
+		<categories>
+			<category>Web/Content management</category>
+		</categories>
+
+		<languages>
+			<language>en</language>
+		</languages>
+	</presentation>
+
+	<patch match="/application/version &gt;= '1.0'"/>
+
+	<service id="instance">
+		<license must-accept="true">
+			<free />
+			<text>
+				<name>SepCity License</name>
+				<url>http://www.sepcity.com/SepCity_license.aspx</url>
+			</text>
+		</license>
+
+		<presentation>
+			<name>SepCity</name>
+			<summary>SepCity is a CMS / Portal software that you can use for free and we also have several modules that you can plugin at any time.</summary>
+
+			<infolinks>
+				<link class="support" href="http://www.sepcity.com/support/">SepCity Support</link>
+			</infolinks>
+
+			<entry-points>
+				<entry dst="/default.aspx" method="GET">
+					<label>User Interface</label>
+				</entry>
+				<entry dst="/spadmin/" method="GET">
+					<label>Administrative interface</label>
+				</entry>
+			</entry-points>
+		</presentation>
+
+		<settings>
+           <group class="userinfo">
+                <group class="authn">
+                    <name class="type">User Information</name>
+                    <setting id="auser_name" type="string" min-length="4" max-length="25" regex="^[a-zA-Z][0-9a-zA-Z_\-]*" class="login">
+                        <name>User Name</name>
+                        <error-message>Please make sure the text you entered starts with a letter and continues with either numbers, letters, underscores or hyphens.</error-message>
+                    </setting>
+                    <setting id="bpassword" type="password" min-length="6" class="password" regex=".*[@#$%^&amp;*\/!].*" >
+                        <name>Password</name>
+                        <error-message>Please make sure that password contains at least 1 special symbols and minimum 6 symbols length.</error-message>
+                    </setting>
+                </group>
+				<group class="vcard">
+					<group class="email">
+						<setting type="string" id="cemail_address" class="value"
+						installation-only="true">
+							<name>Email Address</name>
+						</setting>
+					</group>
+					<group class="fn n">
+						<setting type="string" id="dfirst_name" class="given-name"
+							installation-only="true">
+							<name>First Name</name>
+						</setting>
+						<setting type="string" id="elast_name" class="family-name"
+							installation-only="true">
+							<name>Last Name</name>
+						</setting>
+					</group>
+					<group class="org">
+						<setting id="msite_name" class="organization-name" type="string"
+							installation-only="true">
+							<name>Site name</name>
+						</setting>
+					</group>
+				</group>
+				<group class="smtpinfo">
+					<name class="type">SMTP Server Information</name>
+					<setting type="string" id="nsmtpserver" default-value="127.0.0.1" 
+						installation-only="true">
+						<name>SMTP Server Address</name>
+					</setting>
+					<setting type="string" id="osmtpuser" optional="true" 
+						installation-only="true">
+						<name>SMTP Server Authorization User</name>
+					</setting>
+					<setting type="password" id="psmtppass" optional="true" 
+						installation-only="true">
+						<name>SMTP Server Authorization Password</name>
+					</setting>
+				</group>
+			</group>
+		</settings>
+		
+
+		<requirements xmlns:db="http://apstandard.com/ns/1/db" xmlns:l="http://apstandard.com/ns/1/licensing" xmlns:aspnet="http://apstandard.com/ns/1/aspnet">
+			<aspnet:version>4.7</aspnet:version>
+			
+			<db:db>
+				<db:id>main</db:id>
+				<db:default-name>SepCity</db:default-name>
+				<db:can-use-tables-prefix>false</db:can-use-tables-prefix>
+				<db:server-type>microsoft:sqlserver</db:server-type>
+				<db:server-min-version>11.00.0</db:server-min-version>
+			</db:db>
+		</requirements>
+
+		<provision xmlns:l="http://apstandard.com/ns/1/licensing" xmlns:aspnet="http://apstandard.com/ns/1/aspnet">
+			<configuration-script name="configure">
+				<script-language>vbscript</script-language>
+			</configuration-script>
+			<resource-script name="report-resources">
+				<script-language>vbscript</script-language>
+            </resource-script>
+
+			<url-mapping>
+				<default-prefix>SepCity</default-prefix>
+
+				<installed-size>162816</installed-size>
+
+				<mapping url="/" path="htdocs" xmlns:aspnet="http://apstandard.com/ns/1/aspnet">
+				<aspnet:handler/>
+				<mapping url="app_data">
+					<aspnet:permissions writable="true"/>
+				</mapping>
+				<mapping url="downloads">
+					<aspnet:permissions writable="true"/>
+				</mapping>
+				<mapping url="images">
+					<aspnet:permissions writable="true"/>
+				</mapping>
+				<mapping url="skins">
+					<aspnet:permissions writable="true"/>
+				</mapping>
+				</mapping>
+
+			</url-mapping>
+		</provision>
+	</service>
+
+	</application>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetHelp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HelpId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHelpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHelpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchHelp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Keywords" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchHelpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchHelpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKeywords">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetKeywordsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKeywordsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetHelpSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHelp" />
+  </wsdl:message>
+  <wsdl:message name="GetHelpSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHelpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchHelpSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchHelp" />
+  </wsdl:message>
+  <wsdl:message name="SearchHelpSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchHelpResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKeywordsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKeywords" />
+  </wsdl:message>
+  <wsdl:message name="GetKeywordsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKeywordsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="helpmanualSoap">
+    <wsdl:operation name="GetHelp">
+      <wsdl:input message="tns:GetHelpSoapIn" />
+      <wsdl:output message="tns:GetHelpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchHelp">
+      <wsdl:input message="tns:SearchHelpSoapIn" />
+      <wsdl:output message="tns:SearchHelpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKeywords">
+      <wsdl:input message="tns:GetKeywordsSoapIn" />
+      <wsdl:output message="tns:GetKeywordsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="helpmanualSoap" type="tns:helpmanualSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHelp">
+      <soap:operation soapAction="http://tempuri.org/GetHelp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchHelp">
+      <soap:operation soapAction="http://tempuri.org/SearchHelp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeywords">
+      <soap:operation soapAction="http://tempuri.org/GetKeywords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="helpmanualSoap12" type="tns:helpmanualSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHelp">
+      <soap12:operation soapAction="http://tempuri.org/GetHelp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchHelp">
+      <soap12:operation soapAction="http://tempuri.org/SearchHelp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeywords">
+      <soap12:operation soapAction="http://tempuri.org/GetKeywords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="helpmanual">
+    <wsdl:port name="helpmanualSoap" binding="tns:helpmanualSoap">
+      <soap:address location="https://www.sepcity.com/services/helpmanual.asmx" />
+    </wsdl:port>
+    <wsdl:port name="helpmanualSoap12" binding="tns:helpmanualSoap12">
+      <soap12:address location="https://www.sepcity.com/services/helpmanual.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+  <config>
+    <BGColor Section="Body">
+      <Description></Description>
+      <HexCode>#538218</HexCode>
+    </BGColor>
+    <BGForeColor Section="Body">
+      <Description></Description>
+      <HexCode>#000000</HexCode>
+    </BGForeColor>
+    <TopMenuButBG Section="LayoutTopMenu">
+      <Description></Description>
+      <HexCode>#bb2103</HexCode>
+    </TopMenuButBG>
+    <TopMenuButForeColor Section="LayoutTopMenu">
+      <Description></Description>
+      <HexCode>#ffffff</HexCode>
+    </TopMenuButForeColor>
+    <TopMenuButBGHover Section="LayoutTopMenu">
+      <Description></Description>
+      <HexCode>#d5d857</HexCode>
+    </TopMenuButBGHover>
+    <TopMenuButForeColorHover Section="LayoutTopMenu">
+      <Description></Description>
+      <HexCode>#ffffff</HexCode>
+    </TopMenuButForeColorHover>
+    <MenuLabelBG1 Section="MenuLabel">
+      <Description></Description>
+      <HexCode>#d5d857</HexCode>
+    </MenuLabelBG1>
+    <MenuLabelBG2 Section="MenuLabel">
+      <Description></Description>
+      <HexCode>#f8faa9</HexCode>
+    </MenuLabelBG2>
+    <MenuLabelColor Section="MenuLabel">
+      <Description></Description>
+      <HexCode>#911104</HexCode>
+    </MenuLabelColor>
+    <TopMenuBG1 Section="TopMenuBG">
+      <Description></Description>
+      <HexCode>#911304</HexCode>
+    </TopMenuBG1>
+    <TopMenuBG2 Section="TopMenuBG">
+      <Description></Description>
+      <HexCode>#b12504</HexCode>
+    </TopMenuBG2>
+    <ContentTopGradBG1 Section="ContentTopGrad">
+      <Description></Description>
+      <HexCode>#456c12</HexCode>
+    </ContentTopGradBG1>
+    <ContentTopGradBG2 Section="ContentTopGrad">
+      <Description></Description>
+      <HexCode>#538218</HexCode>
+    </ContentTopGradBG2>
+    <ContentBotGradBG1 Section="ContentBottomGrad">
+      <Description></Description>
+      <HexCode>#538218</HexCode>
+    </ContentBotGradBG1>
+    <ContentBotGradBG2 Section="ContentBottomGrad">
+      <Description></Description>
+      <HexCode>#456c12</HexCode>
+    </ContentBotGradBG2>
+    <HeaderHRBG Section="HeaderHR">
+      <Description></Description>
+      <HexCode>#d5d857</HexCode>
+    </HeaderHRBG>
+    <HeaderBG Section="Header">
+      <Description></Description>
+      <HexCode>#fbfe8b</HexCode>
+    </HeaderBG>
+    <ContentSpacerBG Section="contentspacer">
+      <Description></Description>
+      <HexCode>#d5d857</HexCode>
+    </ContentSpacerBG>
+    <FooterBG Section="footer">
+      <Description></Description>
+      <HexCode>#ddde69</HexCode>
+    </FooterBG>
+  </config>
+</root>

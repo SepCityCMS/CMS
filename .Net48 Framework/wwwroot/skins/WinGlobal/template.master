@@ -1,0 +1,148 @@
+﻿<%@ Master Language="C#" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head id="PageHead" runat="server">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title></title>
+	<asp:ContentPlaceHolder ID="EmbeddedScripts" runat="server"></asp:ContentPlaceHolder>
+	<asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+	<link rel="stylesheet" href="/skins/WinGlobal/styles/layout.css" type="text/css" />
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div class="container">
+		<!-- Navigation -->
+		<div class="brand container">
+			<div class="logo sitelogo">
+				<% var cSiteLogo = new SepCityControls.SiteLogo();
+				   this.Response.Write(cSiteLogo.Render()); %>
+			</div>
+			<div class="comname">
+				<span class="sitename"><% var cWebsiteName = new SepCityControls.WebsiteName();
+				                          this.Response.Write(cWebsiteName.Render()); %></span>
+				<span class="companyslogan"><% var cCompanySlogan = new SepCityControls.CompanySlogan();
+				         this.Response.Write(cCompanySlogan.Render()); %></span>
+			</div>
+
+			<!-- Navigation -->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light navcustom">
+				<a class="navbar-brand" href="#"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<div class="sitemenu1">
+						<% var cSiteMenu1 = new SepCityControls.SiteMenu();
+							cSiteMenu1.MenuID = 1;
+							this.Response.Write(cSiteMenu1.Render()); %>
+					</div>
+				</div>
+			</nav>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="box">
+                <div class="row">
+				    <div class="col-md-9">
+						<p align="center">
+							<span class="adserver"><% var cAdServer = new SepCityControls.AdServer();
+							                          cAdServer.ZoneID = "192837456";
+							                          this.Response.Write(cAdServer.Render()); %></span>
+						</p>
+					    <span class="breadcrumbs"><% var cBreadcrumbs = new SepCityControls.Breadcrumbs();
+					                                 this.Response.Write(cBreadcrumbs.Render()); %></span>
+					    <div class="usertopmenu"><% var cUserTopMenu = new SepCityControls.UserTopMenu();
+					                                this.Response.Write(cUserTopMenu.Render()); %></div>
+                        <div class="pagecontent">
+					        <form id="aspnetForm" runat="server">
+							    <%= System.Web.Helpers.AntiForgery.GetHtml() %>
+						        <asp:ContentPlaceHolder ID="SiteContent" runat="server" />
+					        </form>
+                        </div>
+				    </div>
+				
+				    <div class="col-md-3">
+					    <div class="well">
+						    <h4>Account Menu</h4>
+							<div class="accountmenu"><% var cAccountMenu = new SepCityControls.AccountMenu();
+							                            this.Response.Write(cAccountMenu.Render()); %></div>
+					    </div>
+
+						<div class="well">
+                            <hr class="mb-4">
+							<h4>Member Menu</h4>
+							<div class="sitemenu3v"><% var cSiteMenu3 = new SepCityControls.SiteMenu();
+							                           cSiteMenu3.MenuID = 3;
+							                           cSiteMenu3.CssClass = "flex-column";
+							                           this.Response.Write(cSiteMenu3.Render()); %></div>
+						</div>
+
+						<div class="well">
+                            <hr class="mb-4">
+							<h4>Sponsors</h4>
+							<p align="center"><div class="sponsors"><% var cSponsors = new SepCityControls.AdServer();
+							                                           cSponsors.ZoneID = "746383920";
+							                                           this.Response.Write(cSponsors.Render()); %></div></p>
+						</div>
+
+					    <div class="well">
+                            <hr class="mb-4">
+						    <h4>Polls</h4>
+							<div class="randompolls"><% var cRandomPoll = new SepCityControls.RandomPoll();
+							                            this.Response.Write(cRandomPoll.Render()); %></div>
+					    </div>
+
+					    <div class="well">
+                            <hr class="mb-4">
+						    <h4>Our Newsletters</h4>
+							<div class="newsletters"><% var cNewsletters = new SepCityControls.Newsletters();
+							                            this.Response.Write(cNewsletters.Render()); %></div>
+					    </div>
+
+						<div class="well">
+                            <hr class="mb-4">
+							<h4>Search our Site</h4>
+							<div class="searchengine"><% var cSearchBox = new SepCityControls.SearchBox();
+							                             cSearchBox.ID = "SearchBox";
+							                             this.Response.Write(cSearchBox.Render()); %></div>
+						</div>
+
+					    <div class="well">
+                            <hr class="mb-4">
+						    <h4>Who's Online</h4>
+							<div class="whosonline"><% var cWhosOnline = new SepCityControls.WhosOnline();
+							                       this.Response.Write(cWhosOnline.Render()); %></div>
+					    </div>
+				    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+	<!-- /.container -->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<p><div class="sitemenu7"><% var cSiteMenu7 = new SepCityControls.SiteMenu();
+					                             cSiteMenu7.MenuID = 7;
+					                             this.Response.Write(cSiteMenu7.Render()); %></div></p>
+					<asp:Literal ID="PoweredBySepCity" runat="server" />
+				</div>
+			</div>
+		</div>
+	</footer>
+    
+	<span class="flashmessenger"><% var cFlashMessenger = new SepCityControls.FlashMessenger(); this.Response.Write(cFlashMessenger.Render()); %></span>
+
+</body>
+</html>

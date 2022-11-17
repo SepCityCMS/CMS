@@ -1,0 +1,22 @@
+<MSDeploy.iisApp> 
+	<!-- Copies content from path into the destination specified in parameters.xml and marks as an app in IIS 5.1, 6.0 and 7.x -->
+	<iisapp path="SepCity" />
+
+	<!-- Set NTFS ACLs on the destination specified in parameters.xml -->
+	<setAcl path="SepCity/App_Data" setAclAccess="Modify" />
+	<setAcl path="SepCity/downloads" setAclAccess="Modify" />
+	<setAcl path="SepCity/images" setAclAccess="Modify" />
+	<setAcl path="SepCity/install" setAclAccess="Modify" />
+	<setAcl path="SepCity/skins" setAclAccess="Modify" />
+
+	<!-- _SqlMembership.txt is being added to the distribution. The installer writes the admin username and password to this file. This file has two lines in it: 
+	==============================
+	PlaceholderForAdminUser
+	PlaceholderForAdminPassword
+	==============================
+	-->
+	<setAcl path="SepCity/App_Data/install_temp.xml" setAclAccess="Modify" setAclResourceType="File" setAclUser="anonymousAuthenticationUser" /> 
+	
+	<dbfullsql path="sql/createlogin.sql" transacted="false" />
+	<dbfullsql path="sql/createuser.sql" transacted="false" />
+</MSDeploy.iisApp>

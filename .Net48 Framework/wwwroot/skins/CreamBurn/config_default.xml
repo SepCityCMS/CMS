@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<FeatureList>
+		<Feature id="MemberMenu" text="Members Menu">1</Feature>
+		<Feature id="Sponsors" text="Sponsors">1</Feature>
+		<Feature id="Banners" text="Banners">1</Feature>
+		<Feature id="Newsletters" text="Newsletters">0</Feature>
+		<Feature id="Polls" text="Random Poll">0</Feature>
+    <Feature id="Search" text="Search Engine">0</Feature>
+		<Feature id="SiteStats" text="Site Stats">0</Feature>
+		<Feature id="WhosOn" text="Who's Online">0</Feature>
+	</FeatureList>
+  <UPFeatureList>
+    <UPFeature id="MemberMenu" text="Members Menu">1</UPFeature>
+    <UPFeature id="Advertisements" text="Advertisements">1</UPFeature>
+    <UPFeature id="Newsletters" text="Newsletters">0</UPFeature>
+    <UPFeature id="Polls" text="Random Poll">0</UPFeature>
+    <UPFeature id="Search" text="Search Engine">0</UPFeature>
+    <UPFeature id="SiteStats" text="Site Stats">0</UPFeature>
+    <UPFeature id="WhosOn" text="Who's Online">0</UPFeature>
+  </UPFeatureList>
+	<CustomVariables>
+		<Variable name="HeaderImg">
+			<Question type="Image">File name to header image (Default is a 920x242 Image)</Question>
+			<Value>hbg_img.jpg</Value>
+		</Variable>
+		<Variable name="HeaderText">
+			<Question type="HTML">Text to show in the Header</Question>
+			<Value>&lt;h2&gt;Template License&lt;/h2&gt;
+			&lt;p&gt;This is a free CSS website template by &lt;a href=&quot;http://www.rocketwebsitetemplates.com/&quot; title=&quot;Website Templates&quot;&gt;RocketWebsiteTemplates.com&lt;/a&gt;. This 
+	work is distributed under the &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by/3.0/&quot;&gt;Creative Commons Attribution 3.0 License&lt;/a&gt;, 
+	which means that you are free to use it for any personal or commercial purpose provided you credit me in the form of a link back to &lt;a href=&quot;http://www.rocketwebsitetemplates.com/&quot; title=&quot;Website Templates&quot;&gt;RocketWebsiteTemplates.com&lt;/a&gt;.</Value>
+		</Variable>
+	</CustomVariables>
+</root>

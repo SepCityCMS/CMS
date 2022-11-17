@@ -1,0 +1,194 @@
+﻿@viewModel wwwroot.ViewModels.MasterPageViewModel, wwwroot
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head id="PageHead" runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <dot:ContentPlaceHolder ID="EmbeddedScripts" />
+    <dot:ContentPlaceHolder ID="HeadContent" />
+    <script type="text/javascript">var config = {imageBase: '/',siteBase: '/'};</script>
+    <link type="text/css" rel="stylesheet" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="/skins/public/styles/public.css" />
+    <link type="text/css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link type="text/css" rel="stylesheet" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-json/2.6.0/jquery.json.min.js" integrity="sha256-Ac6pM19lP690qI07nePO/yY6Ut3c7KM9AgNdnc5LtrI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/bootbox.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <link href="/skins/CyberArray/styles/layout.css" rel="stylesheet" type="text/css" />
+    <link href="/skins/CyberArray/styles/colors.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+    <div class="main">
+        <section class="bgcolor1">
+            <!-- Navigation -->
+            <div class="brand container">
+                <div class="logo sitelogo">
+                    <dot:HtmlLiteral Html="{value: SiteLogo}" />
+                </div>
+                <div class="comname">
+                    <span class="sitename">
+                        <dot:HtmlLiteral Html="{value: WebsiteName}" />
+                    </span>
+                    <span class="companyslogan">
+                        <dot:HtmlLiteral Html="{value: CompanySlogan}" />
+                    </span>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <div class="sitemenu1">
+                            <dot:HtmlLiteral Html="{value: SiteMenu1}" />
+                        </div>
+                    </div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </section>
+
+        <section class="bgcolor2">
+            <div class="container">
+                <div class="col-lg-12 text-center">
+                    <div id="carousel-example-generic" class="carousel slide">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="img-fluid img-full" src="" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container contrainerbg">
+            <div class="box bgcolor3">
+                <div class="row">
+                    <div class="col-md-9">
+                        <p align="center">
+                            <span class="adserver">
+                                <dot:HtmlLiteral Html="{value: Banners}" />
+                            </span>
+                        </p>
+                        <span class="breadcrumbs">
+                            <dot:HtmlLiteral Html="{value: BreadCrumbs}" />
+                        </span>
+                        <div class="usertopmenu">
+                            <dot:HtmlLiteral Html="{value: UserTopMenu}" />
+                        </div>
+                        <div class="pagecontent">
+                            <dot:ContentPlaceHolder ID="SiteContent" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="well">
+                            <h4>Account Menu</h4>
+                            <div class="row">
+                                <div class="accountmenu">
+                                    <dot:HtmlLiteral Html="{value: AccountMenu}" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="well">
+                            <hr class="mb-4">
+                            <h4>Member Menu</h4>
+                            <div class="row">
+                                <div class="sitemenu3v">
+                                    <dot:HtmlLiteral Html="{value: SiteMenu3}" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="well">
+                            <hr class="mb-4">
+                            <h4>Sponsors</h4>
+                            <div class="row">
+                                <p align="center">
+                                    <div class="sponsors">
+                                        <dot:HtmlLiteral Html="{value: Sponsors}" />
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="well">
+                            <hr class="mb-4">
+                            <h4>Polls</h4>
+                            <div class="row">
+                                <div class="randompolls">
+                                    <dot:HtmlLiteral Html="{value: RandomPoll}" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="well">
+                            <hr class="mb-4">
+                            <h4>Our Newsletters</h4>
+                            <div class="row">
+                                <div class="newsletters">
+                                    <dot:HtmlLiteral Html="{value: Newsletters}" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="well">
+                            <hr class="mb-4">
+                            <h4>Search our Site</h4>
+                            <div class="row">
+                                <div class="searchengine">
+                                    <dot:HtmlLiteral Html="{value: SearchBox}" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="well">
+                            <hr class="mb-4">
+                            <h4>Who's Online</h4>
+                            <div class="row">
+                                <div class="whosonline">
+                                    <dot:HtmlLiteral Html="{value: WhosOnline}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>
+                        <div class="sitemenu7">
+                            <dot:HtmlLiteral Html="{value: SiteMenu7}" />
+                        </div>
+                    </p>
+                    <dot:HtmlLiteral Html="{value: PoweredBySepCity}" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <span class="flashmessenger"><dot:HtmlLiteral Html="{value: FlashMessenger}" /></span>
+
+</body>
+</html>
+
+

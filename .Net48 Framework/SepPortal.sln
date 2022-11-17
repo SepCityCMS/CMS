@@ -1,0 +1,117 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{F6DD8BB7-D90C-41BC-A7CB-644A9FE84E92}"
+	ProjectSection(SolutionItems) = preProject
+		Bin\ASPSnippets.LinkedInAPI.dll = Bin\ASPSnippets.LinkedInAPI.dll
+		Bin\DocX.dll = Bin\DocX.dll
+		Bin\eSELECTplus_dotNet_API.dll = Bin\eSELECTplus_dotNet_API.dll
+		Bin\Facebook.dll = Bin\Facebook.dll
+		Bin\Facebook.Web.dll = Bin\Facebook.Web.dll
+		Bin\Interop.MSXML2.dll = Bin\Interop.MSXML2.dll
+		Bin\Ionic.Zip.dll = Bin\Ionic.Zip.dll
+		Bin\IP2Location.dll = Bin\IP2Location.dll
+		Bin\itextsharp.dll = Bin\itextsharp.dll
+		Bin\itextsharp.pdfa.dll = Bin\itextsharp.pdfa.dll
+		Bin\itextsharp.xmlworker.dll = Bin\itextsharp.xmlworker.dll
+		Bin\itextsharp.xtra.dll = Bin\itextsharp.xtra.dll
+		Bin\Lucene.Net.dll = Bin\Lucene.Net.dll
+		Bin\MediaHandlerPro.dll = Bin\MediaHandlerPro.dll
+		Bin\Newtonsoft.Json.dll = Bin\Newtonsoft.Json.dll
+		Bin\Recaptcha.dll = Bin\Recaptcha.dll
+		Bin\SepCommon.dll = Bin\SepCommon.dll
+		Bin\SepControls.dll = Bin\SepControls.dll
+		Bin\SepPortal.dll = Bin\SepPortal.dll
+		Bin\SmarterTrack.Connector.dll = Bin\SmarterTrack.Connector.dll
+		Bin\sstchur.web.survey.dll = Bin\sstchur.web.survey.dll
+		Bin\System.Net.Http.dll = Bin\System.Net.Http.dll
+		Bin\System.Net.Http.Formatting.dll = Bin\System.Net.Http.Formatting.dll
+		Bin\System.Net.Http.WebRequest.dll = Bin\System.Net.Http.WebRequest.dll
+		Bin\System.Web.Http.dll = Bin\System.Web.Http.dll
+		Bin\System.Web.Http.WebHost.dll = Bin\System.Web.Http.WebHost.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{132AC742-20E7-4C20-A2C4-4A7CB7186171}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SepCommon", "SepCommon\SepCommon.csproj", "{0A534805-0C7C-4815-B2C1-89F24D88E14E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SepControls", "SepControls\SepControls.csproj", "{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wwwroot", "wwwroot\wwwroot.csproj", "{77E41D98-896B-43C9-A180-00A79349D97B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Debug|x86.Build.0 = Debug|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Release|x86.ActiveCfg = Release|Any CPU
+		{0A534805-0C7C-4815-B2C1-89F24D88E14E}.Release|x86.Build.0 = Release|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Debug|x86.Build.0 = Debug|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Release|x86.ActiveCfg = Release|Any CPU
+		{539F9C68-9F7A-4ABE-9FE0-C98E6801AFDA}.Release|x86.Build.0 = Release|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Debug|x86.Build.0 = Debug|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Release|x86.ActiveCfg = Release|Any CPU
+		{77E41D98-896B-43C9-A180-00A79349D97B}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E7F826B-72DA-43B2-AA79-A8CEE63CF17D}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.sepcity.com:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SepCommon\\SepCommon.csproj
+		SccProjectName1 = SepCommon
+		SccLocalPath1 = SepCommon
+		SccProjectUniqueName2 = SepControls\\SepControls.csproj
+		SccProjectName2 = SepControls
+		SccLocalPath2 = SepControls
+		SccProjectUniqueName3 = wwwroot\\wwwroot.csproj
+		SccProjectName3 = wwwroot
+		SccLocalPath3 = wwwroot
+	EndGlobalSection
+EndGlobal

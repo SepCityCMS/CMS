@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+  <Name Type="BGColor" Section="Body">
+    <Description>Background Color</Description>
+    <HexCode>#538218</HexCode>
+  </Name>
+  <Name Type="BGForeColor" Section="Body">
+    <Description>Font Color</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="HyperlinkColor" Section="Body">
+    <Description>Hyperlink Color</Description>
+    <HexCode>#acc8f6</HexCode>
+  </Name>
+  <Name Type="HyperlinkHoverCover" Section="Body">
+    <Description>Hyperlink Hover Color</Description>
+    <HexCode>#e4f6ac</HexCode>
+  </Name>
+  <Name Type="TopMenuButBG" Section="LayoutTopMenu">
+    <Description>Tab Background Color</Description>
+    <HexCode>#bb2103</HexCode>
+  </Name>
+  <Name Type="TopMenuButForeColor" Section="LayoutTopMenu">
+    <Description>Tab Font Color</Description>
+    <HexCode>#ffffff</HexCode>
+  </Name>
+  <Name Type="TopMenuButBGHover" Section="LayoutTopMenu">
+    <Description>Tab Hover Background Color</Description>
+    <HexCode>#d5d857</HexCode>
+  </Name>
+  <Name Type="TopMenuButForeColorHover" Section="LayoutTopMenu">
+    <Description>Tab Hover Font Color</Description>
+    <HexCode>#ffffff</HexCode>
+  </Name>
+  <Name Type="TopMenuBG1" Section="LayoutTopMenu">
+    <Description>Top Menu Background Gradient Start</Description>
+    <HexCode>#911304</HexCode>
+  </Name>
+  <Name Type="TopMenuBG2" Section="LayoutTopMenu">
+    <Description>Top Menu Background Gradient End</Description>
+    <HexCode>#b12504</HexCode>
+  </Name>
+  <Name Type="MenuLabelBG1" Section="MenuLabel">
+    <Description>Background Color</Description>
+    <HexCode>#d5d857</HexCode>
+  </Name>
+  <Name Type="MenuLabelBG2" Section="MenuLabel">
+    <Description>Background Color</Description>
+    <HexCode>#f8faa9</HexCode>
+  </Name>
+  <Name Type="MenuLabelColor" Section="MenuLabel">
+    <Description>Font Color</Description>
+    <HexCode>#911104</HexCode>
+  </Name>
+  <Name Type="ContentTopGradBG1" Section="ContentTopGrad">
+    <Description>Background Color</Description>
+    <HexCode>#456c12</HexCode>
+  </Name>
+  <Name Type="ContentTopGradBG2" Section="ContentTopGrad">
+    <Description>Background Color</Description>
+    <HexCode>#538218</HexCode>
+  </Name>
+  <Name Type="ContentBotGradBG1" Section="ContentBottomGrad">
+    <Description>Background Color</Description>
+    <HexCode>#538218</HexCode>
+  </Name>
+  <Name Type="ContentBotGradBG2" Section="ContentBottomGrad">
+    <Description>Background Color</Description>
+    <HexCode>#456c12</HexCode>
+  </Name>
+  <Name Type="HeaderHRBG" Section="HeaderHR">
+    <Description>Background Color</Description>
+    <HexCode>#d5d857</HexCode>
+  </Name>
+  <Name Type="HeaderBG" Section="Header">
+    <Description>Background Color</Description>
+    <HexCode>#fbfe8b</HexCode>
+  </Name>
+  <Name Type="HeaderColor" Section="Header">
+    <Description>Font Color</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="ContentSpacerBG" Section="ContentSpacer">
+    <Description>Background Color</Description>
+    <HexCode>#d5d857</HexCode>
+  </Name>
+  <Name Type="FooterBG" Section="Footer">
+    <Description>Background Color</Description>
+    <HexCode>#ddde69</HexCode>
+  </Name>
+  <Name Type="FooterColor" Section="Footer">
+    <Description>Font Color</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="LegendBG" Section="Fieldset">
+    <Description>Legend Background</Description>
+    <HexCode>#d5d857</HexCode>
+  </Name>
+  <Name Type="LegendColor" Section="Fieldset">
+    <Description>Legend Color</Description>
+    <HexCode>#911104</HexCode>
+  </Name>
+  <Name Type="FieldsetBG" Section="Fieldset">
+    <Description>Fieldset Background</Description>
+    <HexCode>#679928</HexCode>
+  </Name>
+  <Name Type="FieldsetBorder" Section="Fieldset">
+    <Description>Fieldset Border</Description>
+    <HexCode>#456c12</HexCode>
+  </Name>
+  <Name Type="FieldsetColor" Section="Fieldset">
+    <Description>Fieldset Color</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="FieldsetReqText" Section="Fieldset">
+    <Description>Fieldset Required Text</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="EventBorder" Section="Events">
+    <Description>Events Border Color</Description>
+    <HexCode>#456c12</HexCode>
+  </Name>
+  <Name Type="EventTitleBG" Section="Events">
+    <Description>Events Title Background Color</Description>
+    <HexCode>#911304</HexCode>
+  </Name>
+  <Name Type="EventTitleColor" Section="Events">
+    <Description>Events Title Color</Description>
+    <HexCode>#ffffff</HexCode>
+  </Name>
+  <Name Type="EventDaysBG" Section="Events">
+    <Description>Events Days Background</Description>
+    <HexCode>#538218</HexCode>
+  </Name>
+  <Name Type="EventDaysColor" Section="Events">
+    <Description>Events Days Color</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="EventOnDaysBG" Section="Events">
+    <Description>Events On Days Background</Description>
+    <HexCode>#911304</HexCode>
+  </Name>
+  <Name Type="EventOnDaysColor" Section="Events">
+    <Description>Events On Days Color</Description>
+    <HexCode>#ffffff</HexCode>
+  </Name>
+  <Name Type="EventBlankDays" Section="Events">
+    <Description>Events Empty Days Background</Description>
+    <HexCode>#456c12</HexCode>
+  </Name>
+  <Name Type="EventTodayBG" Section="Events">
+    <Description>Events Today Background</Description>
+    <HexCode>#d5d857</HexCode>
+  </Name>
+  <Name Type="EventTodayColor" Section="Events">
+    <Description>Events Today Color</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="TableBorder" Section="Tables">
+    <Description>Table Border Color</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="TableTitleBG" Section="Tables">
+    <Description>Table Title Background Color</Description>
+    <HexCode>#375607</HexCode>
+  </Name>
+  <Name Type="TableTitleColor" Section="Tables">
+    <Description>Table Title Color</Description>
+    <HexCode>#ffffff</HexCode>
+  </Name>
+  <Name Type="TableHeaderBG" Section="Tables">
+    <Description>Table Header Background Color</Description>
+    <HexCode>#477312</HexCode>
+  </Name>
+  <Name Type="TableHeaderColor" Section="Tables">
+    <Description>Table Header Color</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="TableBody1BG" Section="Tables">
+    <Description>Table Row Background Color</Description>
+    <HexCode>#8ab041</HexCode>
+  </Name>
+  <Name Type="TableBody1Color" Section="Tables">
+    <Description>Table Row Color</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="TableBody2BG" Section="Tables">
+    <Description>Table Row Alternate Background Color</Description>
+    <HexCode>#729829</HexCode>
+  </Name>
+  <Name Type="TableBody2Color" Section="Tables">
+    <Description>Table Row Alternate Color</Description>
+    <HexCode>#000000</HexCode>
+  </Name>
+  <Name Type="TableBodyHighlightBG" Section="Tables">
+    <Description>Table Highlight Background Color</Description>
+    <HexCode>#cc6600</HexCode>
+  </Name>
+  <Name Type="TableBodyHighlightColor" Section="Tables">
+    <Description>Table Highlight Color</Description>
+    <HexCode>#ffffff</HexCode>
+  </Name>
+  <Name Type="TopMenuBG" Section="ModuleTopMenu">
+    <Description>Background Color</Description>
+    <HexCode>#538218</HexCode>
+  </Name>
+  <Name Type="TopMenuColor" Section="ModuleTopMenu">
+    <Description>Font Color</Description>
+    <HexCode>#ffffff</HexCode>
+  </Name>
+  <Name Type="TopMenuBGHover" Section="ModuleTopMenu">
+    <Description>Hover Background Color</Description>
+    <HexCode>#d5d857</HexCode>
+  </Name>
+  <Name Type="TopMenuColorHover" Section="ModuleTopMenu">
+    <Description>Hover Font Color</Description>
+    <HexCode>#ffffff</HexCode>
+  </Name>
+</root>

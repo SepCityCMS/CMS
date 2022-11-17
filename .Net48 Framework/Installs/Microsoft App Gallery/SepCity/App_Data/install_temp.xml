@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <RunInstall xmlns="http://tempuri.org/">
+      <UserID></UserID>
+      <DBAddress>PlaceHolderForSQLDBAddress</DBAddress>
+      <DBName>PlaceHolderForSQLDBName</DBName>
+      <DBUser>PlaceHolderForSQLUser</DBUser>
+      <DBPass>PlaceHolderForSQLPassword</DBPass>
+      <InstallCategories>No</InstallCategories>
+      <InstallSampleData>No</InstallSampleData>
+      <SMTPServer>PlaceholderForSMTPServer</SMTPServer>
+      <SMTPUser></SMTPUser>
+      <SMTPPass></SMTPPass>
+      <UserName>PlaceholderForAdminName</UserName>
+      <Password>PlaceholderForAdminPassword</Password>
+      <EmailAddress>PlaceholderForAdminEmail</EmailAddress>
+      <FirstName>PlaceholderForAdminFName</FirstName>
+      <LastName>PlaceholderForAdminLName</LastName>
+      <Male>1</Male>
+      <BirthDate></BirthDate>
+      <StreetAddress>123 Main St</StreetAddress>
+      <City>City</City>
+      <State>St</State>
+      <ZipCode>55555</ZipCode>
+      <PhoneNumber>555-555-5555</PhoneNumber>
+      <Country>us</Country>
+      <Secret_Answer></Secret_Answer>
+      <Secret_Question></Secret_Question>
+      <LicenseUser></LicenseUser>
+      <LicensePass></LicensePass>
+      <LicenseKey></LicenseKey>
+    </RunInstall>
+  </soap:Body>
+</soap:Envelope>

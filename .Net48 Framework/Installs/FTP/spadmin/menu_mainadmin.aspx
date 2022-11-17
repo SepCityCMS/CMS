@@ -1,0 +1,1 @@
+<%@ page language="C#" autoeventwireup="true" codebehind="menu_mainadmin.aspx.cs" inherits="wwwroot.mainmenu" %>

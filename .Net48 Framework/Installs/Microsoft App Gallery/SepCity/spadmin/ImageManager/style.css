@@ -1,0 +1,56 @@
+body {
+    background: #ededed;
+    color: #444444;
+    font: 8pt tahoma, arial, sans-serif;
+    margin: 0;
+}
+
+.dialogFooter {
+    background-color: #ededed;
+    padding-bottom: 10px !important;
+    padding-right: 10px !important;
+}
+
+td { font-size: 8pt }
+
+input { font: 8pt tahoma, arial, sans-serif }
+
+select { font: 8pt tahoma, arial, sans-serif }
+
+textarea { font: 8pt tahoma, arial, sans-serif }
+
+.inpSel { font: 8pt tahoma, arial, sans-serif }
+
+.inpTxt { font: 8pt tahoma, arial, sans-serif; }
+
+.inpChk {
+    height: 13px;
+    margin-bottom: 1px;
+    margin-right: 3px;
+    width: 13px;
+}
+
+.inpRdo {
+    height: 13px;
+    margin-bottom: 1px;
+    margin-right: 3px;
+    width: 13px;
+}
+
+.inpBtn, .inpBtnOver, .inpBtnOut {
+    background: url('button.png') #EEEEEE;
+
+    border-bottom: 1px solid #AAAAAA;
+
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #AAAAAA;
+    border-top: 1px solid #DDDDDD;
+    color: #000000;
+
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 2px;
+
+    padding: 4px 10px 4px 10px;
+}

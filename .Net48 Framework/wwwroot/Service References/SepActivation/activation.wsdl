@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Get_License_Details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LicenseKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_License_DetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_License_DetailsResult" type="tns:jActivation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="jActivation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LicenseKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SoftwareEdition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpireDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModuleList" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="New_License">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StreetAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecretQuestion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecretAnswer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferrerSite" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FromPlesk" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Reseller_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="New_LicenseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="New_LicenseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AESEncryption">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AESEncryptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AESEncryptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_License">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LicenseKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_LicenseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Check_LicenseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Version">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_VersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_VersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_Tip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="version" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_TipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Load_TipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_License_DetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_License_Details" />
+  </wsdl:message>
+  <wsdl:message name="Get_License_DetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_License_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="New_LicenseSoapIn">
+    <wsdl:part name="parameters" element="tns:New_License" />
+  </wsdl:message>
+  <wsdl:message name="New_LicenseSoapOut">
+    <wsdl:part name="parameters" element="tns:New_LicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="AESEncryptionSoapIn">
+    <wsdl:part name="parameters" element="tns:AESEncryption" />
+  </wsdl:message>
+  <wsdl:message name="AESEncryptionSoapOut">
+    <wsdl:part name="parameters" element="tns:AESEncryptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Check_LicenseSoapIn">
+    <wsdl:part name="parameters" element="tns:Check_License" />
+  </wsdl:message>
+  <wsdl:message name="Check_LicenseSoapOut">
+    <wsdl:part name="parameters" element="tns:Check_LicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_VersionSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Version" />
+  </wsdl:message>
+  <wsdl:message name="Get_VersionSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_VersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Load_TipSoapIn">
+    <wsdl:part name="parameters" element="tns:Load_Tip" />
+  </wsdl:message>
+  <wsdl:message name="Load_TipSoapOut">
+    <wsdl:part name="parameters" element="tns:Load_TipResponse" />
+  </wsdl:message>
+  <wsdl:portType name="activationSoap">
+    <wsdl:operation name="Get_License_Details">
+      <wsdl:input message="tns:Get_License_DetailsSoapIn" />
+      <wsdl:output message="tns:Get_License_DetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="New_License">
+      <wsdl:input message="tns:New_LicenseSoapIn" />
+      <wsdl:output message="tns:New_LicenseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AESEncryption">
+      <wsdl:input message="tns:AESEncryptionSoapIn" />
+      <wsdl:output message="tns:AESEncryptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Check_License">
+      <wsdl:input message="tns:Check_LicenseSoapIn" />
+      <wsdl:output message="tns:Check_LicenseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Version">
+      <wsdl:input message="tns:Get_VersionSoapIn" />
+      <wsdl:output message="tns:Get_VersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_Tip">
+      <wsdl:input message="tns:Load_TipSoapIn" />
+      <wsdl:output message="tns:Load_TipSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="activationSoap" type="tns:activationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_License_Details">
+      <soap:operation soapAction="http://tempuri.org/Get_License_Details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="New_License">
+      <soap:operation soapAction="http://tempuri.org/New_License" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AESEncryption">
+      <soap:operation soapAction="http://tempuri.org/AESEncryption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Check_License">
+      <soap:operation soapAction="http://tempuri.org/Check_License" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Version">
+      <soap:operation soapAction="http://tempuri.org/Get_Version" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_Tip">
+      <soap:operation soapAction="http://tempuri.org/Load_Tip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="activationSoap12" type="tns:activationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_License_Details">
+      <soap12:operation soapAction="http://tempuri.org/Get_License_Details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="New_License">
+      <soap12:operation soapAction="http://tempuri.org/New_License" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AESEncryption">
+      <soap12:operation soapAction="http://tempuri.org/AESEncryption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Check_License">
+      <soap12:operation soapAction="http://tempuri.org/Check_License" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Version">
+      <soap12:operation soapAction="http://tempuri.org/Get_Version" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_Tip">
+      <soap12:operation soapAction="http://tempuri.org/Load_Tip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="activation">
+    <wsdl:port name="activationSoap" binding="tns:activationSoap">
+      <soap:address location="https://www.sepcity.com/services/activation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="activationSoap12" binding="tns:activationSoap12">
+      <soap12:address location="https://www.sepcity.com/services/activation.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,18 @@
+<%@ Master Language="C#" %>
+<%@ Import Namespace="SepCommon" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head id="PageHead" runat="server">
+<title></title>
+    <asp:ContentPlaceHolder ID="EmbeddedScripts" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="<%= SepFunctions.GetInstallFolder(true) + "skins/public/styles/colors.css" %>" type="text/css" />
+</head>
+<body>
+
+    <form id="aspnetForm" runat="server">
+        <asp:ContentPlaceHolder ID="SiteContent" runat="server" />
+    </form>
+
+</body>
+</html>

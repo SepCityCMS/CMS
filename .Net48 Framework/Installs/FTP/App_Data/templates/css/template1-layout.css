@@ -1,0 +1,123 @@
+body {
+    background-color: [[BGColor]];
+    color: [[BGForeColor]];
+    font-family: Verdana;
+    font-size: 11px;
+    MARGIN: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.MenuLabel {
+    /* fallback (Opera) */
+    background: [[MenuLabelBG1]];
+    /* Mozilla: */
+    background: -moz-linear-gradient(top, [[MenuLabelBG1]], [[MenuLabelBG2]]);
+    /* Chrome, Safari:*/
+    background: -webkit-gradient(linear,
+                                 left top, left bottom, from([[MenuLabelBG1]]), to([[MenuLabelBG2]]));
+    color: [[MenuLabelColor]];
+    /* MSIE */
+    filter: progid:DXImageTransform.Microsoft.Gradient(
+                                                      StartColorStr='[[MenuLabelBG1]]', EndColorStr='[[MenuLabelBG2]]', GradientType=0);
+    font-weight: bold;
+    height: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+    text-align: left;
+    width: 150px;
+}
+
+.TopMenuBG {
+    /* fallback (Opera) */
+    background: [[TopMenuBG1]];
+    /* Mozilla: */
+    background: -moz-linear-gradient(top, [[TopMenuBG1]], [[TopMenuBG2]]);
+    /* Chrome, Safari:*/
+    background: -webkit-gradient(linear,
+                                 left top, left bottom, from([[TopMenuBG1]]), to([[TopMenuBG2]]));
+    /* MSIE */
+    filter: progid:DXImageTransform.Microsoft.Gradient(
+                                                      StartColorStr='[[TopMenuBG1]]', EndColorStr='[[TopMenuBG2]]', GradientType=0);
+    height: 60px;
+    width: 100%;
+}
+
+.ContentTopGrad {
+    /* fallback (Opera) */
+    background: [[ContentTopGradBG2]];
+    /* Mozilla: */
+    background: -moz-linear-gradient(top, [[ContentTopGradBG1]], [[ContentTopGradBG2]]);
+    /* Chrome, Safari:*/
+    background: -webkit-gradient(linear,
+                                 left top, left bottom, from([[ContentTopGradBG1]]), to([[ContentTopGradBG2]]));
+    /* MSIE */
+    filter: progid:DXImageTransform.Microsoft.Gradient(
+                                                      StartColorStr='[[ContentTopGradBG1]]', EndColorStr='[[ContentTopGradBG2]]', GradientType=0);
+    height: 25px;
+    width: 100%;
+}
+
+.ContentBottomGrad {
+    /* fallback (Opera) */
+    background: [[ContentBotGradBG1]];
+    /* Mozilla: */
+    background: -moz-linear-gradient(top, [[ContentBotGradBG1]], [[ContentBotGradBG2]]);
+    /* Chrome, Safari:*/
+    background: -webkit-gradient(linear,
+                                 left top, left bottom, from([[ContentBotGradBG1]]), to([[ContentBotGradBG2]]));
+    /* MSIE */
+    filter: progid:DXImageTransform.Microsoft.Gradient(
+                                                      StartColorStr='[[ContentBotGradBG1]]', EndColorStr='[[ContentBotGradBG2]]', GradientType=0);
+    height: 25px;
+    width: 100%;
+}
+
+.HeaderHR {
+    background-color: [[HeaderHRBG]];
+    height: 3px;
+    width: 100%;
+}
+
+.Header {
+    background-color: [[HeaderBG]];
+    height: 100px;
+    width: 100%;
+}
+
+.Header div {
+    color: [[HeaderColor]];
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 980px;
+    z-index: 99;
+}
+
+.contentbody {
+    padding: 10px;
+    width: 810px;
+}
+
+.contentright { padding: 10px; }
+
+.contentspacer {
+    background-color: [[ContentSpacerBG]];
+    width: 1px;
+}
+
+.Footer {
+    background-color: [[FooterBG]];
+    height: 60px;
+    width: 100%;
+}
+
+.Footer div {
+    color: [[FooterColor]];
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 980px;
+}

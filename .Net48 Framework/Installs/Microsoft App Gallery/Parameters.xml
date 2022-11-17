@@ -1,0 +1,109 @@
+<parameters>
+	<parameter name="Application Path" description="It is recommended that SepCity be installed as a web site root. Leave this parameter empty." defaultValue="" tags="iisapp">
+		<parameterValidation type="AllowEmpty" />
+		<parameterEntry type="ProviderPath" scope="iisapp" match="SepCity" />
+	</parameter>
+
+	<!--Database Information -->
+	<parameter name="Database Server" description="Location of your database server." defaultValue=".\sqlexpress" tags="DBServer, SQL">
+		<parameterEntry type="TextFile" scope="\\App_Data\\install_temp.xml" match="PlaceHolderForSQLDBAddress" />
+		<parameterEntry type="TextFile" scope="\\App_Data\\system.xml" match="PlaceHolderForSQLDBAddress" />
+	</parameter>
+
+	<parameter name="Database Name" description="Name of the database for your application." defaultValue="SepCity" tags="DBName, SQL">
+		<parameterEntry type="TextFile" scope="\\App_Data\\install_temp.xml" match="PlaceHolderForSQLDBName" />
+		<parameterEntry type="TextFile" scope="\\App_Data\\system.xml" match="PlaceHolderForSQLDBName" />
+	</parameter>
+
+	<parameter name="Database Username" description="User name to access you application database." defaultValue="SepCityUser" tags="SQL, DbUsername">
+		<parameterEntry type="TextFile" scope="sql/createlogin.sql" match="PlaceHolderForSQLUser" />
+		<parameterEntry type="TextFile" scope="sql/createuser.sql" match="PlaceHolderForSQLUser" />
+		<parameterEntry type="TextFile" scope="\\App_Data\\install_temp.xml" match="PlaceHolderForSQLUser" />
+		<parameterEntry type="TextFile" scope="\\App_Data\\system.xml" match="PlaceHolderForSQLUser" />
+	</parameter>
+
+	<parameter name="Database Password" description="Enter Password for the Database Username. Please ensure that Passwords contain at least (1) upper case letter, at least (1) lower case letter, at least (1) number or special character, and be least (8) characters in length" tags="New, Password, SQL, DbUserPassword">
+		<parameterValidation type = "RegularExpression" validationString = "[A-Za-z0-9._-]*?" />
+		<parameterEntry type="TextFile" scope="sql/createlogin.sql" match="PlaceHolderForSQLPassword" />
+		<parameterEntry type="TextFile" scope="\\App_Data\\install_temp.xml" match="PlaceHolderForSQLPassword" />
+		<parameterEntry type="TextFile" scope="\\App_Data\\system.xml" match="PlaceHolderForSQLPassword" />
+	</parameter>   
+
+	<parameter name="Database Administrator" description="Administrator username for your database." defaultValue="sa" tags="SQL, DbAdminUsername"></parameter>
+
+	<parameter name="Database Administrator Password" description="Password that is associated with the database administrator account." tags="Password, SQL, DbAdminPassword"></parameter>
+
+	<!-- This is the hidden connection string will create the database user for the application database  -->
+	<parameter name="Connection String Master" description="Automatically sets the connection string for the connection request." defaultValue="Server={Database Server};Database=MASTER;uid={Database Administrator};Pwd={Database Administrator Password};" tags="Hidden,SQL,SQLConnectionString,NoStore">
+		<parameterEntry type="ProviderPath" scope="dbfullsql" match="sql/createlogin.sql" />
+	</parameter>
+	
+	<parameter name="Connection String for Config" description="Connection string to enter into config" defaultValue="server={Database Server};database={Database Name};uid={Database Administrator};Pwd={Database Administrator Password};" tags="Hidden,SQL,SQLConnectionString">
+		<parameterEntry type="ProviderPath" scope="dbfullsql" match="sql/createuser.sql" />
+	</parameter>
+
+	<parameter tags="Hidden,SQL" defaultValue="SERVER={Database Server};" description="Connection string to enter into config" name="Automatic dbserver">
+		<parameterEntry type="TextFile" match="SERVER=(.[^;]*);" scope="\\App_Data\\system.xml"/>
+	</parameter>
+	<parameter tags="Hidden,SQL" defaultValue="DATABASE={Database Name};" description="Connection string to enter into config" name="Automatic dbname ">
+		<parameterEntry type="TextFile" match="DATABASE=(.[^;]*);" scope="\\App_Data\\system.xml"/>
+	</parameter>
+	<parameter tags="Hidden,SQL" defaultValue="user id={Database Username};" description="Connection string to enter into config" name="Automatic dbuser ">
+		<parameterEntry type="TextFile" match="user id=(.[^;]*);" scope="\\App_Data\\system.xml"/>
+	</parameter>
+	<parameter tags="Hidden,SQL" defaultValue="PASSWORD={Database Password};" description="Connection string to enter into config" name="Automatic password">
+		<parameterEntry type="TextFile" match="PASSWORD=(.[^;]*);" scope="\\App_Data\\system.xml"/>
+	</parameter>
+	
+	<!-- This is the parameter that is used to set ACLs, it's set to the application path filled in by the user. -->
+	<parameter name="SetAcl10" description="Automatically sets write access for the App_Data path" defaultValue="{Application Path}/App_Data" tags="hidden">
+		<parameterEntry type="ProviderPath" scope="setAcl" match="/App_Data$" />
+	</parameter>
+
+	<parameter name="SetAcl11" description="Automatically sets write access for the downloads path" defaultValue="{Application Path}/downloads" tags="hidden">
+		<parameterEntry type="ProviderPath" scope="setAcl" match="/downloads$" />
+	</parameter>
+	
+	<parameter name="SetAcl12" description="Automatically sets write access for the images path" defaultValue="{Application Path}/images" tags="hidden">
+		<parameterEntry type="ProviderPath" scope="setAcl" match="/images$" />
+	</parameter>
+	
+	<parameter name="SetAcl13" description="Automatically sets write access for the install path" defaultValue="{Application Path}/install" tags="hidden">
+		<parameterEntry type="ProviderPath" scope="setAcl" match="/install$" />
+	</parameter>
+	
+	<parameter name="SetAcl14" description="Automatically sets write access for the skins path" defaultValue="{Application Path}/skins" tags="hidden">
+		<parameterEntry type="ProviderPath" scope="setAcl" match="/skins$" />
+	</parameter>
+	
+	<!-- This is the parameter that is used to set ACLs, it's set to the application path filled in by the user -->
+	<parameter name="SetAcl3" description="Automatically sets write access for the app" defaultValue="{Application Path}/App_Data/install_temp.xml" tags="hidden">
+		<parameterEntry type="ProviderPath" scope="setAcl" match="/App_Data/install_temp.xml" />
+	</parameter> 
+
+	<!--  Parameters to prompt for Gallery server pro administrator credentials to be created during install  -->
+	<parameter name="User Name" tags="NoStore">
+		<parameterEntry type="TextFile" scope="\\App_Data\\install_temp.xml" match="PlaceholderForAdminName" />
+	</parameter>
+
+	<parameter name="User Password" tags="password,New,NoStore">
+		<parameterEntry type="TextFile" scope="\\App_Data\\install_temp.xml" match="PlaceholderForAdminPassword" />
+	</parameter>
+
+	<parameter name="Email Address" tags="NoStore">
+		<parameterEntry type="TextFile" scope="\\App_Data\\install_temp.xml" match="PlaceholderForAdminEmail" />
+	</parameter>
+
+	<parameter name="First Name" tags="NoStore">
+		<parameterEntry type="TextFile" scope="\\App_Data\\install_temp.xml" match="PlaceholderForAdminFName" />
+	</parameter>
+
+	<parameter name="Last Name" tags="NoStore">
+		<parameterEntry type="TextFile" scope="\\App_Data\\install_temp.xml" match="PlaceholderForAdminLName" />
+	</parameter>
+
+	<parameter name="SMTP Server Address" tags="NoStore">
+		<parameterEntry type="TextFile" scope="\\App_Data\\install_temp.xml" match="PlaceholderForSMTPServer" />
+	</parameter>
+
+</parameters>

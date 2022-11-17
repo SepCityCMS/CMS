@@ -1,0 +1,112 @@
+﻿.jcarousel-wrapper {
+    -moz-border-radius: 5px;
+    -moz-box-shadow: 0 0 2px #999;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999;
+    border: 10px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #999;
+    margin: 20px auto;
+    position: relative;
+}
+
+/** Carousel **/
+
+.jcarousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.jcarousel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 20000em;
+}
+
+.jcarousel li {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    float: left;
+    width: 200px;
+}
+
+.jcarousel img {
+    display: block;
+    height: auto !important;
+    max-width: 100%;
+}
+
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    -moz-border-radius: 30px;
+    -moz-box-shadow: 0 0 4px #F0EFE7;
+    -webkit-border-radius: 30px;
+    -webkit-box-shadow: 0 0 4px #F0EFE7;
+    background: #4E443C;
+    border-radius: 30px;
+    box-shadow: 0 0 4px #F0EFE7;
+    color: #fff;
+    font: 24px/27px Arial, sans-serif;
+    height: 30px;
+    margin-top: -15px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    top: 50%;
+    width: 30px;
+}
+
+.jcarousel-control-prev { left: 15px; }
+
+.jcarousel-control-next { right: 15px; }
+
+/** Carousel Pagination **/
+
+.jcarousel-pagination {
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    bottom: -40px;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    transform: translate(-50%, 0);
+}
+
+.jcarousel-pagination a {
+    -moz-box-shadow: 0 0 2px #4E443C;
+    -webkit-box-shadow: 0 0 2px #4E443C;
+
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #4E443C;
+    color: #4E443C;
+
+    display: inline-block;
+    font-size: 11px;
+    height: 10px;
+    line-height: 10px;
+
+    margin-right: 7px;
+
+    text-decoration: none;
+    text-indent: -9999px;
+    width: 10px;
+}
+
+.jcarousel-pagination a.active {
+    -moz-box-shadow: 0 0 2px #F0EFE7;
+    -webkit-box-shadow: 0 0 2px #F0EFE7;
+    background: #4E443C;
+
+    box-shadow: 0 0 2px #F0EFE7;
+    color: #fff;
+    opacity: 1;
+}

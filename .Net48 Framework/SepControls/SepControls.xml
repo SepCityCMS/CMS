@@ -1,0 +1,1832 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SepControls</name>
+    </assembly>
+    <members>
+        <member name="T:SepControls.AccessClassDropdown">
+            <summary>
+            Class AccessClassDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.AccessClassDropdown.m_SelectWidth">
+            <summary>
+            The m select width.
+            </summary>
+        </member>
+        <member name="F:SepControls.AccessClassDropdown.m_showDeleteAccount">
+            <summary>
+            The m show delete account.
+            </summary>
+        </member>
+        <member name="F:SepControls.AccessClassDropdown.m_Text">
+            <summary>
+            The m text.
+            </summary>
+        </member>
+        <member name="P:SepControls.AccessClassDropdown.SelectWidth">
+            <summary>
+            Gets or sets the width of the select.
+            </summary>
+            <value>The width of the select.</value>
+        </member>
+        <member name="P:SepControls.AccessClassDropdown.showDeleteAccount">
+            <summary>
+            Gets or sets the show delete account.
+            </summary>
+            <value>The show delete account.</value>
+        </member>
+        <member name="P:SepControls.AccessClassDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.AccessClassDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.AccessClassDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.AccessClassDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.AccessKeyDropdown">
+            <summary>
+            Class AccessKeyDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.AccessKeyDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.AccessKeyDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.AccessKeyDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.AccessKeyDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.AccessKeyDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.AccessKeySelection">
+            <summary>
+            Class AccessKeySelection.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.AccessKeySelection.m_ExcludeEveryone">
+            <summary>
+            The m exclude everyone
+            </summary>
+        </member>
+        <member name="F:SepControls.AccessKeySelection.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.AccessKeySelection.ExcludeEveryone">
+            <summary>
+            Gets or sets the exclude everyone.
+            </summary>
+            <value>The exclude everyone.</value>
+        </member>
+        <member name="P:SepControls.AccessKeySelection.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.AccessKeySelection.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.AccessKeySelection.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.AccessKeySelection.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.ActivityTypeDropdown">
+            <summary>
+            Class ActivityTypeDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.ActivityTypeDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.ActivityTypeDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.ActivityTypeDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ActivityTypeDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ActivityTypeDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.AudioPlayer">
+            <summary>
+            Class AudioPlayer.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.AudioPlayer.m_ContentID">
+            <summary>
+            The m content identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.AudioPlayer.m_Height">
+            <summary>
+            The m height
+            </summary>
+        </member>
+        <member name="F:SepControls.AudioPlayer.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="F:SepControls.AudioPlayer.m_Width">
+            <summary>
+            The m width
+            </summary>
+        </member>
+        <member name="P:SepControls.AudioPlayer.ContentID">
+            <summary>
+            Gets or sets the content identifier.
+            </summary>
+            <value>The content identifier.</value>
+        </member>
+        <member name="P:SepControls.AudioPlayer.Height">
+            <summary>
+            Gets or sets the height of the Web server control.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:SepControls.AudioPlayer.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:SepControls.AudioPlayer.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:SepControls.AudioPlayer.Width">
+            <summary>
+            Gets or sets the width of the Web server control.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="M:SepControls.AudioPlayer.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.AudioPlayer.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.AudioPlayer.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.GoogleVerificationResponseOutput">
+            <summary>
+            Class GoogleVerificationResponseOutput.
+            </summary>
+        </member>
+        <member name="P:SepControls.GoogleVerificationResponseOutput.success">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:SepControls.GoogleVerificationResponseOutput"/> is success.
+            </summary>
+            <value><c>true</c> if success; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:SepControls.Captcha">
+            <summary>
+            Class Captcha.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.Captcha.ValidateResponseField">
+            <summary>
+            The validate response field
+            </summary>
+        </member>
+        <member name="F:SepControls.Captcha.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.Captcha.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.Captcha.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.Captcha.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.Captcha.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:SepControls.Captcha.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:SepControls.Captcha.AcceptAllCertifications(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            Accepts all certifications.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="certification">The certification.</param>
+            <param name="chain">The chain.</param>
+            <param name="sslPolicyErrors">The SSL policy errors.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:SepControls.CategoryDropdown">
+            <summary>
+            Class CategoryDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.CategoryDropdown.m_CatID">
+            <summary>
+            The m cat identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.CategoryDropdown.m_Disabled">
+            <summary>
+            The m disabled
+            </summary>
+        </member>
+        <member name="F:SepControls.CategoryDropdown.m_FileID">
+            <summary>
+            The m file identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.CategoryDropdown.m_Management">
+            <summary>
+            The m management
+            </summary>
+        </member>
+        <member name="P:SepControls.CategoryDropdown.CatID">
+            <summary>
+            Gets or sets the cat identifier.
+            </summary>
+            <value>The cat identifier.</value>
+        </member>
+        <member name="P:SepControls.CategoryDropdown.Disabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:SepControls.CategoryDropdown" /> is disabled.
+            </summary>
+            <value><c>true</c> if disabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SepControls.CategoryDropdown.FileID">
+            <summary>
+            Gets or sets the file identifier.
+            </summary>
+            <value>The file identifier.</value>
+        </member>
+        <member name="P:SepControls.CategoryDropdown.Management">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:SepControls.CategoryDropdown" /> is management.
+            </summary>
+            <value><c>true</c> if management; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SepControls.CategoryDropdown.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="M:SepControls.CategoryDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.CategoryDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.CategoryDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.CategorySelection">
+            <summary>
+            Class CategorySelection.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.CategorySelection.m_OnlyInclude">
+            <summary>
+            The m only include
+            </summary>
+        </member>
+        <member name="F:SepControls.CategorySelection.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.CategorySelection.OnlyInclude">
+            <summary>
+            Gets or sets the only include.
+            </summary>
+            <value>The only include.</value>
+        </member>
+        <member name="P:SepControls.CategorySelection.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.CategorySelection.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.CategorySelection.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.CategorySelection.OnPreRender(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.PreRender" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:SepControls.CategorySelection.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.ChangeLogDropdown">
+            <summary>
+            Class ChangeLogDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.ChangeLogDropdown.m_ChangeUniqueID">
+            <summary>
+            The m change unique identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.ChangeLogDropdown.m_ModuleID">
+            <summary>
+            The m module identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.ChangeLogDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.ChangeLogDropdown.ChangeUniqueID">
+            <summary>
+            Gets or sets the change unique identifier.
+            </summary>
+            <value>The change unique identifier.</value>
+        </member>
+        <member name="P:SepControls.ChangeLogDropdown.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:SepControls.ChangeLogDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.ChangeLogDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ChangeLogDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ChangeLogDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.ColorPicker">
+            <summary>
+            Class ColorPicker.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.ColorPicker.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.ColorPicker.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.ColorPicker.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ColorPicker.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ColorPicker.OnPreRender(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.PreRender" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:SepControls.ColorPicker.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.ContentImages">
+            <summary>
+            Class ContentImages.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.ContentImages.m_ContentUniqueID">
+            <summary>
+            The m content unique identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.ContentImages.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="F:SepControls.ContentImages.m_UserID">
+            <summary>
+            The m user identifier
+            </summary>
+        </member>
+        <member name="P:SepControls.ContentImages.ContentUniqueID">
+            <summary>
+            Gets or sets the content unique identifier.
+            </summary>
+            <value>The content unique identifier.</value>
+        </member>
+        <member name="P:SepControls.ContentImages.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:SepControls.ContentImages.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:SepControls.ContentImages.UserID">
+            <summary>
+            Gets or sets the user identifier.
+            </summary>
+            <value>The user identifier.</value>
+        </member>
+        <member name="M:SepControls.ContentImages.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ContentImages.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ContentImages.OnPreRender(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.PreRender" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:SepControls.ContentImages.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.CountryDropdown">
+            <summary>
+            Class CountryDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.CountryDropdown.m_AllowBlankSelection">
+            <summary>
+            The m allow blank selection
+            </summary>
+        </member>
+        <member name="F:SepControls.CountryDropdown.m_StateDropdownID">
+            <summary>
+            The m state dropdown identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.CountryDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.CountryDropdown.AllowBlankSelection">
+            <summary>
+            Gets or sets a value indicating whether [allow blank selection].
+            </summary>
+            <value><c>true</c> if [allow blank selection]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SepControls.CountryDropdown.StateDropdownID">
+            <summary>
+            Gets or sets the state dropdown identifier.
+            </summary>
+            <value>The state dropdown identifier.</value>
+        </member>
+        <member name="P:SepControls.CountryDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.CountryDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.CountryDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.CountryDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.GroupListDropdown">
+            <summary>
+            Class GroupListDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.GroupListDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.GroupListDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.GroupListDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.GroupListDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.GroupListDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.LanguageDropdown">
+            <summary>
+            Class LanguageDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.LanguageDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.LanguageDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.LanguageDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.LanguageDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.LanguageDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.MenuDropdown">
+            <summary>
+            Class MenuDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.MenuDropdown.m_MenuID">
+            <summary>
+            The m menu identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.MenuDropdown.m_OnUserPage">
+            <summary>
+            The m on user page
+            </summary>
+        </member>
+        <member name="F:SepControls.MenuDropdown.m_ShowNotOnAMenu">
+            <summary>
+            The m show not on a menu
+            </summary>
+        </member>
+        <member name="P:SepControls.MenuDropdown.MenuID">
+            <summary>
+            Gets or sets the menu identifier.
+            </summary>
+            <value>The menu identifier.</value>
+        </member>
+        <member name="P:SepControls.MenuDropdown.OnUserPage">
+            <summary>
+            Gets or sets a value indicating whether [on user page].
+            </summary>
+            <value><c>true</c> if [on user page]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SepControls.MenuDropdown.ShowNotOnAMenu">
+            <summary>
+            Gets or sets a value indicating whether [show not on a menu].
+            </summary>
+            <value><c>true</c> if [show not on a menu]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:SepControls.MenuDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.MenuDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.MenuDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.ModuleReviews">
+            <summary>
+            Class ModuleReviews.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.ModuleReviews.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="F:SepControls.ModuleReviews.m_UserID">
+            <summary>
+            The m user identifier
+            </summary>
+        </member>
+        <member name="P:SepControls.ModuleReviews.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:SepControls.ModuleReviews.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:SepControls.ModuleReviews.UserID">
+            <summary>
+            Gets or sets the user identifier.
+            </summary>
+            <value>The user identifier.</value>
+        </member>
+        <member name="M:SepControls.ModuleReviews.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ModuleReviews.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ModuleReviews.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.ModuleSelection">
+            <summary>
+            Class ModuleSelection.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.ModuleSelection.m_ModuleType">
+            <summary>
+            The m module type
+            </summary>
+        </member>
+        <member name="F:SepControls.ModuleSelection.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.ModuleSelection.ModuleType">
+            <summary>
+            Gets or sets the type of the module.
+            </summary>
+            <value>The type of the module.</value>
+        </member>
+        <member name="P:SepControls.ModuleSelection.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.ModuleSelection.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ModuleSelection.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ModuleSelection.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.NewsletterDropdown">
+            <summary>
+            Class NewsletterDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.NewsletterDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.NewsletterDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.NewsletterDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.NewsletterDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.NewsletterDropdown.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.OrderStatusDropdown">
+            <summary>
+            Class OrderStatusDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.OrderStatusDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.OrderStatusDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.OrderStatusDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.OrderStatusDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.OrderStatusDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.PageSelection">
+            <summary>
+            Class PageSelection.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.PageSelection.m_OnlyInclude">
+            <summary>
+            The m only include
+            </summary>
+        </member>
+        <member name="F:SepControls.PageSelection.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.PageSelection.OnlyInclude">
+            <summary>
+            Gets or sets the only include.
+            </summary>
+            <value>The only include.</value>
+        </member>
+        <member name="P:SepControls.PageSelection.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.PageSelection.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.PageSelection.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.PageSelection.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.PortalDropdown">
+            <summary>
+            Class PortalDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.PortalDropdown.m_SelectWidth">
+            <summary>
+            The m select width
+            </summary>
+        </member>
+        <member name="F:SepControls.PortalDropdown.m_ShowAllPortals">
+            <summary>
+            The m show all portals
+            </summary>
+        </member>
+        <member name="F:SepControls.PortalDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.PortalDropdown.SelectWidth">
+            <summary>
+            Gets or sets the width of the select.
+            </summary>
+            <value>The width of the select.</value>
+        </member>
+        <member name="P:SepControls.PortalDropdown.ShowAllPortals">
+            <summary>
+            Gets or sets a value indicating whether [show all portals].
+            </summary>
+            <value><c>true</c> if [show all portals]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SepControls.PortalDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.PortalDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.PortalDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.PortalDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.PortalSelection">
+            <summary>
+            Class PortalSelection.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.PortalSelection.m_ExcludeMaster">
+            <summary>
+            The m exclude master
+            </summary>
+        </member>
+        <member name="F:SepControls.PortalSelection.m_OnlyInclude">
+            <summary>
+            The m only include
+            </summary>
+        </member>
+        <member name="F:SepControls.PortalSelection.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.PortalSelection.ExcludeMaster">
+            <summary>
+            Gets or sets a value indicating whether [exclude master].
+            </summary>
+            <value><c>true</c> if [exclude master]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SepControls.PortalSelection.OnlyInclude">
+            <summary>
+            Gets or sets the only include.
+            </summary>
+            <value>The only include.</value>
+        </member>
+        <member name="P:SepControls.PortalSelection.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.PortalSelection.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.PortalSelection.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.PortalSelection.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.PostPrice">
+            <summary>
+            Class PostPrice.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.PostPrice.m_PriceUniqueID">
+            <summary>
+            The m price unique identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.PostPrice.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.PostPrice.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:SepControls.PostPrice.PriceUniqueID">
+            <summary>
+            Gets or sets the price unique identifier.
+            </summary>
+            <value>The price unique identifier.</value>
+        </member>
+        <member name="P:SepControls.PostPrice.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.PostPrice.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.PostPrice.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.PostPrice.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.RatingGraph">
+            <summary>
+            Class RatingGraph.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.RatingGraph.m_LookupID">
+            <summary>
+            The m lookup identifier
+            </summary>
+        </member>
+        <member name="P:SepControls.RatingGraph.LookupID">
+            <summary>
+            Gets or sets the lookup identifier.
+            </summary>
+            <value>The lookup identifier.</value>
+        </member>
+        <member name="P:SepControls.RatingGraph.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="M:SepControls.RatingGraph.Rating_Adverage(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Ratings the adverage.
+            </summary>
+            <param name="intStars1">The int stars1.</param>
+            <param name="intStars2">The int stars2.</param>
+            <param name="intStars3">The int stars3.</param>
+            <param name="intStars4">The int stars4.</param>
+            <param name="intStars5">The int stars5.</param>
+            <returns>System.Int64.</returns>
+        </member>
+        <member name="M:SepControls.RatingGraph.Rating_Totals(System.Int32,System.String,System.Int64,System.Int32)">
+            <summary>
+            Ratings the totals.
+            </summary>
+            <param name="intModuleID">The int module identifier.</param>
+            <param name="intUniqueID">The int unique identifier.</param>
+            <param name="intStars">The int stars.</param>
+            <param name="intDays">The int days.</param>
+            <returns>System.Int64.</returns>
+        </member>
+        <member name="M:SepControls.RatingGraph.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.RatingGraph.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.RatingGraph.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.RatingStars">
+            <summary>
+            Class RatingStars.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.RatingStars.m_disableAJAX">
+            <summary>
+            The m disable ajax
+            </summary>
+        </member>
+        <member name="F:SepControls.RatingStars.m_isReadOnly">
+            <summary>
+            The m is read only
+            </summary>
+        </member>
+        <member name="F:SepControls.RatingStars.m_LookupID">
+            <summary>
+            The m lookup identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.RatingStars.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.RatingStars.disableAJAX">
+            <summary>
+            Gets or sets a value indicating whether [disable ajax].
+            </summary>
+            <value><c>true</c> if [disable ajax]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SepControls.RatingStars.isReadOnly">
+            <summary>
+            Gets or sets a value indicating whether this instance is read only.
+            </summary>
+            <value><c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SepControls.RatingStars.LookupID">
+            <summary>
+            Gets or sets the lookup identifier.
+            </summary>
+            <value>The lookup identifier.</value>
+        </member>
+        <member name="P:SepControls.RatingStars.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:SepControls.RatingStars.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.RatingStars.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.RatingStars.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.RatingStars.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.StateDropdown">
+            <summary>
+            Class StateDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.StateDropdown.m_Country">
+            <summary>
+            The m country
+            </summary>
+        </member>
+        <member name="F:SepControls.StateDropdown.m_SelectWidth">
+            <summary>
+            The m select width
+            </summary>
+        </member>
+        <member name="F:SepControls.StateDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.StateDropdown.Country">
+            <summary>
+            Gets or sets the country.
+            </summary>
+            <value>The country.</value>
+        </member>
+        <member name="P:SepControls.StateDropdown.SelectWidth">
+            <summary>
+            Gets or sets the width of the select.
+            </summary>
+            <value>The width of the select.</value>
+        </member>
+        <member name="P:SepControls.StateDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.StateDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.StateDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.StateDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.TemplateDropdown">
+            <summary>
+            Class TemplateDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.TemplateDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.TemplateDropdown.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:SepControls.TemplateDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.TemplateDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.TemplateDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.TemplateDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.UploadFiles">
+            <summary>
+            Class UploadFiles.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.UploadFiles.m_ContentID">
+            <summary>
+            The m content identifier
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.m_showTemp">
+            <summary>
+            The m show temporary
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.m_UserID">
+            <summary>
+            The m user identifier
+            </summary>
+        </member>
+        <member name="T:SepControls.UploadFiles.EFileTypes">
+            <summary>
+            Enum EFileTypes
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.EFileTypes.Images">
+            <summary>
+            The images
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.EFileTypes.Audio">
+            <summary>
+            The audio
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.EFileTypes.Video">
+            <summary>
+            The video
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.EFileTypes.Document">
+            <summary>
+            The document
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.EFileTypes.Software">
+            <summary>
+            The software
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.EFileTypes.Any">
+            <summary>
+            Any
+            </summary>
+        </member>
+        <member name="T:SepControls.UploadFiles.EInputMode">
+            <summary>
+            Enum EInputMode
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.EInputMode.SingleFile">
+            <summary>
+            The single file
+            </summary>
+        </member>
+        <member name="F:SepControls.UploadFiles.EInputMode.MultipleFiles">
+            <summary>
+            The multiple files
+            </summary>
+        </member>
+        <member name="P:SepControls.UploadFiles.ContentID">
+            <summary>
+            Gets or sets the content identifier.
+            </summary>
+            <value>The content identifier.</value>
+        </member>
+        <member name="P:SepControls.UploadFiles.FileType">
+            <summary>
+            Gets or sets the type of the file.
+            </summary>
+            <value>The type of the file.</value>
+        </member>
+        <member name="P:SepControls.UploadFiles.Mode">
+            <summary>
+            Gets or sets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="P:SepControls.UploadFiles.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:SepControls.UploadFiles.showTemp">
+            <summary>
+            Gets or sets a value indicating whether [show temporary].
+            </summary>
+            <value><c>true</c> if [show temporary]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SepControls.UploadFiles.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:SepControls.UploadFiles.UserID">
+            <summary>
+            Gets or sets the user identifier.
+            </summary>
+            <value>The user identifier.</value>
+        </member>
+        <member name="M:SepControls.UploadFiles.FormatSize(System.Int64)">
+            <summary>
+            Formats the size.
+            </summary>
+            <param name="iSize">Size of the i.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:SepControls.UploadFiles.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.UploadFiles.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.UploadFiles.OnPreRender(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.PreRender" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:SepControls.UploadFiles.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.UserPagesMenu">
+            <summary>
+            Class UserPagesMenu.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.UserPagesMenu.m_MenuID">
+            <summary>
+            The m menu identifier
+            </summary>
+        </member>
+        <member name="P:SepControls.UserPagesMenu.MenuID">
+            <summary>
+            Gets or sets the menu identifier.
+            </summary>
+            <value>The menu identifier.</value>
+        </member>
+        <member name="M:SepControls.UserPagesMenu.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.UserPagesMenu.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.UserPagesMenu.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.VideoPlayer">
+            <summary>
+            Class VideoPlayer.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.VideoPlayer.m_Height">
+            <summary>
+            The m height
+            </summary>
+        </member>
+        <member name="F:SepControls.VideoPlayer.m_src">
+            <summary>
+            The m source
+            </summary>
+        </member>
+        <member name="F:SepControls.VideoPlayer.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="F:SepControls.VideoPlayer.m_Width">
+            <summary>
+            The m width
+            </summary>
+        </member>
+        <member name="P:SepControls.VideoPlayer.Height">
+            <summary>
+            Gets or sets the height of the Web server control.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:SepControls.VideoPlayer.src">
+            <summary>
+            Gets or sets the source.
+            </summary>
+            <value>The source.</value>
+        </member>
+        <member name="P:SepControls.VideoPlayer.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:SepControls.VideoPlayer.Width">
+            <summary>
+            Gets or sets the width of the Web server control.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="M:SepControls.VideoPlayer.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.VideoPlayer.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.VideoPlayer.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.WYSIWYGEditor">
+            <summary>
+            Class WYSIWYGEditor.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.WYSIWYGEditor.m_Mode">
+            <summary>
+            The m mode
+            </summary>
+        </member>
+        <member name="F:SepControls.WYSIWYGEditor.m_RelativeURLs">
+            <summary>
+            The m relative ur ls
+            </summary>
+        </member>
+        <member name="F:SepControls.WYSIWYGEditor.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.WYSIWYGEditor.Mode">
+            <summary>
+            Gets or sets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="P:SepControls.WYSIWYGEditor.RelativeURLs">
+            <summary>
+            Gets or sets a value indicating whether [relative ur ls].
+            </summary>
+            <value><c>true</c> if [relative ur ls]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SepControls.WYSIWYGEditor.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.WYSIWYGEditor.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.WYSIWYGEditor.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.WYSIWYGEditor.OnPreRender(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.PreRender" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:SepControls.WYSIWYGEditor.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.ZoneDropdown">
+            <summary>
+            Class ZoneDropdown.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.ZoneDropdown.m_OnlyInclude">
+            <summary>
+            The m only include
+            </summary>
+        </member>
+        <member name="F:SepControls.ZoneDropdown.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.ZoneDropdown.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:SepControls.ZoneDropdown.OnlyInclude">
+            <summary>
+            Gets or sets the only include.
+            </summary>
+            <value>The only include.</value>
+        </member>
+        <member name="P:SepControls.ZoneDropdown.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.ZoneDropdown.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ZoneDropdown.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ZoneDropdown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:SepControls.ZoneSelection">
+            <summary>
+            Class ZoneSelection.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="F:SepControls.ZoneSelection.m_OnlyInclude">
+            <summary>
+            The m only include
+            </summary>
+        </member>
+        <member name="F:SepControls.ZoneSelection.m_Text">
+            <summary>
+            The m text
+            </summary>
+        </member>
+        <member name="P:SepControls.ZoneSelection.ModuleID">
+            <summary>
+            Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:SepControls.ZoneSelection.OnlyInclude">
+            <summary>
+            Gets or sets the only include.
+            </summary>
+            <value>The only include.</value>
+        </member>
+        <member name="P:SepControls.ZoneSelection.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:SepControls.ZoneSelection.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ZoneSelection.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:SepControls.ZoneSelection.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the specified output.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+    </members>
+</doc>

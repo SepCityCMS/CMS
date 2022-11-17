@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="SuppressVersion">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CurrentVersion" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="wwwroot">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FileName" type="xs:string" default="" />
+                <xs:element name="ErrorCode" type="xs:string" default="" />
+                <xs:element name="Message" type="xs:string" default="" />
+                <xs:element name="CodePrev" type="xs:unsignedInt" default="0" />
+                <xs:element name="CodeCurrent" type="xs:unsignedInt" default="0" />
+                <xs:element name="CodeNext" type="xs:unsignedInt" default="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//wwwroot" />
+        <xs:field xpath="FileName" />
+        <xs:field xpath="ErrorCode" />
+        <xs:field xpath="Message" />
+        <xs:field xpath="CodePrev" />
+        <xs:field xpath="CodeCurrent" />
+        <xs:field xpath="CodeNext" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <SuppressVersion>
+    <CurrentVersion>2</CurrentVersion>
+  </SuppressVersion>
+  <wwwroot>
+    <FileName>auction_display.aspx.cs</FileName>
+    <ErrorCode>V3024</ErrorCode>
+    <Message>An odd precise comparison: CurrentBid == _. Consider using a comparison with defined precision: Math.Abs(A - B) &lt; Epsilon.</Message>
+    <CodePrev>4174429781</CodePrev>
+    <CodeCurrent>6155445</CodeCurrent>
+    <CodeNext>123</CodeNext>
+  </wwwroot>
+  <wwwroot>
+    <FileName>careers_browse_candidates.aspx.cs</FileName>
+    <ErrorCode>V3024</ErrorCode>
+    <Message>An odd precise comparison: currentPage == totalPages. Consider using a comparison with defined precision: Math.Abs(A - B) &lt; Epsilon.</Message>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>1739491314</CodeCurrent>
+    <CodeNext>123</CodeNext>
+  </wwwroot>
+</NewDataSet>

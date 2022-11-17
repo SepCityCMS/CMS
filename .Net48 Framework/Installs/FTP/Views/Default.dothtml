@@ -1,0 +1,12 @@
+﻿@viewModel wwwroot.ViewModels.DefaultViewModel, wwwroot
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="HeadContent">
+</dot:Content>
+
+<dot:Content ContentPlaceHolderID="SiteContent">
+
+    <dot:HtmlLiteral Html="{value: PageText}" />
+
+</dot:Content>
+

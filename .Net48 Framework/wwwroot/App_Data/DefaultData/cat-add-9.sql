@@ -1,0 +1,10 @@
+INSERT INTO Categories (CatID,ListUnder,CategoryName,Description,Keywords,CatType,Moderator,AccessKeys,WriteKeys,SEODescription,SEOPageTitle,ManageKeys,AccessHide,WriteHide,ExcPortalSecurity,Weight,ShowList,Sharing) VALUES('197960432462328','0','Sales Questions','','','','Moderator','|2|,|3|,|1|,|4|','|2|,|3|,|4|','','','|2|','0','0','0','2000','1','1')
+INSERT INTO CategoriesModules (UniqueID,CatID,ModuleID) VALUES('299427892868458','197960432462328','9')
+INSERT INTO CategoriesPortals (UniqueID,CatID,PortalID) VALUES('199464183141916','197960432462328','0')
+INSERT INTO Categories (CatID,ListUnder,CategoryName,Description,Keywords,CatType,Moderator,AccessKeys,WriteKeys,SEODescription,SEOPageTitle,ManageKeys,AccessHide,WriteHide,ExcPortalSecurity,Weight,ShowList,Sharing) VALUES('251747971345157','0','Support Questions','','','','Moderator','|2|,|3|,|1|,|4|','|2|,|3|,|4|','','','|2|','0','0','0','2000','1','1')
+INSERT INTO CategoriesModules (UniqueID,CatID,ModuleID) VALUES('607845036858027','251747971345157','9')
+INSERT INTO CategoriesPortals (UniqueID,CatID,PortalID) VALUES('217769332638448','251747971345157','0')
+INSERT INTO Categories (CatID,ListUnder,CategoryName,Description,Keywords,CatType,Moderator,AccessKeys,WriteKeys,SEODescription,SEOPageTitle,ManageKeys,AccessHide,WriteHide,ExcPortalSecurity,Weight,ShowList,Sharing) VALUES('162324803515098','0','Training Questions','','','','Moderator','|2|,|3|,|1|,|4|','|2|,|3|,|4|','','','|2|','0','0','0','2000','1','1')
+INSERT INTO CategoriesModules (UniqueID,CatID,ModuleID) VALUES('200300069756167','162324803515098','9')
+INSERT INTO CategoriesPortals (UniqueID,CatID,PortalID) VALUES('207512710734544','162324803515098','0')
+[[GO]]

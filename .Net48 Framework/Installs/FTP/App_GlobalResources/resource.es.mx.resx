@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="R01292931454553033827454577" xml:space="preserve">
+    <value>Access Class:</value>
+  </data>
+  <data name="R012929314545531131514577" xml:space="preserve">
+    <value>Access Keys:</value>
+  </data>
+  <data name="R012946354831" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="R01294635483546353145" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+  <data name="R01303053133139283144" xml:space="preserve">
+    <value>Add Member</value>
+  </data>
+  <data name="R013232353835274631530441494038354031" xml:space="preserve">
+    <value>Affiliate Downline</value>
+  </data>
+  <data name="R0235444634530427463177" xml:space="preserve">
+    <value>Birth Date:</value>
+  </data>
+  <data name="R033546515386532041494077" xml:space="preserve">
+    <value>City / Town:</value>
+  </data>
+  <data name="R0341474046445177" xml:space="preserve">
+    <value>Country:</value>
+  </data>
+  <data name="R0530354653133139283144" xml:space="preserve">
+    <value>Edit Member</value>
+  </data>
+  <data name="R053035465321453144" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="R0539273538530130304431454553354553443143473544313084" xml:space="preserve">
+    <value>Email Address is required.</value>
+  </data>
+  <data name="R0539273538530130304431454577" xml:space="preserve">
+    <value>Email Address:</value>
+  </data>
+  <data name="R05392735385321453144" xml:space="preserve">
+    <value>Email User</value>
+  </data>
+  <data name="R0540463144532753162745454941443077" xml:space="preserve">
+    <value>Enter a Password:</value>
+  </data>
+  <data name="R063139273831" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="R0635444546531427393153354553443143473544313084" xml:space="preserve">
+    <value>First Name is required.</value>
+  </data>
+  <data name="R0635444546531427393177" xml:space="preserve">
+    <value>First Name:</value>
+  </data>
+  <data name="R07314030314477" xml:space="preserve">
+    <value>Gender:</value>
+  </data>
+  <data name="R08313842" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="R09404835463153133139283144" xml:space="preserve">
+    <value>Invite Member</value>
+  </data>
+  <data name="R0940484135293145" xml:space="preserve">
+    <value>Invoices</value>
+  </data>
+  <data name="R12274546531427393153354553443143473544313084" xml:space="preserve">
+    <value>Last Name is required.</value>
+  </data>
+  <data name="R12274546531427393177" xml:space="preserve">
+    <value>Last Name:</value>
+  </data>
+  <data name="R1327354053164144462738" xml:space="preserve">
+    <value>Main Portal</value>
+  </data>
+  <data name="R13273831" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="R132740273331" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="R13313928314445" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="R143149530129463548354651" xml:space="preserve">
+    <value>New Activity</value>
+  </data>
+  <data name="R1431495309404841352931" xml:space="preserve">
+    <value>New Invoice</value>
+  </data>
+  <data name="R14314953133139283144" xml:space="preserve">
+    <value>New Member</value>
+  </data>
+  <data name="R1441" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="R1441463145" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="R14414653012946354831" xml:space="preserve">
+    <value>Not Active</value>
+  </data>
+  <data name="R1546343144" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="R162745454941443053354553443143473544313084" xml:space="preserve">
+    <value>Password is required.</value>
+  </data>
+  <data name="R1627511627385305392735385301303044314545536509405329274531535141475335404631404653284751314445534641534227515351414753493546345329443130354653292744306677" xml:space="preserve">
+    <value>PayPal Email Address (In case you intent buyers to pay you with credit card):</value>
+  </data>
+  <data name="R16344140315314473928314477" xml:space="preserve">
+    <value>Phone Number:</value>
+  </data>
+  <data name="R16413540464577" xml:space="preserve">
+    <value>Points:</value>
+  </data>
+  <data name="R16414446273877" xml:space="preserve">
+    <value>Portal:</value>
+  </data>
+  <data name="R164145462738530341303177" xml:space="preserve">
+    <value>Postal Code:</value>
+  </data>
+  <data name="R1831295129383153023540" xml:space="preserve">
+    <value>Recycle Bin</value>
+  </data>
+  <data name="R183132314444273853652145314453142739316677" xml:space="preserve">
+    <value>Referral (User Name):</value>
+  </data>
+  <data name="R183143473544315327474634414435522746354140532831324144315341463431444553292740532730305346343545534745314453464153463431354453324435314030533835454677" xml:space="preserve">
+    <value>Require authorization before others can add this user to their friend list:</value>
+  </data>
+  <data name="R1831683140463144532753162745454941443077" xml:space="preserve">
+    <value>Re-enter a Password:</value>
+  </data>
+  <data name="R19274831" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="R19313831294653463431531431494538314646314445535141475349354534534641533641354077" xml:space="preserve">
+    <value>Select the Newsletters you wish to join:</value>
+  </data>
+  <data name="R1931421641444627385308313842" xml:space="preserve">
+    <value>SepCity Help</value>
+  </data>
+  <data name="R1931464635403345" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="R1946274631538653164441483540293177" xml:space="preserve">
+    <value>State / Province:</value>
+  </data>
+  <data name="R194644313146530130304431454577" xml:space="preserve">
+    <value>Street Address:</value>
+  </data>
+  <data name="R21453144531427393153354553443143473544313084" xml:space="preserve">
+    <value>User Name is required.</value>
+  </data>
+  <data name="R21453144531427393177" xml:space="preserve">
+    <value>User Name:</value>
+  </data>
+  <data name="R214531445319462746474577" xml:space="preserve">
+    <value>User Status:</value>
+  </data>
+  <data name="R233128453546315321181277" xml:space="preserve">
+    <value>Website URL:</value>
+  </data>
+  <data name="R253145" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="R6868685319313831294653275301292931454553033827454553686868" xml:space="preserve">
+    <value>--- Select a Access Class ---</value>
+  </data>
+  <data name="R68686853193138312946532753194627463186164441483540293153686868" xml:space="preserve">
+    <value>--- Select a State/Province ---</value>
+  </data>
+</root>

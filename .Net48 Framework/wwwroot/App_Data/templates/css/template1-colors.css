@@ -1,0 +1,329 @@
+a { color: [[HyperlinkColor]]; }
+
+a:Hover {
+    color: [[HyperlinkHoverCover]];
+    text-decoration: Underline;
+}
+
+/* ======================================================================== */
+
+.TitleStyle {
+    background-color: [[TableTitleBG]];
+    color: [[TableTitleColor]];
+}
+
+/* Login inputs when using [[AccountMenu]] function */
+
+.LoginField { width: 140px; }
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+.ModFormDiv { }
+
+.ModFieldset {
+    background-color: [[FieldsetBG]];
+    background-repeat: repeat-x;
+    border-color: [[FieldsetBorder]];
+    border-style: solid;
+    border-width: 1px;
+    clear: both;
+    margin: 0 0 1.5em 0;
+    padding: 10px;
+    width: 97%;
+}
+
+.ModFieldset legend {
+    background-color: [[LegendBG]];
+    border-color: [[FieldsetBorder]];
+    color: [[LegendColor]];
+    font-weight: bold;
+    margin-left: 1em;
+    padding: 0;
+}
+
+.ModFieldset label {
+    color: [[FieldsetColor]];
+    display: block;
+}
+
+.textEntry { width: 250px; }
+
+.dateEntry { width: 113px; }
+
+.textareaEntry {
+    height: 80px;
+    width: 250px;
+}
+
+.selectEntry { width: 250px; }
+
+.imageEntry { display: block; }
+
+.checkboxEntry { }
+
+.ModSaveButton button {
+    background-color: transparent;
+    background-image: none;
+    border-style: none;
+    float: none;
+    padding-left: 12em;
+    width: auto;
+}
+
+.LoginDiv { }
+
+.LoginFieldset { width: 260px; }
+
+.LoginFieldset #UserNameLabel { display: block; }
+
+.LoginFieldset #PasswordLabel { display: block; }
+
+/* MISC  
+----------------------------------------------------------*/
+
+img { border: 0px; }
+
+br { clear: left; }
+
+/* Style used when showing a title when displaying articles, news story, ect. */
+
+.ListingTitle { font-size: 16px; }
+
+/* The table in the discounts module */
+
+.DiscountTable {
+    border-bottom: #000000 2px dashed;
+    border-left: #000000 2px dashed;
+    border-right: #000000 2px dashed;
+    border-top: #000000 2px dashed;
+}
+
+/* The mark-off price or percentage price within the discount table */
+
+.DiscountPrice {
+    color: #FF0000;
+    font-size: 16px;
+}
+
+/* The label when showing the discount description within the discount table */
+
+.DiscountLabel { }
+
+/* Events table for the events module */
+
+.EventTable { background-color: [[EventBorder]]; }
+
+/* The month shown in the events module */
+
+.EventTitle { background-color: [[EventTitleBG]]; }
+
+.EventTitle a { color: [[EventTitleColor]]; }
+
+/* Style for the days shown in the event calendar */
+
+.EventDays {
+    background-color: [[EventDaysBG]];
+    color: [[EventDaysColor]];
+}
+
+/* Style when an event is on a day on the calendar */
+
+.EventOnDays {
+    background-color: [[EventOnDaysBG]];
+    color: [[EventOnDaysColor]];
+}
+
+/* Style used in the calendar when no day numbers are on a month */
+
+.EventBlank { background-color: [[EventBlankDays]]; }
+
+/* Style for today in the calendar */
+
+.EventToday {
+    background-color: [[EventTodayBG]];
+    color: [[EventTodayColor]];
+}
+
+/* Highlight style when someone purchases a highlighted listing */
+
+.PHighlight {
+    background-color: #94311B;
+    color: #FFFFFF;
+}
+
+/* Styles used for comments in some of the modules */
+
+#idCommentShow {
+    overflow: auto;
+    width: 270px;
+}
+
+#idCommentShow hr {
+    height: 1px;
+    width: 100%;
+}
+
+#idCommentShow span { font-weight: bold; }
+
+/* The default background color for the graph showing the poll results */
+
+.PollGraphBG {
+    background-color: #EEEEEE;
+    height: 1em;
+    margin: 1px 0;
+    width: 140px;
+}
+
+/* The background showing the results for the polls */
+
+.PollGraphResults {
+    background-color: #FF0000;
+    float: left;
+    height: 1em;
+}
+
+/* Used for the [[Polls]] function */
+
+#randompoll {
+    display: in-line;
+    text-align: left;
+    width: 160px;
+}
+
+/* Titles inside of the fieldsets */
+
+.TitleText { }
+
+/* Shopping Mall Classes */
+
+a:link.SMProductTitle {
+    color: #acc8f6;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a:visited.SMProductTitle {
+    color: #acc8f6;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a:active.SMProductTitle {
+    color: #acc8f6;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a:hover.SMProductTitle {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.SMNoStock { }
+
+.SMUnitPrice { }
+
+.SMSalePrice { }
+
+.SMNoStock { }
+
+.SMQuantity { }
+
+.DetailCaption {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Shopping Cart View Cart */
+
+.TableSteps {
+    background-color: #cccccc;
+    border: 1px;
+    color: #ff0000;
+    margin-bottom: 10px;
+    width: 450px;
+}
+
+.CartSteps {
+    background-color: #333333;
+    border-color: #ffffff;
+    color: #ffffff;
+    text-align: center;
+    width: 150px;
+}
+
+.CartStepsOn {
+    background-color: #444444;
+    border-color: #ffffff;
+    color: #ffff00;
+    text-align: center;
+    width: 150px;
+}
+
+/* [[ViewCart]] Function */
+
+.ViewCartDiv {
+    text-align: left;
+    width: 140px;
+}
+
+.ViewCartTitle {
+    background-color: #b70000;
+    color: #ffffff;
+    padding: 2px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Category text when displaying a category */
+
+#nav-menu-cat { width: 780px; }
+
+/* Articles Module classes for listing articles in a category */
+
+.ArticleList { padding-bottom: 15px; }
+
+.ArticleHeadline a { font-size: 15px; }
+
+.ArticleSummary { }
+
+.ArticleSummaryFooter {
+    background-color: [[TableHeaderBG]];
+    color: [[TableHeaderColor]];
+    height: 23px;
+    padding-right: 10px;
+    text-align: right;
+    width: 100%;
+}
+
+.ArticleSummaryFooter a { padding-left: 20px; }
+
+.ArticlePostedBy { }
+
+.HrLine { height: 1px; }
+
+/* Classes below are used for custom field sections */
+
+.SectionTitle {
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.SectionText { padding-left: 20px; }
+
+h1 {
+    font: 700 1.8em "trebuchet ms", serif;
+    font-style: italic;
+    margin: 3px;
+    text-transform: uppercase;
+}
+
+.accountIcon {
+    cursor: pointer;
+    float: left;
+    margin: 5px;
+    text-align: center;
+    width: 128px;
+}

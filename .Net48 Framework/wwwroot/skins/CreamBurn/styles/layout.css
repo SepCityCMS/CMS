@@ -1,0 +1,233 @@
+﻿/*!
+ * Start Bootstrap - Business Casual Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details,see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-color: #F5F1E6;
+    background-size: cover;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.content {
+    background: #E5FFFF;
+    background: none repeat scroll 0 0 rgba(255,255,255,0.9);
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p {
+    color: #000;
+}
+
+hr {
+    border-color: #999;
+}
+
+.brand,
+.address-bar {
+    display: none;
+}
+
+.img-full {
+    min-width: 100%;
+}
+
+.brand-before,
+.brand-name {
+    text-transform: capitalize;
+}
+
+.brand-before {
+    margin: 15px 0;
+}
+
+.brand-name {
+    font-size: 4em;
+    margin: 0;
+}
+
+.tagline-divider {
+    border-color: #999;
+    margin: 15px auto 3px;
+    max-width: 250px;
+}
+
+.box {
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    width: 100%;
+}
+
+.intro-text {
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.img-border {
+    border: #999 solid 1px;
+    float: none;
+    margin: 0 auto 0;
+}
+
+.img-left {
+    float: none;
+    margin: 0 auto 0;
+}
+
+footer {
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+    footer p {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+        footer p a, footer p a:hover, footer p a:active {
+            color: #000000;
+        }
+
+.brand {
+    color: #000000;
+    display: inherit;
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2.3em;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    padding: 10px 0 10px;
+    text-align: center;
+}
+
+.top-divider {
+    margin-top: 0;
+}
+
+.img-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.address-bar {
+    color: #fff;
+    display: inherit;
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+}
+
+.brand .logo {
+    float: left;
+    margin-left: 20px;
+}
+
+.brand .comname {
+    float: left;
+}
+
+    .brand .comname .sitename {
+        margin-left: 25px;
+        font-size: 2em;
+        display: block;
+    }
+
+    .brand .comname span {
+        display: block;
+        font-size: 1em;
+        margin-left: 25px;
+    }
+
+footer .nav > li > a {
+    color: #000000 !important;
+    padding: 10px;
+}
+
+footer .navbar-nav > li > a {
+    color: #ffffff !important;
+    line-height: normal;
+    padding: 11px 25px;
+}
+
+footer nav li a:hover {
+    background-color: #56ACC3 !important;
+    color: #ffffff !important;
+    line-height: normal;
+}
+
+footer .navbar-nav {
+    float: right;
+    margin: 0 auto;
+    table-layout: fixed;
+}
+
+.nomargin {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.sb_menu,
+ul.ex_menu {
+    color: #959595;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 16px;
+}
+
+    ul.sb_menu li,
+    ul.ex_menu li {
+        margin: 0;
+    }
+
+    ul.sb_menu li {
+        padding: 4px 0;
+        width: 220px;
+    }
+
+    ul.ex_menu li {
+        padding: 4px 0;
+    }
+
+        ul.sb_menu li a,
+        ul.ex_menu li a {
+            color: #959595;
+            margin-left: -16px;
+            padding: 4px 8px 4px 16px;
+            text-decoration: none;
+        }
+
+            ul.sb_menu li a:hover,
+            ul.ex_menu li a:hover {
+                color: #D8AD11;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+.navbar-collapse {
+    padding: 0px !important;
+}

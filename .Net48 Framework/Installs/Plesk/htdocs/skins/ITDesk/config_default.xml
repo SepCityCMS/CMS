@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<FeatureList>
+		<Feature id="MemberMenu" text="Members Menu">1</Feature>
+		<Feature id="Sponsors" text="Sponsors">1</Feature>
+		<Feature id="Banners" text="Banners">1</Feature>
+		<Feature id="Newsletters" text="Newsletters">0</Feature>
+		<Feature id="Polls" text="Random Poll">0</Feature>
+    <Feature id="Search" text="Search Engine">0</Feature>
+		<Feature id="SiteStats" text="Site Stats">0</Feature>
+		<Feature id="WhosOn" text="Who's Online">0</Feature>
+	</FeatureList>
+  <UPFeatureList>
+    <UPFeature id="MemberMenu" text="Members Menu">1</UPFeature>
+    <UPFeature id="Advertisements" text="Advertisements">1</UPFeature>
+    <UPFeature id="Newsletters" text="Newsletters">0</UPFeature>
+    <UPFeature id="Polls" text="Random Poll">0</UPFeature>
+    <UPFeature id="Search" text="Search Engine">0</UPFeature>
+    <UPFeature id="SiteStats" text="Site Stats">0</UPFeature>
+    <UPFeature id="WhosOn" text="Who's Online">0</UPFeature>
+  </UPFeatureList>
+	<CustomVariables>
+		<Variable name="HeaderImg">
+			<Question type="Image">File name to header image (Default is a 948x295 Image)</Question>
+			<Value>hbg_img.jpg</Value>
+		</Variable>
+	</CustomVariables>
+</root>

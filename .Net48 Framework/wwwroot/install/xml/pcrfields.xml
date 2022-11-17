@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pcrfields>
+	<PositionFields>
+		<field name="CompanyName" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Company Name</field>
+		<field name="JobTitle" postDefault="Y" detailsDefault="Y" searchDefault="Y" type="string">Job Title</field>
+		<field name="NumberOfOpenings" postDefault="Y" detailsDefault="N" searchDefault="N" type="integer">Number Of Openings</field>
+		<field name="PositionId" postDefault="Y" detailsDefault="Y" searchDefault="N" type="string">Position Id</field>
+		<field name="JobDescription" postDefault="Y" detailsDefault="Y" searchDefault="D" type="string">Job Description</field>
+		<field name="JobType" postDefault="Y" detailsDefault="Y" searchDefault="Y" type="string">Job Type</field>
+		<field name="Industry" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Industry</field>
+		<field name="Specialty" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Specialty</field>
+		<field name="DegreeRequired" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Degree Required</field>
+		<field name="MinYearsExp" postDefault="N" detailsDefault="N" searchDefault="N" type="integer">Min Years Experience</field>
+		<field name="MaxYearsExp" postDefault="N" detailsDefault="N" searchDefault="N" type="integer">Max Years Experience</field>
+		<field name="MinSalary" postDefault="N" detailsDefault="N" searchDefault="N" type="currency">Min Salary</field>
+		<field name="MaxSalary" postDefault="N" detailsDefault="N" searchDefault="N" type="currency">Max Salary</field>
+		<field name="DatePosted" postDefault="D" detailsDefault="Y" searchDefault="N" type="date">Date Posted</field>
+		<field name="City" postDefault="Y" detailsDefault="Y" searchDefault="Y" type="string">City</field>
+		<field name="State" postDefault="Y" detailsDefault="Y" searchDefault="Y" type="string">State</field>
+		<field name="PostalCode" postDefault="Y" detailsDefault="Y" searchDefault="Y" type="string">Postal Code</field>
+		<field name="PostalCodeExtension" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Postal Code Extension</field>
+		<field name="Country" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Country</field>
+		<field name="County" postDefault="N" detailsDefault="N" searchDefault="N" type="string">County</field>
+		<field name="ContactName" postDefault="Y" detailsDefault="Y" searchDefault="N" type="string">Contact Name</field>
+		<field name="Department" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Department</field>
+		<field name="ContactPhone" postDefault="Y" detailsDefault="Y" searchDefault="N" type="string">Contact Phone</field>
+		<field name="ContactEmail" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Contact Email</field>
+		<field name="BeginDate" postDefault="D" detailsDefault="N" searchDefault="N" type="date">Begin Date</field>
+		<field name="EndDate" postDefault="D" detailsDefault="N" searchDefault="N" type="date">End Date</field>
+		<field name="UserName" postDefault="D" detailsDefault="D" searchDefault="D" type="string">User Name</field>
+		<field name="WhyOpen" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Why Open</field>
+		<field name="Vacation" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Vacation</field>
+		<field name="EducationAid" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Education Aid</field>
+		<field name="HealthCoverage" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Health Coverage</field>
+		<field name="Status" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Status</field>
+		<field name="Benefits" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Benefits</field>
+		<field name="Notes" postDefault="N" detailsDefault="N" searchDefault="D" type="string">Notes</field>
+		<field name="WebNotes" postDefault="N" detailsDefault="N" searchDefault="D" type="string">Web Notes</field>
+		<field name="FeePercentage" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Fee Percentage</field>
+		<field name="BillRate" postDefault="N" detailsDefault="N" searchDefault="N" type="currency">Bill Rate</field>
+		<field name="PayRate" postDefault="N" detailsDefault="N" searchDefault="N" type="currency">Pay Rate</field>
+		<field name="Guarantee" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Guarantee</field>
+		<field name="ShowOnWeb" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Show On Web</field>
+		<field name="LastActivity" postDefault="D" detailsDefault="N" searchDefault="N" type="date">Last Activity</field>
+		<field name="LastModified" postDefault="D" detailsDefault="N" searchDefault="N" type="date">Last Modified</field>
+		<field name="InternalJobDescription" postDefault="N" detailsDefault="N" searchDefault="D" type="string">Internal Job Description</field>
+		<field name="ExternalExpiration" postDefault="D" detailsDefault="N" searchDefault="N" type="date">External Expiration</field>
+		<field name="InternalExpiration" postDefault="D" detailsDefault="N" searchDefault="N" type="date">Internal Expiration</field>
+		<field name="StartHold" postDefault="D" detailsDefault="N" searchDefault="N" type="date">Start Hold</field>
+		<field name="EndHold" postDefault="D" detailsDefault="N" searchDefault="N" type="date">End Hold</field>
+		<field name="DefaultCurrency" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Default Currency</field>
+		<field name="Keywords" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Keywords</field>
+		<field name="DirectApplyLink" postDefault="D" detailsDefault="N" searchDefault="D" type="string">Direct Apply Link</field>
+		<field name="DirectJobLink" postDefault="D" detailsDefault="N" searchDefault="D" type="string">Direct Job Link</field>
+	</PositionFields>
+	<CandidateFields>
+		<field name="CompanyName" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Company Name</field>
+		<field name="CompanyUserName" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Company User Name</field>
+		<field name="FirstName" postDefault="D" detailsDefault="Y" searchDefault="Y" type="string">First Name</field>
+		<field name="LastName" postDefault="D" detailsDefault="Y" searchDefault="Y" type="string">Last Name</field>
+		<field name="MiddleInitial" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Middle Initial</field>
+		<field name="Salutation" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Salutation</field>
+		<field name="Title" postDefault="D" detailsDefault="Y" searchDefault="N" type="string">Title</field>
+		<field name="Address" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Street Address</field>
+		<field name="Address2" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Street Address Line 2</field>
+		<field name="City" postDefault="D" detailsDefault="Y" searchDefault="Y" type="string">City</field>
+		<field name="State" postDefault="D" detailsDefault="Y" searchDefault="Y" type="string">State</field>
+		<field name="PostalCode" postDefault="D" detailsDefault="Y" searchDefault="N" type="string">Postal Code</field>
+		<field name="PostalCodeExtension" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Postal Code Extension</field>
+		<field name="County" postDefault="D" detailsDefault="N" searchDefault="N" type="string">County</field>
+		<field name="Country" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Country</field>
+		<field name="HomePhone" postDefault="D" detailsDefault="Y" searchDefault="N" type="string">Home Phone</field>
+		<field name="FaxPhone" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Fax Phone</field>
+		<field name="Pager" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Pager</field>
+		<field name="MobilePhone" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Mobile Phone</field>
+		<field name="WorkPhone" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Work Phone</field>
+		<field name="Relocate" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Relocate</field>
+		<field name="CurrentSalary" postDefault="D" detailsDefault="N" searchDefault="N" type="currency">Current Salary</field>
+		<field name="DesiredSalary" postDefault="D" detailsDefault="N" searchDefault="N" type="currency">Desired Salary</field>
+		<field name="School" postDefault="D" detailsDefault="N" searchDefault="N" type="string">School</field>
+		<field name="DegreeType" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Degree Type</field>
+		<field name="GradYear" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Grad Year</field>
+		<field name="DateEntered" postDefault="D" detailsDefault="Y" searchDefault="N" type="date">Date Entered</field>
+		<field name="EmailAddress" postDefault="D" detailsDefault="Y" searchDefault="N" type="string">Email Address</field>
+		<field name="Industry" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Industry</field>
+		<field name="Specialty" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Specialty</field>
+		<field name="Status" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Status</field>
+		<field name="ShowOnWebRollup" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Show On Web Rollup</field>
+		<field name="Subjective" postDefault="N" detailsDefault="N" searchDefault="N" type="double">Subjective</field>
+		<field name="HasResume" postDefault="D" detailsDefault="N" searchDefault="N" type="boolean">Has Resume</field>
+		<field name="NoteFlag" postDefault="D" detailsDefault="N" searchDefault="N" type="boolean">Note Flag</field>
+		<field name="OptOut" postDefault="D" detailsDefault="D" searchDefault="D" type="boolean">Opt-Out</field>
+		<field name="ProfileLine1" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Profile Line 1</field>
+		<field name="ProfileLine2" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Profile Line 2</field>
+		<field name="ProfileLine3" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Profile Line 3</field>
+		<field name="ProfileLine4" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Profile Line 4</field>
+		<field name="ProfileLine5" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Profile Line 5</field>
+		<field name="ProfileLine6" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Profile Line 6</field>
+		<field name="ProfileLine7" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Profile Line 7</field>
+		<field name="ProfileLine8" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Profile Line 8</field>
+		<field name="ProfileLine9" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Profile Line 9</field>
+		<field name="Keywords" postDefault="D" detailsDefault="N" searchDefault="D" type="string">Keywords</field>
+		<field name="Notes" postDefault="D" detailsDefault="N" searchDefault="D" type="string">Notes</field>
+		<field name="Identification" postDefault="D" detailsDefault="N" searchDefault="N" type="string">Identification</field>
+		<field name="LastActivity" postDefault="D" detailsDefault="N" searchDefault="N" type="date">Last Activity</field>
+		<field name="LastModified" postDefault="D" detailsDefault="Y" searchDefault="N" type="date">Last Modified</field>
+		<field name="Available" postDefault="N" detailsDefault="N" searchDefault="N" type="date">Available</field>
+		<field name="BillRate" postDefault="N" detailsDefault="N" searchDefault="N" type="currency">Bill Rate</field>
+		<field name="PayRate" postDefault="N" detailsDefault="N" searchDefault="N" type="currency">Pay Rate</field>
+		<field name="DefaultCurrency" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Default Currency</field>
+		<field name="UserName" postDefault="D" detailsDefault="N" searchDefault="N" type="string">User Name</field>
+		<field name="Photograph" postDefault="D" detailsDefault="N" searchDefault="D" type="string">Photograph</field>
+		<field name="PhotographThumb" postDefault="D" detailsDefault="N" searchDefault="D" type="string">Photograph Thumbnail</field>
+		<field name="Group" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Group</field>
+		<field name="Summary" postDefault="D" detailsDefault="Y" searchDefault="D" type="string">Summary</field>
+		<field name="ResumeText" postDefault="D" detailsDefault="Y" searchDefault="D" type="string">Resume Text</field>
+	</CandidateFields>
+	<CompanyFields>
+		<field name="CompanyName" postDefault="Y" detailsDefault="Y" searchDefault="Y" type="string">Company Name</field>
+		<field name="Logo" postDefault="N" detailsDefault="N" searchDefault="D" type="upload">Company Logo</field>
+		<field name="UserName" postDefault="D" detailsDefault="N" searchDefault="N" type="string">User Name</field>
+		<field name="Address" postDefault="Y" detailsDefault="N" searchDefault="N" type="string">Street Address</field>
+		<field name="Address2" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Street Address Line 2</field>
+		<field name="City" postDefault="Y" detailsDefault="Y" searchDefault="Y" type="string">City</field>
+		<field name="State" postDefault="Y" detailsDefault="Y" searchDefault="Y" type="string">State</field>
+		<field name="PostalCode" postDefault="Y" detailsDefault="N" searchDefault="N" type="string">Postal Code</field>
+		<field name="PostalCodeExtension" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Postal Code Extension</field>
+		<field name="County" postDefault="N" detailsDefault="N" searchDefault="N" type="string">County</field>
+		<field name="Country" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Country</field>
+		<field name="Phone" postDefault="Y" detailsDefault="N" searchDefault="N" type="string">Phone</field>
+		<field name="Fax" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Fax</field>
+		<field name="EmailWWWAddress" postDefault="Y" detailsDefault="N" searchDefault="N" type="string">Email Address</field>
+		<field name="DefaultCurrency" postDefault="D" detailsDefault="D" searchDefault="D" type="string">Default Currency</field>
+		<field name="IndustryCode" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Industry Code</field>
+		<field name="NumberOfEmployees" postDefault="Y" detailsDefault="N" searchDefault="N" type="integer">Number Of Employees</field>
+		<field name="AnnualRevenue" postDefault="N" detailsDefault="N" searchDefault="N" type="currency">Annual Revenue</field>
+		<field name="DivisionOf" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Division</field>
+		<field name="CompanyType" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Company Type</field>
+		<field name="Industry" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Industry</field>
+		<field name="Specialty" postDefault="N" detailsDefault="N" searchDefault="N" type="string">Specialty</field>
+		<field name="Subjective" postDefault="N" detailsDefault="N" searchDefault="N" type="integer">Subjective</field>
+		<field name="Keywords" postDefault="N" detailsDefault="N" searchDefault="D" type="string">Keywords</field>
+		<field name="Summary" postDefault="N" detailsDefault="Y" searchDefault="D" type="string">Summary</field>
+		<field name="Notes" postDefault="N" detailsDefault="N" searchDefault="D" type="string">Notes</field>
+		<field name="NoteFlag" postDefault="D" detailsDefault="D" searchDefault="D" type="boolean">Note Flag</field>
+		<field name="LastActivity" postDefault="D" detailsDefault="N" searchDefault="N" type="date">Last Activity</field>
+		<field name="LastModified" postDefault="D" detailsDefault="N" searchDefault="N" type="date">Last Modified</field>
+	</CompanyFields>
+</pcrfields>

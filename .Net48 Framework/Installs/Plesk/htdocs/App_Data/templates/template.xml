@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+  <template1>
+    <TemplateName>2 Columns</TemplateName>
+    <TenplateFile>template1</TenplateFile>
+    <HTMLFiles>topmenu1|header1|header2|header3|body1|body2|body3|footer1</HTMLFiles>
+    <RightColumn>[[AccountMenu]],[[SiteMenu3]],[[WhosOn]]</RightColumn>
+    <RightColumnHeader>&lt;div class=&quot;MenuLabel&quot;&gt;[[ModuleName]]&lt;/div&gt;&lt;br/&gt;</RightColumnHeader>
+    <RightColumnFooter>&lt;br/&gt;&lt;br/&gt;</RightColumnFooter>
+  </template1>
+</root>

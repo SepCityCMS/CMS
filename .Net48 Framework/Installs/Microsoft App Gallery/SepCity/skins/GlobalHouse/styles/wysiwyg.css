@@ -1,0 +1,18 @@
+body
+{
+	background-color : #eeeeee;
+	color : #000000;
+	font-family : Verdana;
+	font-size : 11px;
+	MARGIN : 0px;
+	margin-bottom : 0px;
+	margin-left : 0px;
+	margin-right : 0px;
+	margin-top : 0px;
+}
+
+/* hyperlink styles */
+a:link
+{
+	color : #006699;
+}
